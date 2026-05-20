@@ -1,0 +1,1245 @@
+{
+  "version": "1.0",
+  "source": "ISTQB CTFL Syllabus v4.0 (avril 2023)",
+  "language": "fr",
+  "questions": [
+    {
+      "id": "Q1-001",
+      "chapter": 1,
+      "level": "K1",
+      "question": "Parmi les propositions suivantes, laquelle n'est PAS un objectif typique du test ?",
+      "options": [
+        "Évaluer les produits d'activités tels que les exigences et le code",
+        "Réduire le niveau de risque d'une qualité logicielle insuffisante",
+        "Corriger les défauts détectés dans le code",
+        "Construire la confiance dans la qualité de l'objet de test"
+      ],
+      "answer": 2,
+      "explanation": "La correction des défauts relève du débogage, pas du test. Le test détecte les défauts ; le développeur les corrige."
+    },
+    {
+      "id": "Q1-002",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Quelle est la différence FONDAMENTALE entre le test et le débogage ?",
+      "options": [
+        "Le test est manuel, le débogage est automatisé",
+        "Le test détecte les défaillances/défauts ; le débogage trouve et élimine la cause",
+        "Le test est statique, le débogage est dynamique",
+        "Il n'y a pas de différence, ce sont des synonymes"
+      ],
+      "answer": 1,
+      "explanation": "Le test révèle l'existence d'un problème (défaillance ou défaut). Le débogage reproduit, diagnostique et corrige."
+    },
+    {
+      "id": "Q1-003",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Une équipe découvre que la spécification contient une exigence ambiguë. Comment qualifier ce constat ?",
+      "options": [
+        "Une défaillance",
+        "Un défaut",
+        "Une erreur",
+        "Une cause racine"
+      ],
+      "answer": 1,
+      "explanation": "Une imperfection dans un artefact (ici la spécification) est un défaut. L'erreur est l'action humaine qui l'a créé ; la défaillance n'existe qu'à l'exécution."
+    },
+    {
+      "id": "Q1-004",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Quel principe du test affirme que tester de manière exhaustive est impossible ?",
+      "options": [
+        "Principe 1 : Le test montre la présence de défauts",
+        "Principe 2 : Le test exhaustif est impossible",
+        "Principe 4 : Regroupement des défauts",
+        "Principe 7 : Illusion de l'absence de défauts"
+      ],
+      "answer": 1,
+      "explanation": "Le 2ᵉ principe (Manna 1978). Il faut donc concentrer l'effort via les techniques de test, la priorisation et le test basé sur les risques."
+    },
+    {
+      "id": "Q1-005",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Que signifie le principe du 'regroupement (clustering) des défauts' ?",
+      "options": [
+        "Plus on teste, plus on trouve de défauts",
+        "Un petit nombre de composants contient généralement la majorité des défauts (Pareto)",
+        "Les défauts se présentent toujours par grappes de trois",
+        "Les mêmes tests répétés trouvent moins de défauts"
+      ],
+      "answer": 1,
+      "explanation": "Principe 4 (Enders 1975) : application du principe de Pareto. C'est une entrée importante pour le test basé sur les risques."
+    },
+    {
+      "id": "Q1-006",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Le principe de 'l'usure des tests' (paradoxe du pesticide) implique que…",
+      "options": [
+        "Les tests automatisés sont moins efficaces que les manuels",
+        "Si on exécute toujours les mêmes tests, ils deviennent moins efficaces pour détecter de nouveaux défauts",
+        "Les tests doivent être supprimés après un certain temps",
+        "Plus on teste, plus le système devient buggé"
+      ],
+      "answer": 1,
+      "explanation": "Principe 5 (Beizer 1990). Solution : modifier ou ajouter des tests. Exception : régression automatisée."
+    },
+    {
+      "id": "Q1-007",
+      "chapter": 1,
+      "level": "K1",
+      "question": "Lequel des éléments suivants relève typiquement de l'assurance qualité (QA) et NON du contrôle qualité (QC) ?",
+      "options": [
+        "Les tests dynamiques",
+        "Les méthodes formelles",
+        "L'amélioration des processus de développement",
+        "Le prototypage"
+      ],
+      "answer": 2,
+      "explanation": "La QA est préventive et axée sur les processus. Le test fait partie du QC (corrective, axée produit)."
+    },
+    {
+      "id": "Q1-008",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Quelle activité de test consiste à définir 'comment tester' ?",
+      "options": [
+        "Analyse de test",
+        "Conception des tests",
+        "Implémentation des tests",
+        "Exécution des tests"
+      ],
+      "answer": 1,
+      "explanation": "L'analyse définit 'quoi tester' (conditions de test). La conception définit 'comment tester' (cas de test)."
+    },
+    {
+      "id": "Q1-009",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un produit d'activités (testware) de la phase de planification ?",
+      "options": [
+        "Logs de test",
+        "Cas de test détaillés",
+        "Plan de test et référentiel des risques",
+        "Rapport de clôture des tests"
+      ],
+      "answer": 2,
+      "explanation": "La planification produit plan de test, calendrier, référentiel des risques et critères de sortie."
+    },
+    {
+      "id": "Q1-010",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Pourquoi la traçabilité entre base de test et testware est-elle importante ?",
+      "options": [
+        "Pour automatiser tous les tests",
+        "Pour évaluer la couverture et l'impact des changements, et faciliter audits/rapports",
+        "Pour augmenter le nombre de défauts trouvés",
+        "Pour remplacer les revues"
+      ],
+      "answer": 1,
+      "explanation": "La traçabilité permet d'évaluer la couverture, le risque résiduel, faciliter audits et rendre les rapports compréhensibles."
+    },
+    {
+      "id": "Q1-011",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Selon le syllabus, quels sont les DEUX rôles principaux dans le test ?",
+      "options": [
+        "Développeur et architecte",
+        "Test Manager et testeur",
+        "Product Owner et Scrum Master",
+        "Auteur et réviseur"
+      ],
+      "answer": 1,
+      "explanation": "Test Manager (planification, pilotage, contrôle, clôture) et testeur (analyse, conception, implémentation, exécution)."
+    },
+    {
+      "id": "Q1-012",
+      "chapter": 1,
+      "level": "K1",
+      "question": "Dans l'approche 'équipe intégrée' (whole-team approach), issue de quelle pratique ?",
+      "options": [
+        "Scrum",
+        "Programmation extrême (XP)",
+        "Kanban",
+        "Lean IT"
+      ],
+      "answer": 1,
+      "explanation": "L'approche équipe intégrée est issue de XP."
+    },
+    {
+      "id": "Q1-013",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Quel est un INCONVÉNIENT typique de l'indépendance du test ?",
+      "options": [
+        "Les testeurs trouvent moins de défauts",
+        "Les testeurs indépendants peuvent être isolés et vus comme un goulot d'étranglement",
+        "Le test devient impossible",
+        "Les développeurs ne participent plus aux tests"
+      ],
+      "answer": 1,
+      "explanation": "Risque d'isolement, de manque de collaboration, perte de responsabilité qualité côté dev, perception de goulot d'étranglement."
+    },
+    {
+      "id": "Q1-014",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Une équipe rapporte des défaillances au product owner. Quelle compétence est PRIMORDIALE ?",
+      "options": [
+        "Connaissances techniques approfondies",
+        "Bonne communication et écoute active, transmettre l'info de manière constructive",
+        "Capacité à automatiser",
+        "Connaissance des outils"
+      ],
+      "answer": 1,
+      "explanation": "Les testeurs sont porteurs de 'mauvaises nouvelles' ; une communication constructive est essentielle (biais de confirmation)."
+    },
+    {
+      "id": "Q1-015",
+      "chapter": 1,
+      "level": "K1",
+      "question": "Quelle norme fournit des informations sur les concepts généraux du test logiciel ?",
+      "options": [
+        "ISO/IEC 25010",
+        "ISO/IEC/IEEE 29119-1",
+        "ISO/IEC 20246",
+        "ISO 31000"
+      ],
+      "answer": 1,
+      "explanation": "ISO/IEC/IEEE 29119-1 traite des concepts généraux. La partie 2 = processus, 3 = doc, 4 = techniques."
+    },
+
+    {
+      "id": "Q2-001",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Dans un modèle séquentiel (cascade), à quel moment le testeur est-il typiquement impliqué dans les phases initiales ?",
+      "options": [
+        "Il n'est pas impliqué avant le codage",
+        "Dans la revue des exigences, l'analyse et la conception des tests",
+        "Uniquement à l'acceptation",
+        "Pendant le déploiement"
+      ],
+      "answer": 1,
+      "explanation": "Même en cascade, les testeurs participent tôt (revue, analyse, conception) ; seul l'exécution dynamique attend le code."
+    },
+    {
+      "id": "Q2-002",
+      "chapter": 2,
+      "level": "K1",
+      "question": "Lesquels parmi ces exemples sont des approches de développement pilotées par les tests ?",
+      "options": [
+        "Kanban, Lean IT, Scrum",
+        "TDD, ATDD, BDD",
+        "Cascade, V, Spirale",
+        "DevOps, CI, CD"
+      ],
+      "answer": 1,
+      "explanation": "TDD, ATDD, BDD sont les trois approches pilotées par les tests (test-first)."
+    },
+    {
+      "id": "Q2-003",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Quel format est typiquement associé au BDD ?",
+      "options": [
+        "Input/Output/Result",
+        "Given/When/Then",
+        "If/Then/Else",
+        "Setup/Act/Verify"
+      ],
+      "answer": 1,
+      "explanation": "Le BDD exprime le comportement en Given/When/Then (Étant donné / Lorsque / Alors)."
+    },
+    {
+      "id": "Q2-004",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un AVANTAGE de DevOps pour le test ?",
+      "options": [
+        "Élimine totalement le besoin de tests manuels",
+        "Feedback rapide et automatisation favorisant le shift-left",
+        "Réduit le besoin d'environnements de test",
+        "Remplace l'analyse des risques"
+      ],
+      "answer": 1,
+      "explanation": "DevOps fournit un feedback rapide, automatise le pipeline et favorise le shift-left. Le test manuel reste néanmoins nécessaire."
+    },
+    {
+      "id": "Q2-005",
+      "chapter": 2,
+      "level": "K2",
+      "question": "L'approche 'shift left' signifie principalement que…",
+      "options": [
+        "Les tests doivent être déplacés à la fin du projet",
+        "Le test est effectué plus tôt dans le SDLC, sans négliger les phases tardives",
+        "On supprime les tests manuels",
+        "On déplace les testeurs vers le développement"
+      ],
+      "answer": 1,
+      "explanation": "Shift-left = appliquer le principe du test précoce. Il ne signifie PAS abandonner les tests tardifs."
+    },
+    {
+      "id": "Q2-006",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Une rétrospective de fin d'itération doit principalement répondre à trois questions. Laquelle parmi celles-ci n'en fait PAS partie ?",
+      "options": [
+        "Qu'est-ce qui a été un succès à conserver ?",
+        "Qu'est-ce qui n'a pas fonctionné à améliorer ?",
+        "Comment intégrer les améliorations à l'avenir ?",
+        "Qui est responsable des échecs ?"
+      ],
+      "answer": 3,
+      "explanation": "Une rétrospective ne cherche pas à blâmer. Ce n'est jamais un objectif (idem pour les revues)."
+    },
+    {
+      "id": "Q2-007",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Combien de niveaux de test décrits par le syllabus v4.0 ?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 2,
+      "explanation": "5 niveaux : composants, intégration de composants, système, intégration système, acceptation."
+    },
+    {
+      "id": "Q2-008",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Les tests de composants (unitaires) sont normalement effectués par…",
+      "options": [
+        "L'équipe de test indépendante",
+        "Les utilisateurs finaux",
+        "Les développeurs dans leur environnement",
+        "Les opérations"
+      ],
+      "answer": 2,
+      "explanation": "Les tests de composants se font côté dev avec leurs harnais/frameworks."
+    },
+    {
+      "id": "Q2-009",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est une forme principale de tests d'acceptation ?",
+      "options": [
+        "Test alpha et test bêta",
+        "Test de partitions d'équivalence",
+        "Test de transition d'état",
+        "Test des branches"
+      ],
+      "answer": 0,
+      "explanation": "UAT, OAT, contractuelle/réglementaire, alpha (chez le dev), bêta (chez le client) sont les formes principales."
+    },
+    {
+      "id": "Q2-010",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un type de test au sens du syllabus ?",
+      "options": [
+        "Test d'acceptation",
+        "Test système",
+        "Test non fonctionnel",
+        "Test d'intégration"
+      ],
+      "answer": 2,
+      "explanation": "Les 4 types : fonctionnel, non fonctionnel, boîte noire, boîte blanche. Les autres sont des niveaux."
+    },
+    {
+      "id": "Q2-011",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Quelle norme fournit les caractéristiques qualité non fonctionnelles ?",
+      "options": [
+        "ISO/IEC 25010",
+        "ISO/IEC/IEEE 29119-3",
+        "ISO/IEC 20246",
+        "ISO/IEC 14764"
+      ],
+      "answer": 0,
+      "explanation": "ISO 25010 : performance, compatibilité, utilisabilité, fiabilité, sécurité, maintenabilité, portabilité."
+    },
+    {
+      "id": "Q2-012",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Un développeur corrige un bug. Que doit-on faire avant de clôturer le défaut ?",
+      "options": [
+        "Un test exploratoire",
+        "Un test de confirmation pour vérifier la correction, puis un test de régression",
+        "Uniquement un test d'acceptation",
+        "Aucun test, le correctif est garanti"
+      ],
+      "answer": 1,
+      "explanation": "Confirmation : la correction fonctionne ? Régression : n'a-t-on rien cassé ailleurs ?"
+    },
+    {
+      "id": "Q2-013",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Pourquoi les tests de régression sont-ils d'excellents candidats à l'automatisation ?",
+      "options": [
+        "Ils sont plus difficiles que les autres",
+        "Ils sont exécutés de nombreuses fois et leur nombre augmente avec chaque release",
+        "Ils ne peuvent être faits que par machine",
+        "Ils ne nécessitent pas de validation des résultats"
+      ],
+      "answer": 1,
+      "explanation": "La répétition fréquente et la croissance des suites de régression en font des candidats parfaits à l'automatisation, surtout en CI/CD."
+    },
+    {
+      "id": "Q2-014",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Lequel des événements suivants NE déclenche PAS typiquement un test de maintenance ?",
+      "options": [
+        "Une nouvelle release planifiée",
+        "Un hotfix correctif",
+        "Une migration de plateforme",
+        "La rédaction initiale des exigences"
+      ],
+      "answer": 3,
+      "explanation": "La maintenance concerne un système déjà en production. Les déclencheurs : modifications, mises à niveau/migrations, retrait."
+    },
+    {
+      "id": "Q2-015",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Quelle stratégie d'intégration consiste à intégrer tous les composants simultanément ?",
+      "options": [
+        "Bottom-up",
+        "Top-down",
+        "Big-bang",
+        "Continuous integration"
+      ],
+      "answer": 2,
+      "explanation": "Le big-bang intègre tout d'un coup. Bottom-up commence par les composants bas-niveau, top-down par le haut."
+    },
+
+    {
+      "id": "Q3-001",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Lequel des éléments suivants relève du test statique ?",
+      "options": [
+        "Exécution d'un test unitaire automatisé",
+        "Test de performance d'un site web",
+        "Analyse statique du code source",
+        "Test exploratoire d'une application"
+      ],
+      "answer": 2,
+      "explanation": "Le test statique n'exécute PAS le code : revues + analyse statique."
+    },
+    {
+      "id": "Q3-002",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Quel type de défaut est PLUS facilement détecté par le test statique que par le test dynamique ?",
+      "options": [
+        "Un défaut de performance sous charge",
+        "Un défaut sur un chemin de code rarement exécuté",
+        "Un défaut d'utilisabilité de l'interface",
+        "Un défaut de timing"
+      ],
+      "answer": 1,
+      "explanation": "Le test statique trouve facilement les défauts sur des chemins rares (qui seraient difficiles à atteindre en dynamique)."
+    },
+    {
+      "id": "Q3-003",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Lequel des éléments suivants NE peut PAS être un produit d'activités examinable par test statique ?",
+      "options": [
+        "Document de spécification d'exigences",
+        "Code source",
+        "Plan de test",
+        "Comportement d'utilisateur en production"
+      ],
+      "answer": 3,
+      "explanation": "Le comportement en exécution relève du test dynamique. Le statique examine des artefacts lisibles."
+    },
+    {
+      "id": "Q3-004",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Lequel des types de revue suivants est le PLUS FORMEL ?",
+      "options": [
+        "Revue informelle",
+        "Relecture technique (walkthrough)",
+        "Revue technique",
+        "Inspection"
+      ],
+      "answer": 3,
+      "explanation": "L'inspection suit le processus complet, recueille des métriques et l'auteur ne peut pas être réviseur ni scribe."
+    },
+    {
+      "id": "Q3-005",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Qui mène typiquement une relecture technique (walkthrough) ?",
+      "options": [
+        "Un modérateur indépendant",
+        "L'auteur du produit d'activités",
+        "Le manager",
+        "Le scribe"
+      ],
+      "answer": 1,
+      "explanation": "Le walkthrough est mené par l'auteur (formation, consensus, détection)."
+    },
+    {
+      "id": "Q3-006",
+      "chapter": 3,
+      "level": "K1",
+      "question": "Dans le processus de revue, qui est responsable de l'enregistrement des anomalies trouvées ?",
+      "options": [
+        "Le modérateur",
+        "Le scribe",
+        "L'auteur",
+        "Le manager"
+      ],
+      "answer": 1,
+      "explanation": "Le scribe (rapporteur) collecte les anomalies et enregistre les décisions de la réunion."
+    },
+    {
+      "id": "Q3-007",
+      "chapter": 3,
+      "level": "K1",
+      "question": "Quelle norme spécifie le processus de revue ?",
+      "options": [
+        "ISO/IEC 25010",
+        "ISO/IEC 20246",
+        "ISO 31000",
+        "ISO/IEC/IEEE 14764"
+      ],
+      "answer": 1,
+      "explanation": "ISO/IEC 20246 traite des revues de produits d'activités."
+    },
+    {
+      "id": "Q3-008",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Quelle est la première activité du processus de revue selon ISO/IEC 20246 ?",
+      "options": [
+        "Revue individuelle",
+        "Planification",
+        "Communication et analyse",
+        "Correction et rapport"
+      ],
+      "answer": 1,
+      "explanation": "Ordre : Planification → Lancement → Revue individuelle → Communication & analyse → Correction & rapport."
+    },
+    {
+      "id": "Q3-009",
+      "chapter": 3,
+      "level": "K1",
+      "question": "Lequel des éléments suivants est un FACTEUR DE RÉUSSITE d'une revue ?",
+      "options": [
+        "Utiliser la revue pour évaluer les participants",
+        "Réaliser les revues en grands groupes (> 10 personnes)",
+        "Définir des objectifs clairs et des critères de sortie mesurables",
+        "Limiter le temps de préparation des participants"
+      ],
+      "answer": 2,
+      "explanation": "Évaluer les participants ne doit JAMAIS être un objectif. Les revues se font en petits groupes avec temps de préparation suffisant."
+    },
+    {
+      "id": "Q3-010",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Que peuvent vérifier les outils d'analyse statique ?",
+      "options": [
+        "Uniquement la syntaxe du code",
+        "Défauts de code, maintenabilité, vulnérabilités de sécurité, conformité aux standards",
+        "Uniquement les performances",
+        "Le comportement utilisateur"
+      ],
+      "answer": 1,
+      "explanation": "L'analyse statique détecte une large variété de défauts : code, maintenabilité, sécurité, conventions."
+    },
+    {
+      "id": "Q3-011",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Quel est l'objectif PRINCIPAL d'une revue informelle ?",
+      "options": [
+        "Recueillir des métriques pour améliorer le processus",
+        "Détecter des anomalies",
+        "Parvenir à un consensus technique",
+        "Former de nouveaux membres"
+      ],
+      "answer": 1,
+      "explanation": "L'objectif principal d'une revue informelle est la détection d'anomalies, sans processus formel ni résultat documenté."
+    },
+    {
+      "id": "Q3-012",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Pourquoi un feedback précoce et fréquent des parties prenantes est-il bénéfique ?",
+      "options": [
+        "Il remplace les tests dynamiques",
+        "Il évite les malentendus sur les exigences et les coûteuses rectifications tardives",
+        "Il garantit zéro défaut",
+        "Il accélère uniquement la livraison sans impact sur la qualité"
+      ],
+      "answer": 1,
+      "explanation": "Un feedback précoce évite les écarts de vision et les rectifications coûteuses ; il améliore la priorisation et la valeur."
+    },
+
+    {
+      "id": "Q4-001",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quelle catégorie regroupe les partitions d'équivalence et l'analyse des valeurs limites ?",
+      "options": [
+        "Boîte blanche",
+        "Boîte noire",
+        "Basée sur l'expérience",
+        "Test exploratoire"
+      ],
+      "answer": 1,
+      "explanation": "Ce sont des techniques basées sur les spécifications (boîte noire)."
+    },
+    {
+      "id": "Q4-002",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un champ accepte un âge entre 18 et 65 ans inclus. Quel ensemble couvre 100 % des partitions d'équivalence ?",
+      "options": [
+        "{17, 18, 65, 66}",
+        "{10, 30, 70}",
+        "{18, 30, 65}",
+        "{30}"
+      ],
+      "answer": 1,
+      "explanation": "3 partitions : invalide basse (< 18), valide [18..65], invalide haute (> 65). {10, 30, 70} en couvre une de chaque."
+    },
+    {
+      "id": "Q4-003",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Pour une plage [1..100] inclus, quelles valeurs sont à tester en analyse des valeurs limites avec la technique à 2 valeurs ?",
+      "options": [
+        "1, 100",
+        "0, 1, 100, 101",
+        "0, 1, 2, 99, 100, 101",
+        "1, 50, 100"
+      ],
+      "answer": 1,
+      "explanation": "Technique 2 valeurs : pour chaque limite, la limite + sa voisine dans la partition adjacente. Pour [1..100] : 0, 1 (bas) ; 100, 101 (haut)."
+    },
+    {
+      "id": "Q4-004",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Pour la même plage [1..100], combien de valeurs distinctes faut-il en technique à 3 valeurs ?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "10"
+      ],
+      "answer": 1,
+      "explanation": "3 valeurs par limite : pour 1 → 0, 1, 2 ; pour 100 → 99, 100, 101. Total = 6 valeurs distinctes."
+    },
+    {
+      "id": "Q4-005",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Une table de décision a 3 conditions booléennes. Combien de colonnes a la table COMPLÈTE non simplifiée ?",
+      "options": [
+        "3",
+        "6",
+        "8",
+        "9"
+      ],
+      "answer": 2,
+      "explanation": "2^n combinaisons avec n conditions booléennes → 2^3 = 8 colonnes."
+    },
+    {
+      "id": "Q4-006",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Dans une table de décision, que signifie '–' (tiret) dans une condition ?",
+      "options": [
+        "La condition est fausse",
+        "La condition n'est pas pertinente pour le résultat",
+        "La condition est irréalisable",
+        "L'action ne doit pas se produire"
+      ],
+      "answer": 1,
+      "explanation": "V = vraie, F = fausse, – = non pertinente, N/A = irréalisable. Pour les actions : X = a lieu, vide = ne se produit pas."
+    },
+    {
+      "id": "Q4-007",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Pour le test de transition d'état, lequel des critères suivants est le PLUS faible ?",
+      "options": [
+        "Couverture de tous les états",
+        "Couverture des transitions valides (0-switch)",
+        "Couverture de toutes les transitions",
+        "Tous équivalents"
+      ],
+      "answer": 0,
+      "explanation": "La couverture des états est plus faible : on peut visiter tous les états sans exercer toutes les transitions valides."
+    },
+    {
+      "id": "Q4-008",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Que désigne le 'masquage des défauts' dans le test de transition d'état ?",
+      "options": [
+        "Un test qui masque l'erreur du développeur",
+        "Une situation où un défaut empêche la détection d'un autre défaut",
+        "Un défaut qui ne survient que sur un état précis",
+        "Un test invalide masqué par la spec"
+      ],
+      "answer": 1,
+      "explanation": "C'est pourquoi on ne teste qu'une seule transition invalide par cas de test."
+    },
+    {
+      "id": "Q4-009",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Si la couverture des branches est de 100 %, alors la couverture des instructions est…",
+      "options": [
+        "0 %",
+        "Toujours 100 % aussi",
+        "Toujours inférieure à 100 %",
+        "Inconnue sans calculer"
+      ],
+      "answer": 1,
+      "explanation": "La couverture des branches englobe la couverture des instructions. L'inverse n'est PAS vrai."
+    },
+    {
+      "id": "Q4-010",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Soit le code : `if (x > 0) print('A'); else print('B');`. Combien de cas de test FAUT-IL minimum pour 100 % de couverture des branches ?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "2 branches (vrai/faux) → besoin de 2 cas (ex. x=5 et x=-1)."
+    },
+    {
+      "id": "Q4-011",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Pour le même code : `if (x > 0) print('A'); else print('B');`, combien faut-il de cas pour 100 % de couverture des INSTRUCTIONS ?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "2 instructions exécutables distinctes (print 'A' et print 'B') → besoin de 2 cas. Note : on aurait pu avoir 1 instruction toujours exécutée + le if."
+    },
+    {
+      "id": "Q4-012",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quelle est une FORCE des tests boîte blanche ?",
+      "options": [
+        "Ils détectent les exigences non implémentées",
+        "Ils prennent en compte toute l'implémentation et fournissent une mesure objective de couverture",
+        "Ils ne nécessitent pas de connaître le code",
+        "Ils remplacent les tests boîte noire"
+      ],
+      "answer": 1,
+      "explanation": "Forces : analyse complète de l'implémentation, mesure objective. Faiblesse : ne détecte pas les exigences omises."
+    },
+    {
+      "id": "Q4-013",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Le test exploratoire est PARTICULIÈREMENT utile quand…",
+      "options": [
+        "Les spécifications sont très détaillées et stables",
+        "Les spécifications sont insuffisantes ou en cas de forte pression du temps",
+        "On a beaucoup de temps pour planifier",
+        "Aucune compétence n'est requise"
+      ],
+      "answer": 1,
+      "explanation": "Le test exploratoire convient quand les specs manquent ou en cas de pression. Efficacité dépend fortement de l'expérience du testeur."
+    },
+    {
+      "id": "Q4-014",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Une charte de test est utilisée dans…",
+      "options": [
+        "Les tests basés sur les tables de décision",
+        "Le test exploratoire structuré en sessions",
+        "Les tests boîte blanche",
+        "Les tests de transition d'état"
+      ],
+      "answer": 1,
+      "explanation": "La charte de test contient les objectifs et guide la session de test exploratoire (test basé sur des sessions)."
+    },
+    {
+      "id": "Q4-015",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quel est l'acronyme des critères de qualité des User Stories ?",
+      "options": [
+        "INVEST",
+        "SMART",
+        "FIRST",
+        "RACI"
+      ],
+      "answer": 0,
+      "explanation": "INVEST : Indépendantes, Négociables, Valeur, Estimables, Small (petites), Testables."
+    },
+    {
+      "id": "Q4-016",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quels sont les '3 C' d'une User Story ?",
+      "options": [
+        "Code, Compile, Commit",
+        "Carte, Conversation, Confirmation",
+        "Client, Contrat, Conclusion",
+        "Cycle, Critère, Coût"
+      ],
+      "answer": 1,
+      "explanation": "Jeffries 2000 : Card (support), Conversation (échange), Confirmation (critères d'acceptation)."
+    },
+    {
+      "id": "Q4-017",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quels sont les DEUX formats les plus courants pour rédiger des critères d'acceptation ?",
+      "options": [
+        "Orienté scénario (Given/When/Then) et orienté règles (liste/table)",
+        "UML et BPMN",
+        "JSON et XML",
+        "Gherkin et Markdown"
+      ],
+      "answer": 0,
+      "explanation": "Les deux formats principaux sont : scénario (Given/When/Then) et règles (checklist, table entrée-sortie)."
+    },
+    {
+      "id": "Q4-018",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Dans l'ATDD, quelle est la PREMIÈRE étape ?",
+      "options": [
+        "Écrire le code",
+        "Tenir un atelier de spécification",
+        "Automatiser les tests",
+        "Faire un test exploratoire"
+      ],
+      "answer": 1,
+      "explanation": "L'atelier de spécification analyse l'US et ses critères d'acceptation avant de créer les cas de test."
+    },
+    {
+      "id": "Q4-019",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quelle technique de test basée sur l'expérience consiste à dériver une 'liste d'erreurs possibles' à attaquer méthodiquement ?",
+      "options": [
+        "Test exploratoire",
+        "Estimation d'erreurs (avec attaques de fautes)",
+        "Test basé sur des checklists",
+        "Test ATDD"
+      ],
+      "answer": 1,
+      "explanation": "Les 'attaques de fautes' sont une approche méthodique de l'estimation d'erreurs."
+    },
+    {
+      "id": "Q4-020",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quel est l'AVANTAGE PRINCIPAL des techniques boîte noire par rapport à boîte blanche ?",
+      "options": [
+        "Elles trouvent plus de défauts",
+        "Elles restent valides si l'implémentation change tant que le comportement reste le même",
+        "Elles ne nécessitent pas de testeur",
+        "Elles couvrent à 100 % le code"
+      ],
+      "answer": 1,
+      "explanation": "Les techniques boîte noire sont indépendantes de l'implémentation, donc les cas restent utiles après refactoring."
+    },
+
+    {
+      "id": "Q5-001",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Lequel des éléments suivants ferait PARTIE du contenu typique d'un plan de test ?",
+      "options": [
+        "Le code source de l'application",
+        "L'approche de test, les critères E/S, le référentiel des risques",
+        "Les logs d'exécution",
+        "Les rapports de clôture des tests d'autres projets"
+      ],
+      "answer": 1,
+      "explanation": "Un plan de test contient le contexte, hypothèses, parties prenantes, communication, risques, approche, budget et calendrier."
+    },
+    {
+      "id": "Q5-002",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Quelle est la différence entre Definition of Ready (DoR) et Definition of Done (DoD) ?",
+      "options": [
+        "Aucune, ce sont des synonymes",
+        "DoR = critères d'entrée, DoD = critères de sortie",
+        "DoR = test, DoD = production",
+        "DoR = développement, DoD = test"
+      ],
+      "answer": 1,
+      "explanation": "DoR conditionne le démarrage (entrée) ; DoD conditionne la complétion (sortie)."
+    },
+    {
+      "id": "Q5-003",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Estimation 3 points : a=4, m=8, b=14. Que vaut E ?",
+      "options": [
+        "8",
+        "8.33",
+        "10",
+        "12"
+      ],
+      "answer": 1,
+      "explanation": "E = (a + 4m + b)/6 = (4 + 32 + 14)/6 = 50/6 ≈ 8.33."
+    },
+    {
+      "id": "Q5-004",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Pour les mêmes valeurs (a=4, m=8, b=14), que vaut l'écart-type SD ?",
+      "options": [
+        "1",
+        "1.67",
+        "2",
+        "3"
+      ],
+      "answer": 1,
+      "explanation": "SD = (b - a)/6 = (14 - 4)/6 = 10/6 ≈ 1.67."
+    },
+    {
+      "id": "Q5-005",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Quelle technique d'estimation est basée sur des données historiques de projets antérieurs ?",
+      "options": [
+        "Delphi large bande",
+        "Estimation en 3 points",
+        "Estimation basée sur des ratios",
+        "Planning Poker"
+      ],
+      "answer": 2,
+      "explanation": "Les ratios standards (ex. dev:test = 3:2) proviennent de projets antérieurs de l'organisation."
+    },
+    {
+      "id": "Q5-006",
+      "chapter": 5,
+      "level": "K1",
+      "question": "Le Planning Poker est une variante de quelle technique ?",
+      "options": [
+        "Ratios",
+        "Extrapolation",
+        "Delphi large bande",
+        "Estimation 3 points"
+      ],
+      "answer": 2,
+      "explanation": "Le Planning Poker est une variante Agile du Delphi large bande."
+    },
+    {
+      "id": "Q5-007",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Vous devez prioriser les cas de test couvrant en premier les fonctions les plus risquées. Quelle stratégie utilisez-vous ?",
+      "options": [
+        "Priorisation basée sur la couverture",
+        "Priorisation basée sur les risques",
+        "Priorisation basée sur les exigences",
+        "Priorisation aléatoire"
+      ],
+      "answer": 1,
+      "explanation": "Priorisation basée sur les risques : les cas couvrant les + grands risques s'exécutent en premier."
+    },
+    {
+      "id": "Q5-008",
+      "chapter": 5,
+      "level": "K1",
+      "question": "Dans la pyramide des tests, quels tests se trouvent typiquement à la BASE ?",
+      "options": [
+        "Tests E2E / UI",
+        "Tests d'intégration système",
+        "Tests unitaires / de composants",
+        "Tests d'acceptation"
+      ],
+      "answer": 2,
+      "explanation": "La base = tests rapides, isolés, nombreux (unitaires). Le sommet = tests E2E, lents, peu nombreux."
+    },
+    {
+      "id": "Q5-009",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Dans le modèle des quadrants de tests (Marick), quel quadrant contient typiquement les tests exploratoires et UAT ?",
+      "options": [
+        "Q1 (technologie, soutien équipe)",
+        "Q2 (métier, soutien équipe)",
+        "Q3 (métier, critique produit)",
+        "Q4 (technologie, critique produit)"
+      ],
+      "answer": 2,
+      "explanation": "Q3 = orienté métier, critique produit : exploratoires, utilisabilité, UAT. Q4 = smoke et non fonctionnels."
+    },
+    {
+      "id": "Q5-010",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Quelle norme guide la gestion des risques ?",
+      "options": [
+        "ISO/IEC 25010",
+        "ISO 31000",
+        "ISO/IEC 20246",
+        "ISO/IEC/IEEE 29119-4"
+      ],
+      "answer": 1,
+      "explanation": "ISO 31000 traite des principes et lignes directrices de la gestion des risques."
+    },
+    {
+      "id": "Q5-011",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un risque PROJET ?",
+      "options": [
+        "Une fonctionnalité manquante",
+        "Une vulnérabilité de sécurité",
+        "Un retard de livraison d'un fournisseur",
+        "Un calcul erroné"
+      ],
+      "answer": 2,
+      "explanation": "Les risques projet incluent : organisationnels, humains, techniques, fournisseurs. Les risques produit touchent les caractéristiques-qualité."
+    },
+    {
+      "id": "Q5-012",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Le niveau de risque est typiquement calculé par…",
+      "options": [
+        "Probabilité × Impact",
+        "Coût × Délai",
+        "Impact ÷ Probabilité",
+        "Sévérité × Priorité"
+      ],
+      "answer": 0,
+      "explanation": "Approche quantitative : niveau de risque = probabilité × impact. Approche qualitative : matrice de risque."
+    },
+    {
+      "id": "Q5-013",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Lequel des éléments suivants N'EST PAS une option de réponse à un risque ?",
+      "options": [
+        "Atténuation",
+        "Acceptation",
+        "Transfert",
+        "Élimination totale garantie"
+      ],
+      "answer": 3,
+      "explanation": "Options : atténuation, acceptation, transfert, plan d'urgence. Aucune option ne garantit l'élimination totale."
+    },
+    {
+      "id": "Q5-014",
+      "chapter": 5,
+      "level": "K1",
+      "question": "Lequel des éléments suivants est une métrique de QUALITÉ PRODUIT ?",
+      "options": [
+        "Effort de test consommé",
+        "Nombre de cas exécutés",
+        "Temps moyen jusqu'à la défaillance (MTBF)",
+        "Couverture des exigences"
+      ],
+      "answer": 2,
+      "explanation": "MTBF, disponibilité, temps de réponse sont des métriques de qualité produit. Les autres concernent avancement ou couverture."
+    },
+    {
+      "id": "Q5-015",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Quelle est la différence entre 'sévérité' et 'priorité' d'un défaut ?",
+      "options": [
+        "Aucune",
+        "Sévérité = impact technique/métier ; priorité = urgence de correction",
+        "Sévérité = priorité",
+        "Sévérité = financière ; priorité = humaine"
+      ],
+      "answer": 1,
+      "explanation": "Un défaut peut avoir une sévérité élevée mais une priorité faible (et inversement)."
+    },
+    {
+      "id": "Q5-016",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Lequel des éléments suivants devrait OBLIGATOIREMENT figurer dans un rapport de défaut ?",
+      "options": [
+        "Le nom du fournisseur",
+        "Un identifiant unique, les étapes de reproduction, les résultats attendus vs réels",
+        "Le coût de correction estimé",
+        "Le numéro de version du compilateur"
+      ],
+      "answer": 1,
+      "explanation": "Éléments clés : ID unique, étapes reproductibles, attendu vs réel, sévérité, priorité, statut, environnement, etc."
+    },
+    {
+      "id": "Q5-017",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Quel est l'objectif PRINCIPAL de la gestion de configuration pour le test ?",
+      "options": [
+        "Augmenter le nombre de défauts",
+        "Identifier, contrôler et tracer les éléments de configuration pour assurer cohérence et traçabilité",
+        "Remplacer le test statique",
+        "Réduire le coût des outils"
+      ],
+      "answer": 1,
+      "explanation": "La gestion de configuration assure identification unique, versioning, traçabilité et permet de revenir à une baseline."
+    },
+    {
+      "id": "Q5-018",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Un rapport d'AVANCEMENT des tests est typiquement produit…",
+      "options": [
+        "Une seule fois en fin de projet",
+        "Régulièrement (quotidien, hebdo) pendant les tests",
+        "Uniquement par le développeur",
+        "Jamais en Agile"
+      ],
+      "answer": 1,
+      "explanation": "Le rapport d'avancement est régulier ; le rapport de clôture est ponctuel (fin de niveau, itération, projet)."
+    },
+
+    {
+      "id": "Q6-001",
+      "chapter": 6,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un AVANTAGE potentiel de l'automatisation des tests ?",
+      "options": [
+        "Élimine totalement le besoin de testeurs",
+        "Évaluation objective et réduction du travail manuel répétitif",
+        "Garantit zéro défaut",
+        "Pas de maintenance nécessaire"
+      ],
+      "answer": 1,
+      "explanation": "Gains : moins de répétition, cohérence, métriques objectives, accès facilité aux infos, time-to-market réduit."
+    },
+    {
+      "id": "Q6-002",
+      "chapter": 6,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un RISQUE potentiel de l'automatisation ?",
+      "options": [
+        "Détecter trop de défauts",
+        "Attentes irréalistes envers l'outil et dépendance excessive",
+        "Tests trop lents",
+        "Augmenter la qualité du code"
+      ],
+      "answer": 1,
+      "explanation": "Risques : attentes irréalistes, estimations inexactes, mauvais usage, dépendance fournisseur, incompatibilité plateforme."
+    },
+    {
+      "id": "Q6-003",
+      "chapter": 6,
+      "level": "K2",
+      "question": "Quel TYPE d'outils facilite l'intégration continue et le pipeline de livraison ?",
+      "options": [
+        "Outils de gestion des tests",
+        "Outils DevOps",
+        "Outils de test statique",
+        "Outils de tests non fonctionnels"
+      ],
+      "answer": 1,
+      "explanation": "Les outils DevOps supportent le pipeline de livraison, le suivi du workflow, le build automatisé, CI/CD."
+    },
+    {
+      "id": "Q6-004",
+      "chapter": 6,
+      "level": "K1",
+      "question": "Un outil 'd'exécution de tests' permet typiquement…",
+      "options": [
+        "De gérer les exigences",
+        "D'effectuer des revues humaines",
+        "D'exécuter automatiquement les tests et de mesurer la couverture",
+        "De rédiger la documentation utilisateur"
+      ],
+      "answer": 2,
+      "explanation": "Les outils d'exécution et de couverture facilitent l'exécution automatisée et la mesure de couverture."
+    },
+    {
+      "id": "Q6-005",
+      "chapter": 6,
+      "level": "K2",
+      "question": "Que faut-il considérer AVANT d'introduire un outil d'automatisation ?",
+      "options": [
+        "Uniquement le prix",
+        "Effort d'introduction, formation, maintenance, et adéquation aux besoins réels",
+        "Uniquement les avis en ligne",
+        "Aucune analyse n'est nécessaire"
+      ],
+      "answer": 1,
+      "explanation": "Un outil ≠ succès garanti. Il faut analyser l'effort total (intro, formation, maintenance) et l'adéquation au contexte."
+    },
+
+    {
+      "id": "QM-001",
+      "chapter": 0,
+      "level": "K2",
+      "question": "Combien de questions comporte typiquement l'examen Foundation Level ?",
+      "options": [
+        "30",
+        "40",
+        "50",
+        "60"
+      ],
+      "answer": 1,
+      "explanation": "40 questions QCM, durée 60 min (75 min pour non-anglophones natifs), seuil 65 %."
+    },
+    {
+      "id": "QM-002",
+      "chapter": 0,
+      "level": "K1",
+      "question": "Quels sont les 3 niveaux cognitifs des objectifs d'apprentissage ?",
+      "options": [
+        "K1 (se souvenir), K2 (comprendre), K3 (appliquer)",
+        "K1 (lire), K2 (écrire), K3 (parler)",
+        "Débutant, Intermédiaire, Avancé",
+        "Bronze, Argent, Or"
+      ],
+      "answer": 0,
+      "explanation": "K1 = se souvenir / rappeler, K2 = comprendre / expliquer, K3 = appliquer / utiliser."
+    },
+    {
+      "id": "QM-003",
+      "chapter": 0,
+      "level": "K1",
+      "question": "Quel est le seuil de réussite à l'examen Foundation ?",
+      "options": [
+        "50 %",
+        "60 %",
+        "65 %",
+        "75 %"
+      ],
+      "answer": 2,
+      "explanation": "Seuil officiel : 65 % soit 26 bonnes réponses sur 40."
+    }
+  ]
+}

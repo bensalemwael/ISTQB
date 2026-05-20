@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Quiz ISTQB CTFL v4.0 — Révision</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Quiz ISTQB CTFL v4.0</h1>
+  <p class="subtitle">Révision pour la certification Testeur Certifié Niveau Fondation</p>
+</header>
+
+<main id="app">
+  <!-- Écran de configuration -->
+  <section id="setup" class="screen active">
+    <h2>Configurer votre session</h2>
+
+    <fieldset>
+      <legend>Mode</legend>
+      <label><input type="radio" name="mode" value="training" checked> <strong>Entraînement</strong> — feedback immédiat avec explication</label>
+      <label><input type="radio" name="mode" value="exam"> <strong>Examen blanc</strong> — 40 questions, 60 min, résultats à la fin</label>
+    </fieldset>
+
+    <fieldset id="chapter-filter">
+      <legend>Chapitres</legend>
+      <label><input type="checkbox" name="chapter" value="all" checked> Tous</label>
+      <label><input type="checkbox" name="chapter" value="1"> 1. Fondamentaux</label>
+      <label><input type="checkbox" name="chapter" value="2"> 2. Cycle de vie</label>
+      <label><input type="checkbox" name="chapter" value="3"> 3. Test statique</label>
+      <label><input type="checkbox" name="chapter" value="4"> 4. Analyse & conception</label>
+      <label><input type="checkbox" name="chapter" value="5"> 5. Gestion</label>
+      <label><input type="checkbox" name="chapter" value="6"> 6. Outils</label>
+      <label><input type="checkbox" name="chapter" value="0"> Métadonnées examen</label>
+    </fieldset>
+
+    <fieldset id="level-filter">
+      <legend>Niveaux cognitifs</legend>
+      <label><input type="checkbox" name="level" value="K1" checked> K1 (se souvenir)</label>
+      <label><input type="checkbox" name="level" value="K2" checked> K2 (comprendre)</label>
+      <label><input type="checkbox" name="level" value="K3" checked> K3 (appliquer)</label>
+    </fieldset>
+
+    <fieldset id="count-fieldset">
+      <legend>Nombre de questions</legend>
+      <label>
+        <input type="number" id="count" value="20" min="1" max="100" step="1"> questions
+        <span class="hint">(Examen blanc = forcé à 40)</span>
+      </label>
+      <label><input type="checkbox" id="shuffle-answers" checked> Mélanger les réponses</label>
+    </fieldset>
+
+    <div class="stats" id="stats"></div>
+
+    <button id="start" class="primary">Démarrer le quiz →</button>
+
+    <details class="history-block">
+      <summary>📊 Historique des sessions</summary>
+      <div id="history"></div>
+      <button id="clear-history" class="ghost">Effacer l'historique</button>
+    </details>
+  </section>
+
+  <!-- Écran de quiz -->
+  <section id="quiz" class="screen">
+    <div class="bar">
+      <div class="progress"><div id="progress-bar"></div></div>
+      <div class="meta">
+        <span id="qnum"></span>
+        <span id="timer" hidden></span>
+      </div>
+    </div>
+
+    <div id="question-container"></div>
+
+    <div class="controls">
+      <button id="prev" class="ghost">← Précédent</button>
+      <button id="next" class="primary">Suivant →</button>
+      <button id="finish" class="primary" hidden>Terminer</button>
+    </div>
+  </section>
+
+  <!-- Écran de résultats -->
+  <section id="results" class="screen">
+    <h2>Résultats</h2>
+    <div id="score-summary"></div>
+    <div id="results-detail"></div>
+    <div class="controls">
+      <button id="retry-wrong" class="primary">Refaire les erreurs</button>
+      <button id="restart" class="ghost">Nouvelle session</button>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>Basé sur le syllabus officiel <a href="https://www.cftl.fr" target="_blank">CFTL/ISTQB CTFL v4.0</a> (avril 2023) — Contenu pédagogique, non officiel.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
