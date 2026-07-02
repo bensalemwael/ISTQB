@@ -6,8 +6,9 @@ Repo de révision pour la certification **ISTQB Testeur Certifié Niveau Fondati
 
 ## Contenu
 
+- **[plan-5-jours.md](plan-5-jours.md)** — 🎯 Plan de révision intensif sur 5 jours (bloc par bloc, avec critères de sortie)
 - **[chapters/](chapters/)** — Fiches de révision détaillées par chapitre (1 à 6)
-- **[fiches/](fiches/)** — Fiches synthèses (mots-clés, principes, formules)
+- **[fiches/](fiches/)** — Fiches synthèses : mémo express, exercices K3 corrigés, pièges d'examen, glossaire essentiel
 - **[quiz/](quiz/)** — Quiz interactif en ligne (HTML/JS, ouvrable directement dans un navigateur)
 
 ## L'examen en chiffres
@@ -21,14 +22,16 @@ Repo de révision pour la certification **ISTQB Testeur Certifié Niveau Fondati
 
 ## Plan du syllabus v4.0
 
-| Ch. | Titre | Durée min. | Points clés |
-|---|---|---|---|
-| 1 | Fondamentaux des tests | 180 min | Objectifs, 7 principes, processus, rôles |
-| 2 | Tests dans le cycle de vie | 130 min | TDD/ATDD/BDD, DevOps, shift-left, niveaux, types |
-| 3 | Test statique | 80 min | Revues (informelle, walkthrough, technique, inspection) |
-| 4 | Analyse & conception | 390 min | Partitions, valeurs limites, tables décision, transitions d'état, boîte blanche, ATDD |
-| 5 | Gestion des activités | 335 min | Plan, estimation, risques, métriques, défauts, pyramide, quadrants |
-| 6 | Outils de test | 20 min | Catégories, bénéfices, risques |
+| Ch. | Titre | Durée min. | **Questions à l'examen** | Points clés |
+|---|---|---|---|---|
+| 1 | Fondamentaux des tests | 180 min | **8** | Objectifs, 7 principes, processus, rôles |
+| 2 | Tests dans le cycle de vie | 130 min | **6** | TDD/ATDD/BDD, DevOps, shift-left, niveaux, types |
+| 3 | Test statique | 80 min | **4** | Revues (informelle, walkthrough, technique, inspection) |
+| 4 | Analyse & conception | 390 min | **11** | Partitions, valeurs limites, tables décision, transitions d'état, boîte blanche, ATDD |
+| 5 | Gestion des activités | 335 min | **9** | Plan, estimation, risques, métriques, défauts, pyramide, quadrants |
+| 6 | Outils de test | 20 min | **2** | Catégories, bénéfices, risques |
+
+> Distribution officielle des 40 questions (Exam Structure Tables v1.3). **Ch4 + Ch5 = 50 % de l'examen.** Le mode examen du quiz respecte cette distribution.
 
 ## Démarrer le quiz
 
@@ -47,19 +50,21 @@ Activer Pages dans `Settings → Pages → Branch: main, Folder: /quiz` et accé
 
 ## Fonctionnalités du quiz
 
-- ✅ 80+ questions couvrant les 6 chapitres
+- ✅ 135+ questions couvrant les 6 chapitres (dont 32 questions K3 avec calculs corrigés)
 - ✅ Filtres par chapitre et par niveau cognitif (K1/K2/K3)
-- ✅ Mode examen blanc (40 questions, 60 minutes, chrono)
+- ✅ Mode examen blanc (40 questions, 60 minutes, chrono, **distribution officielle par chapitre 8/6/4/11/9/2**)
 - ✅ Mode entraînement (feedback immédiat avec explication)
 - ✅ Score, historique local (localStorage)
 - ✅ Mélange aléatoire des questions et réponses
 
-## Méthode de révision suggérée (4 semaines)
+## Méthodes de révision
 
-1. **S1** — Lire chapitre 1 + 2, faire les quiz par chapitre (K1/K2)
-2. **S2** — Lire chapitre 3 + 4, faire les quiz, pratiquer les techniques K3
-3. **S3** — Lire chapitre 5 + 6, faire les quiz complets
-4. **S4** — Examens blancs à répétition, revoir les chapitres faibles
+- **⚡ Examen dans moins d'une semaine** → suivre le [plan intensif 5 jours](plan-5-jours.md) (bloc par bloc, critères de sortie quotidiens)
+- **📆 4 semaines devant soi** :
+  1. **S1** — Lire chapitre 1 + 2, faire les quiz par chapitre (K1/K2)
+  2. **S2** — Lire chapitre 3 + 4, faire les quiz, pratiquer les techniques K3 ([fiches/02-exercices-k3-corriges.md](fiches/02-exercices-k3-corriges.md))
+  3. **S3** — Lire chapitre 5 + 6, faire les quiz complets
+  4. **S4** — Examens blancs à répétition, revoir les chapitres faibles + [fiches/03-pieges-examen.md](fiches/03-pieges-examen.md)
 
 ## Ressources complémentaires
 

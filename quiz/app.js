@@ -147,7 +147,23 @@
     if (STATE.mode === 'exam') count = Math.min(40, pool.length);
     count = Math.min(count, pool.length);
 
-    STATE.session = shuffle(pool).slice(0, count);
+    if (STATE.mode === 'exam') {
+      // Distribution officielle CTFL v4.0 (Exam Structure Tables v1.3)
+      const EXAM_DIST = { 1: 8, 2: 6, 3: 4, 4: 11, 5: 9, 6: 2 };
+      const picked = [];
+      Object.entries(EXAM_DIST).forEach(([ch, n]) => {
+        const chPool = shuffle(pool.filter(q => q.chapter === Number(ch)));
+        picked.push(...chPool.slice(0, n));
+      });
+      // Compléter si un chapitre manque de questions
+      if (picked.length < count) {
+        const ids = new Set(picked.map(q => q.id));
+        picked.push(...shuffle(pool.filter(q => !ids.has(q.id))).slice(0, count - picked.length));
+      }
+      STATE.session = shuffle(picked);
+    } else {
+      STATE.session = shuffle(pool).slice(0, count);
+    }
     STATE.current = 0;
     STATE.answers = {};
     STATE.optionMaps = {};

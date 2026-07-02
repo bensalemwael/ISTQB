@@ -213,6 +213,76 @@
       "answer": 1,
       "explanation": "ISO/IEC/IEEE 29119-1 traite des concepts généraux. La partie 2 = processus, 3 = doc, 4 = techniques."
     },
+    {
+      "id": "Q1-016",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Parmi les options suivantes, laquelle représente le niveau d'indépendance du test le PLUS ÉLEVÉ ?",
+      "options": [
+        "Le développeur teste son propre code",
+        "Un développeur teste le code d'un collègue de la même équipe",
+        "Une équipe de test indépendante au sein de l'organisation",
+        "Des testeurs externes à l'organisation"
+      ],
+      "answer": 3,
+      "explanation": "Le syllabus décrit des degrés croissants d'indépendance : pas de testeur indépendant (le développeur teste son code), testeurs de la même équipe, équipe de test indépendante interne, et enfin testeurs externes à l'organisation — le niveau le plus élevé."
+    },
+    {
+      "id": "Q1-017",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un AVANTAGE de l'indépendance du test ?",
+      "options": [
+        "Les testeurs indépendants sont susceptibles de reconnaître d'autres types de défaillances que les développeurs, car ils n'ont pas les mêmes biais cognitifs",
+        "Les testeurs indépendants corrigent les défauts plus rapidement",
+        "Les développeurs n'ont plus besoin de tester leur propre code",
+        "L'indépendance supprime le besoin de communication avec les développeurs"
+      ],
+      "answer": 0,
+      "explanation": "Des testeurs indépendants ne partagent pas les biais cognitifs de l'auteur (p. ex. biais de confirmation) et peuvent vérifier, remettre en cause ou réfuter les hypothèses faites lors de la spécification et de l'implémentation."
+    },
+    {
+      "id": "Q1-018",
+      "chapter": 1,
+      "level": "K1",
+      "question": "Laquelle des activités suivantes relève typiquement du rôle de TESTEUR plutôt que de celui de Test Manager ?",
+      "options": [
+        "Créer et mettre à jour le plan de test",
+        "Le pilotage et le contrôle des tests",
+        "La conception, l'implémentation et l'exécution des tests",
+        "La rédaction du rapport de clôture des tests"
+      ],
+      "answer": 2,
+      "explanation": "Le Test Manager prend en charge la planification, le pilotage, le contrôle et la clôture des tests ; le testeur prend en charge les aspects d'ingénierie : analyse, conception, implémentation et exécution."
+    },
+    {
+      "id": "Q1-019",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Dans quelle situation l'approche 'équipe intégrée' (whole-team approach) est-elle la MOINS appropriée ?",
+      "options": [
+        "Un projet Agile reposant sur une forte collaboration",
+        "Un contexte exigeant un haut niveau d'indépendance du test, comme un système critique de sûreté",
+        "Une petite équipe co-localisée développant une application web",
+        "Un produit nécessitant un feedback rapide des utilisateurs"
+      ],
+      "answer": 1,
+      "explanation": "L'approche équipe intégrée renforce la collaboration mais réduit l'indépendance du test. Elle peut donc être inadaptée lorsque le contexte exige un niveau élevé d'indépendance, p. ex. pour les systèmes critiques de sûreté (safety-critical)."
+    },
+    {
+      "id": "Q1-020",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Pourquoi les connaissances du domaine métier sont-elles importantes pour un testeur ?",
+      "options": [
+        "Elles remplacent les connaissances techniques",
+        "Elles permettent d'écrire du code plus rapidement",
+        "Elles permettent de comprendre les besoins des clients et des utilisateurs et d'évaluer le produit de leur point de vue",
+        "Elles dispensent de lire les spécifications"
+      ],
+      "answer": 2,
+      "explanation": "Les connaissances du domaine permettent au testeur d'appréhender le produit du point de vue du client et de l'utilisateur, et de communiquer efficacement avec eux. Elles complètent — sans remplacer — les compétences techniques et de test."
+    },
 
     {
       "id": "Q2-001",
@@ -424,6 +494,90 @@
       "answer": 2,
       "explanation": "Le big-bang intègre tout d'un coup. Bottom-up commence par les composants bas-niveau, top-down par le haut."
     },
+    {
+      "id": "Q2-016",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un DÉFI de DevOps du point de vue du test ?",
+      "options": [
+        "Le pipeline CI/CD doit être défini et maintenu, ce qui exige un effort et des ressources supplémentaires",
+        "Le feedback fourni aux développeurs est trop rapide",
+        "Les tests automatisés ne peuvent pas être intégrés au pipeline de livraison",
+        "Le shift-left devient impossible à appliquer"
+      ],
+      "answer": 0,
+      "explanation": "DevOps apporte des bénéfices (feedback rapide, shift-left), mais comporte des défis : définir et maintenir le pipeline CI/CD, introduire et maintenir les outils d'automatisation, ce qui demande effort et ressources. Les tests manuels restent par ailleurs nécessaires."
+    },
+    {
+      "id": "Q2-017",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Laquelle des pratiques suivantes est un exemple de 'shift-left' ?",
+      "options": [
+        "Exécuter les tests d'acceptation uniquement après la mise en production",
+        "Effectuer une analyse statique du code dès qu'il est écrit, avant l'exécution des tests dynamiques",
+        "Reporter la revue des exigences après la fin du codage",
+        "Confier tous les tests à une équipe externe en fin de projet"
+      ],
+      "answer": 1,
+      "explanation": "Le shift-left applique le principe du test précoce : revoir les spécifications du point de vue du test, écrire les cas de test avant le code, utiliser l'analyse statique et l'intégration continue dès que possible."
+    },
+    {
+      "id": "Q2-018",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Un système bancaire en production reçoit un correctif sur le module de calcul des intérêts. À quoi sert l'analyse d'impact dans ce contexte ?",
+      "options": [
+        "À estimer le coût financier du correctif",
+        "À déterminer quel développeur a introduit le défaut",
+        "À identifier les zones affectées par le changement et à déterminer les tests de régression à exécuter",
+        "À prouver que le correctif fonctionne sans avoir à le tester"
+      ],
+      "answer": 2,
+      "explanation": "L'analyse d'impact évalue les modifications apportées, identifie les conséquences attendues et non désirées, et détermine l'étendue des tests de maintenance, notamment les tests de régression sur les zones affectées."
+    },
+    {
+      "id": "Q2-019",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Quelle affirmation décrit correctement la relation entre les niveaux de test et les types de test ?",
+      "options": [
+        "Tous les types de test peuvent être appliqués à n'importe quel niveau de test",
+        "Les tests fonctionnels n'existent qu'au niveau système",
+        "Les tests non fonctionnels sont réservés au niveau composant",
+        "Les types de test et les niveaux de test sont des synonymes"
+      ],
+      "answer": 0,
+      "explanation": "Les types de test (fonctionnel, non fonctionnel, boîte noire, boîte blanche) sont orthogonaux aux niveaux : n'importe quel type peut être réalisé à n'importe quel niveau, p. ex. un test de sécurité au niveau composant comme au niveau système."
+    },
+    {
+      "id": "Q2-020",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Lors des tests système, l'équipe mesure le temps de réponse d'une API sous une charge de 1 000 utilisateurs simultanés. Comment classer cette activité ?",
+      "options": [
+        "Test fonctionnel au niveau composant",
+        "Test boîte blanche au niveau intégration de composants",
+        "Test fonctionnel au niveau acceptation",
+        "Test non fonctionnel au niveau système"
+      ],
+      "answer": 3,
+      "explanation": "L'efficience de performance évalue 'comment' le système se comporte : c'est une caractéristique non fonctionnelle (ISO 25010). L'activité étant réalisée pendant les tests système, il s'agit d'un test non fonctionnel au niveau système."
+    },
+    {
+      "id": "Q2-021",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Quels facteurs déterminent l'ÉTENDUE des tests de maintenance ?",
+      "options": [
+        "Uniquement la disponibilité des testeurs",
+        "Le degré de risque du changement, la taille du système existant et la taille du changement effectué",
+        "Uniquement le budget alloué au marketing",
+        "Le nombre de développeurs dans l'équipe"
+      ],
+      "answer": 1,
+      "explanation": "Le syllabus cite trois facteurs qui déterminent l'étendue des tests de maintenance : le degré de risque de la modification, la taille du système existant et la taille du changement effectué."
+    },
 
     {
       "id": "Q3-001",
@@ -592,6 +746,90 @@
       ],
       "answer": 1,
       "explanation": "Un feedback précoce évite les écarts de vision et les rectifications coûteuses ; il améliore la priorisation et la valeur."
+    },
+    {
+      "id": "Q3-013",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Au cours de quelle activité du processus de revue chaque réviseur détecte-t-il les anomalies, par exemple à l'aide de checklists ?",
+      "options": [
+        "Planification",
+        "Lancement de la revue",
+        "Revue individuelle",
+        "Correction et rapport"
+      ],
+      "answer": 2,
+      "explanation": "La revue individuelle est l'activité où chaque réviseur examine seul le produit d'activités pour identifier anomalies, recommandations et questions, en appliquant une ou plusieurs techniques (lecture basée sur des checklists, sur des scénarios, etc.)."
+    },
+    {
+      "id": "Q3-014",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Quelle activité du processus de revue comprend la distribution du produit d'activités et l'explication du périmètre et des objectifs aux participants ?",
+      "options": [
+        "Planification",
+        "Lancement de la revue",
+        "Communication et analyse",
+        "Revue individuelle"
+      ],
+      "answer": 1,
+      "explanation": "Le lancement de la revue (initiation) vise à s'assurer que chacun est prêt à démarrer : distribution du produit d'activités et des supports, explication du périmètre, des objectifs, du processus, des rôles, et réponses aux questions des participants."
+    },
+    {
+      "id": "Q3-015",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Dans une revue formelle, quel rôle décide de ce qui doit être revu et fournit les ressources nécessaires (personnel et temps) ?",
+      "options": [
+        "Le manager",
+        "Le scribe",
+        "L'auteur",
+        "Le facilitateur"
+      ],
+      "answer": 0,
+      "explanation": "Le manager décide de l'exécution de la revue et fournit les ressources (personnel, temps, budget). Le facilitateur assure le bon déroulement des réunions et les médiations, tandis que le scribe consigne les anomalies."
+    },
+    {
+      "id": "Q3-016",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Quel rôle porte la responsabilité GLOBALE d'une revue, décidant qui y participera et organisant où et quand elle aura lieu ?",
+      "options": [
+        "Le modérateur",
+        "L'auteur",
+        "Le scribe",
+        "Le leader de la revue"
+      ],
+      "answer": 3,
+      "explanation": "Le leader de la revue (review leader) assume la responsabilité globale : il décide qui sera impliqué et organise le lieu et le moment de la revue. Le facilitateur (modérateur), lui, anime les réunions de revue."
+    },
+    {
+      "id": "Q3-017",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Parmi les suivants, lequel N'EST PAS un facteur de succès des revues ?",
+      "options": [
+        "Découper les gros produits d'activités en petites parties revues séparément",
+        "Donner aux participants un temps de préparation suffisant",
+        "Bénéficier du soutien du management",
+        "Évaluer l'auteur en fonction du nombre d'anomalies trouvées"
+      ],
+      "answer": 3,
+      "explanation": "Utiliser les résultats d'une revue pour évaluer les participants ou l'auteur détruit la confiance et va à l'encontre des objectifs. Les facteurs de succès incluent le découpage en petites parties, un temps de préparation suffisant, le soutien du management et une culture d'amélioration continue."
+    },
+    {
+      "id": "Q3-018",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Au cours de quelle activité du processus de revue décide-t-on du statut des anomalies (acceptée, rejetée) et évalue-t-on le niveau de qualité du produit revu ?",
+      "options": [
+        "Revue individuelle",
+        "Communication et analyse",
+        "Planification",
+        "Lancement de la revue"
+      ],
+      "answer": 1,
+      "explanation": "Lors de la communication et de l'analyse (souvent en réunion de revue), les anomalies sont discutées, leur statut est décidé (une anomalie n'est pas nécessairement un défaut), et le niveau de qualité ainsi que les actions de suivi sont déterminés."
     },
 
     {
@@ -874,6 +1112,258 @@
       "answer": 1,
       "explanation": "Les techniques boîte noire sont indépendantes de l'implémentation, donc les cas restent utiles après refactoring."
     },
+    {
+      "id": "Q4-021",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un champ 'note d'examen' accepte des entiers avec les règles : 0–49 = échec ; 50–79 = réussite ; 80–100 = mention. Les valeurs inférieures à 0 et supérieures à 100 sont rejetées. Quel est le nombre MINIMAL de cas de test pour couvrir toutes les partitions d'équivalence ?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "answer": 2,
+      "explanation": "Il y a 5 partitions : deux invalides (< 0 et > 100) et trois valides (0–49 échec, 50–79 réussite, 80–100 mention). Avec un seul paramètre, chaque cas de test ne couvre qu'une partition, donc 5 cas au minimum."
+    },
+    {
+      "id": "Q4-022",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Une fonction prend deux paramètres : pays ∈ {France, Belgique, Suisse} et type de client ∈ {particulier, professionnel}. En appliquant le partitionnement d'équivalence avec le critère 'chaque partition couverte au moins une fois', combien de cas de test faut-il au MINIMUM ?",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "6"
+      ],
+      "answer": 1,
+      "explanation": "Chaque cas de test combine un pays ET un type de client, couvrant ainsi une partition de chaque paramètre. Il faut donc au moins max(3, 2) = 3 cas, p. ex. (France, particulier), (Belgique, professionnel), (Suisse, particulier)."
+    },
+    {
+      "id": "Q4-023",
+      "chapter": 4,
+      "level": "K3",
+      "question": "La livraison gratuite s'applique aux commandes de 50 € à 200 € inclus (montants en euros entiers). Avec l'analyse des valeurs limites à 2 valeurs, quelles valeurs faut-il tester ?",
+      "options": [
+        "{50, 200}",
+        "{49, 50, 200, 201}",
+        "{49, 50, 51, 199, 200, 201}",
+        "{48, 49, 201, 202}"
+      ],
+      "answer": 1,
+      "explanation": "En BVA à 2 valeurs, on teste chaque valeur limite et sa plus proche voisine dans la partition adjacente : 49 et 50 pour la limite basse, 200 et 201 pour la limite haute, soit 4 valeurs."
+    },
+    {
+      "id": "Q4-024",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un système tarifaire accepte un âge entier ; toute valeur hors de 0–120 est rejetée. Tarifs : enfant 0–12, adolescent 13–17, adulte 18–64, senior 65–120. Avec l'analyse des valeurs limites à 2 valeurs, combien de valeurs distinctes faut-il tester ?",
+      "options": [
+        "8",
+        "10",
+        "12",
+        "16"
+      ],
+      "answer": 1,
+      "explanation": "Les valeurs à tester sont : -1 et 0 (limite basse) ; 12 et 13, 17 et 18, 64 et 65 (frontières internes, chaque limite ayant sa voisine dans la partition adjacente) ; 120 et 121 (limite haute). Soit 10 valeurs distinctes."
+    },
+    {
+      "id": "Q4-025",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un mot de passe doit contenir entre 8 et 20 caractères inclus. Avec l'analyse des valeurs limites à 3 valeurs, quelles longueurs faut-il tester ?",
+      "options": [
+        "{8, 20}",
+        "{7, 8, 20, 21}",
+        "{7, 8, 9, 19, 20, 21}",
+        "{6, 7, 8, 20, 21, 22}"
+      ],
+      "answer": 2,
+      "explanation": "La BVA à 3 valeurs teste chaque valeur limite avec ses deux voisines : 7, 8, 9 pour la limite basse et 19, 20, 21 pour la limite haute, soit 6 longueurs distinctes."
+    },
+    {
+      "id": "Q4-026",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Une table de décision comporte 2 conditions booléennes et 1 condition pouvant prendre 3 valeurs. Combien de colonnes contient la table complète (non simplifiée) ?",
+      "options": [
+        "7",
+        "8",
+        "12",
+        "16"
+      ],
+      "answer": 2,
+      "explanation": "Le nombre de colonnes de la table complète est le produit du nombre de valeurs possibles de chaque condition : 2 × 2 × 3 = 12 colonnes."
+    },
+    {
+      "id": "Q4-027",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Une table de décision complète pour l'accord d'un prêt utilise C1 = 'client fidèle' et C2 = 'revenu suffisant'. Les colonnes sont R1 (V,V), R2 (V,F), R3 (F,V) et R4 (F,F). Un client NON fidèle disposant d'un revenu suffisant correspond à quelle colonne ?",
+      "options": [
+        "R1",
+        "R2",
+        "R3",
+        "R4"
+      ],
+      "answer": 2,
+      "explanation": "Client non fidèle → C1 = F ; revenu suffisant → C2 = V. La combinaison (F, V) correspond à la colonne R3."
+    },
+    {
+      "id": "Q4-028",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un site applique les règles suivantes : si membre premium ET commande ≥ 30 € → livraison gratuite ; si membre premium ET commande < 30 € → réduction de 50 % sur la livraison ; sinon → tarif plein. Une cliente NON premium passe une commande de 45 €. Quelle action le système doit-il appliquer ?",
+      "options": [
+        "Livraison gratuite",
+        "Réduction de 50 % sur la livraison",
+        "Tarif plein",
+        "Erreur : cas non couvert par les règles"
+      ],
+      "answer": 2,
+      "explanation": "La cliente n'est pas membre premium : les deux premières règles, qui exigent toutes deux le statut premium, ne s'appliquent pas. C'est la règle 'sinon' qui s'applique : tarif plein, quel que soit le montant de la commande."
+    },
+    {
+      "id": "Q4-029",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un lecteur audio a 3 états {Arrêté, En lecture, Pause} et 3 événements {play, pause, stop}. Transitions valides : Arrêté–play→En lecture ; En lecture–pause→Pause ; En lecture–stop→Arrêté ; Pause–play→En lecture ; Pause–stop→Arrêté. Combien de transitions faut-il exercer pour la couverture des transitions valides (0-switch), et combien d'entrées de la table d'états pour la couverture de toutes les transitions ?",
+      "options": [
+        "5 et 9",
+        "5 et 5",
+        "9 et 9",
+        "3 et 5"
+      ],
+      "answer": 0,
+      "explanation": "La couverture 0-switch exige d'exercer les 5 transitions valides. La couverture de toutes les transitions couvre toutes les cellules de la table d'états : 3 états × 3 événements = 9 entrées, dont 4 tentatives de transitions invalides."
+    },
+    {
+      "id": "Q4-030",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un tunnel de commande a pour états : Accueil (initial), Sélection, Confirmé (final) et Abandonné (final). Transitions valides : T1 Accueil→Sélection ; T2 Sélection→Confirmé ; T3 Sélection→Abandonné ; T4 Sélection→Accueil. Combien de cas de test faut-il au MINIMUM pour couvrir toutes les transitions valides ?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "answer": 1,
+      "explanation": "T2 et T3 aboutissent chacune à un état final sans transition sortante : une même séquence ne peut donc pas exercer les deux. Deux cas suffisent : Accueil→Sélection→Accueil→Sélection→Confirmé (T1, T4, T1, T2) et Accueil→Sélection→Abandonné (T1, T3)."
+    },
+    {
+      "id": "Q4-031",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Soit le pseudo-code : lire(x) ; si x < 0 alors x = -x ; fin si ; afficher(x). Quel est le nombre minimal de cas de test pour 100 % de couverture des instructions, puis pour 100 % de couverture des branches ?",
+      "options": [
+        "1 et 1",
+        "1 et 2",
+        "2 et 2",
+        "2 et 4"
+      ],
+      "answer": 1,
+      "explanation": "Un seul cas avec x < 0 (p. ex. x = -5) exécute toutes les instructions, y compris x = -x → 1 cas pour les instructions. La couverture des branches exige aussi la sortie 'faux' de la décision (p. ex. x = 3) → 2 cas."
+    },
+    {
+      "id": "Q4-032",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Une suite de tests exerce 6 des 8 branches d'un composant. Quelle est la couverture des branches atteinte ?",
+      "options": [
+        "50 %",
+        "60 %",
+        "66 %",
+        "75 %"
+      ],
+      "answer": 3,
+      "explanation": "Couverture des branches = branches exercées / branches totales = 6 / 8 = 75 %. Pour atteindre 100 %, il faudrait des cas de test supplémentaires exerçant les 2 branches restantes."
+    },
+    {
+      "id": "Q4-033",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Complétez ce scénario au format Given/When/Then : 'Étant donné un compte avec un solde de 100 €, ___ l'utilisateur retire 40 €, ___ le solde affiché est de 60 €.'",
+      "options": [
+        "Lorsque / Alors",
+        "Alors / Lorsque",
+        "Étant donné / Alors",
+        "Lorsque / Étant donné"
+      ],
+      "answer": 0,
+      "explanation": "Given (Étant donné) décrit le contexte initial, When (Lorsque) l'action déclenchante, Then (Alors) le résultat attendu vérifiable : LORSQUE l'utilisateur retire 40 €, ALORS le solde affiché est de 60 €."
+    },
+    {
+      "id": "Q4-034",
+      "chapter": 4,
+      "level": "K3",
+      "question": "User story : 'En tant que client, je veux payer par carte pour finaliser ma commande.' Critère d'acceptation : 'Le paiement est refusé si la carte est expirée.' En ATDD, quel cas de test dérive-t-on DIRECTEMENT de ce critère ?",
+      "options": [
+        "Vérifier que la page de paiement s'affiche en moins de 2 secondes",
+        "Saisir une carte dont la date d'expiration est dépassée et vérifier que le paiement est refusé",
+        "Relire le code du module de paiement en revue par les pairs",
+        "Vérifier qu'un nouveau client peut créer un compte"
+      ],
+      "answer": 1,
+      "explanation": "En ATDD, les cas de test sont dérivés directement des critères d'acceptation lors de l'atelier de spécification : le critère 'paiement refusé si carte expirée' conduit à saisir une carte expirée et à vérifier le refus. Les autres options ne testent pas ce critère."
+    },
+    {
+      "id": "Q4-035",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Parmi les affirmations suivantes sur les partitions d'équivalence, laquelle est correcte ?",
+      "options": [
+        "Les partitions peuvent se chevaucher",
+        "Seules les partitions valides doivent être testées",
+        "Les partitions ne doivent pas être vides, ne doivent pas se chevaucher et doivent couvrir l'ensemble des valeurs possibles",
+        "Chaque partition doit contenir exactement une valeur"
+      ],
+      "answer": 2,
+      "explanation": "Une partition d'équivalence doit être non vide et disjointe des autres, et l'union des partitions doit couvrir tout le domaine. On suppose que tous les éléments d'une même partition sont traités de la même manière par l'objet de test."
+    },
+    {
+      "id": "Q4-036",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quel est un AVANTAGE du test par table de décision ?",
+      "options": [
+        "Il aide à identifier toutes les combinaisons importantes de conditions et à détecter les lacunes ou contradictions dans les exigences",
+        "Il garantit une couverture de code de 100 %",
+        "Il élimine le besoin d'exécuter les tests",
+        "Il remplace l'analyse des valeurs limites"
+      ],
+      "answer": 0,
+      "explanation": "L'approche systématique des tables de décision permet de repérer les combinaisons de conditions oubliées, incohérentes ou contradictoires dans les exigences, en plus de servir de base à la dérivation des cas de test."
+    },
+    {
+      "id": "Q4-037",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Dans le test basé sur des checklists, pourquoi les points de contrôle ne doivent-ils être ni trop détaillés ni trop généraux ?",
+      "options": [
+        "Parce que la checklist doit tenir sur une seule page",
+        "Trop détaillés, ils deviennent rigides comme des cas de test scriptés ; trop généraux, leur interprétation devient trop variable",
+        "Parce que les outils de gestion des tests limitent le nombre d'items",
+        "Parce que le syllabus impose un nombre exact d'items"
+      ],
+      "answer": 1,
+      "explanation": "Le test basé sur des checklists offre plus de variabilité (donc une meilleure couverture potentielle) mais moins de répétabilité que le test scripté. Le bon niveau de détail des items permet d'équilibrer ces deux effets."
+    },
+    {
+      "id": "Q4-038",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Quel est le principal bénéfice de la rédaction COLLABORATIVE des user stories (représentants métier, développeurs, testeurs) ?",
+      "options": [
+        "Réduire le nombre de réunions de l'équipe",
+        "Permettre aux représentants métier d'écrire le code",
+        "Obtenir une vision partagée et détecter tôt les défauts des exigences (ambiguïtés, contradictions, omissions)",
+        "Supprimer le besoin de critères d'acceptation"
+      ],
+      "answer": 2,
+      "explanation": "La collaboration des trois perspectives (métier, développement, test) crée une compréhension partagée et permet de détecter les défauts des exigences avant l'implémentation, au moment où ils coûtent le moins cher à corriger."
+    },
 
     {
       "id": "Q5-001",
@@ -1127,6 +1617,174 @@
       "answer": 1,
       "explanation": "Le rapport d'avancement est régulier ; le rapport de clôture est ponctuel (fin de niveau, itération, projet)."
     },
+    {
+      "id": "Q5-019",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Estimation à 3 points pour une tâche de test : estimation optimiste a = 6, plus probable m = 9, pessimiste b = 18 (en jours-personne). Que vaut l'estimation finale E ?",
+      "options": [
+        "9",
+        "9,5",
+        "10",
+        "11"
+      ],
+      "answer": 2,
+      "explanation": "E = (a + 4m + b) / 6 = (6 + 4×9 + 18) / 6 = (6 + 36 + 18) / 6 = 60 / 6 = 10 jours-personne."
+    },
+    {
+      "id": "Q5-020",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Estimation à 3 points : a = 2, m = 5, b = 14 (en jours). Que valent l'estimation E et l'écart-type ET ?",
+      "options": [
+        "E = 6 ; ET = 2",
+        "E = 7 ; ET = 2",
+        "E = 6 ; ET = 3",
+        "E = 5 ; ET = 1,5"
+      ],
+      "answer": 0,
+      "explanation": "E = (a + 4m + b) / 6 = (2 + 20 + 14) / 6 = 36 / 6 = 6. ET = (b − a) / 6 = (14 − 2) / 6 = 2. L'effort sera donc le plus probablement compris entre 4 et 8 jours (E ± ET)."
+    },
+    {
+      "id": "Q5-021",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Trois risques produit sont identifiés. Risque A : probabilité 20 %, impact 10 000 €. Risque B : probabilité 50 %, impact 3 000 €. Risque C : probabilité 10 %, impact 25 000 €. Lequel a le niveau de risque le PLUS ÉLEVÉ ?",
+      "options": [
+        "Le risque A",
+        "Le risque B",
+        "Le risque C",
+        "Les risques A et C sont à égalité"
+      ],
+      "answer": 2,
+      "explanation": "Niveau de risque = probabilité × impact. A : 0,20 × 10 000 = 2 000 € ; B : 0,50 × 3 000 = 1 500 € ; C : 0,10 × 25 000 = 2 500 €. Le risque C a le niveau le plus élevé malgré sa faible probabilité."
+    },
+    {
+      "id": "Q5-022",
+      "chapter": 5,
+      "level": "K3",
+      "question": "L'équipe identifie le risque que l'environnement de test soit indisponible pendant la campagne. Elle réserve à l'avance un environnement cloud de secours qui ne sera activé QUE si l'indisponibilité survient. De quelle option de réponse au risque s'agit-il ?",
+      "options": [
+        "Atténuation du risque",
+        "Acceptation du risque",
+        "Transfert du risque",
+        "Plan d'urgence (contingence)"
+      ],
+      "answer": 3,
+      "explanation": "Un plan d'urgence définit à l'avance les actions à déclencher si le risque se matérialise. L'atténuation aurait consisté à réduire la probabilité d'indisponibilité elle-même, et le transfert à confier le risque à un tiers (p. ex. une assurance)."
+    },
+    {
+      "id": "Q5-023",
+      "chapter": 5,
+      "level": "K3",
+      "question": "À mi-itération, la courbe du travail restant d'un burndown chart est nettement AU-DESSUS de la ligne idéale. Quelle est l'interprétation correcte ?",
+      "options": [
+        "L'équipe progresse plus lentement que prévu : à ce rythme, tout le travail ne sera pas terminé à la fin de l'itération",
+        "L'équipe est en avance sur le plan",
+        "L'itération est déjà terminée",
+        "La vélocité de l'équipe a augmenté"
+      ],
+      "answer": 0,
+      "explanation": "Le burndown chart représente le travail restant en fonction du temps. Une courbe au-dessus de la ligne idéale signifie qu'il reste plus de travail que prévu à cette date : l'équipe est en retard et doit adapter le périmètre ou son organisation."
+    },
+    {
+      "id": "Q5-024",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Une faute d'orthographe est découverte dans le titre de la page d'accueil du site d'une grande marque, visible par tous les visiteurs, sans aucun impact fonctionnel. Comment classer ce défaut ?",
+      "options": [
+        "Sévérité élevée, priorité élevée",
+        "Sévérité faible, priorité faible",
+        "Sévérité faible, priorité élevée",
+        "Sévérité élevée, priorité faible"
+      ],
+      "answer": 2,
+      "explanation": "L'impact fonctionnel est nul → sévérité faible. Mais le défaut nuit à l'image de marque sur la page la plus visible du site → la correction est urgente, donc priorité élevée. Sévérité et priorité s'évaluent indépendamment."
+    },
+    {
+      "id": "Q5-025",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un exemple typique de critère d'ENTRÉE (Definition of Ready) ?",
+      "options": [
+        "La disponibilité de l'environnement de test et du testware",
+        "L'atteinte du niveau de couverture visé",
+        "Un nombre de défauts non résolus inférieur au seuil convenu",
+        "L'exécution de tous les tests planifiés"
+      ],
+      "answer": 0,
+      "explanation": "Les critères d'entrée portent sur les préconditions du démarrage : ressources disponibles (environnement, outils, personnel), testware prêt, base de test disponible. Les trois autres options sont des critères de sortie."
+    },
+    {
+      "id": "Q5-026",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est un critère de SORTIE typique (Definition of Done) ?",
+      "options": [
+        "Le budget du projet est approuvé",
+        "Les testeurs sont formés à l'outil de test",
+        "La couverture planifiée est atteinte et le nombre de défauts non résolus est sous le seuil convenu",
+        "L'environnement de test est disponible"
+      ],
+      "answer": 2,
+      "explanation": "Les critères de sortie mesurent l'achèvement des activités : couverture atteinte, seuils de défauts non résolus respectés, densité de défauts, fiabilité estimée. Budget, formation et environnement relèvent des critères d'entrée."
+    },
+    {
+      "id": "Q5-027",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Selon le modèle de la pyramide des tests, quelle affirmation est correcte ?",
+      "options": [
+        "Les tests de l'interface utilisateur doivent être les plus nombreux",
+        "Plus on monte dans la pyramide, plus la granularité des tests est grossière, moins ils sont nombreux et plus ils sont lents",
+        "Tous les niveaux de la pyramide contiennent le même nombre de tests",
+        "La pyramide interdit les tests manuels"
+      ],
+      "answer": 1,
+      "explanation": "La pyramide préconise beaucoup de tests de bas niveau (unitaires : rapides, isolés) et peu de tests de haut niveau (E2E/UI : lents, complexes). L'objectif est un feedback rapide avec un coût de maintenance maîtrisé."
+    },
+    {
+      "id": "Q5-028",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Comment les résultats de l'analyse des risques produit influencent-ils le test ?",
+      "options": [
+        "Ils déterminent uniquement la composition de l'équipe de test",
+        "Ils déterminent la rigueur et l'étendue des tests, la priorisation, ainsi que le choix des techniques et des niveaux de test",
+        "Ils remplacent le plan de test",
+        "Ils n'ont aucune influence sur les activités de test"
+      ],
+      "answer": 1,
+      "explanation": "Le test basé sur les risques utilise l'analyse pour décider : quoi tester en premier, avec quelle intensité, avec quelles techniques, à quels niveaux, et si des activités complémentaires hors test sont nécessaires pour réduire le risque."
+    },
+    {
+      "id": "Q5-029",
+      "chapter": 5,
+      "level": "K2",
+      "question": "L'analyse des risques produit se compose de deux étapes principales. Lesquelles ?",
+      "options": [
+        "L'identification des risques et l'évaluation des risques",
+        "L'atténuation des risques et le transfert des risques",
+        "La planification des tests et l'exécution des tests",
+        "La surveillance des risques et la clôture des risques"
+      ],
+      "answer": 0,
+      "explanation": "L'analyse des risques comprend l'identification (trouver les risques via brainstorming, ateliers, interviews, causes-effets) et l'évaluation (catégoriser, déterminer probabilité, impact et niveau de risque, prioriser et proposer des réponses)."
+    },
+    {
+      "id": "Q5-030",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Quel est l'objectif PRINCIPAL d'un rapport de défaut rédigé pendant les tests dynamiques ?",
+      "options": [
+        "Justifier le budget de l'équipe de test",
+        "Donner aux personnes en charge de la résolution toutes les informations nécessaires pour reproduire et résoudre le problème",
+        "Prouver que les développeurs travaillent mal",
+        "Remplacer le rapport d'avancement des tests"
+      ],
+      "answer": 1,
+      "explanation": "Un rapport de défaut vise d'abord à fournir l'information suffisante pour reproduire, analyser et corriger le problème. Il sert aussi à suivre la qualité du produit et à fournir des idées d'amélioration du processus de développement et de test."
+    },
 
     {
       "id": "Q6-001",
@@ -1197,6 +1855,48 @@
       ],
       "answer": 1,
       "explanation": "Un outil ≠ succès garanti. Il faut analyser l'effort total (intro, formation, maintenance) et l'adéquation au contexte."
+    },
+    {
+      "id": "Q6-006",
+      "chapter": 6,
+      "level": "K2",
+      "question": "Parmi les suivantes, laquelle N'EST PAS un bénéfice attendu de l'automatisation des tests ?",
+      "options": [
+        "Un temps d'exécution réduit permettant des exécutions plus fréquentes",
+        "Une plus grande cohérence et répétabilité des tests",
+        "La garantie de détecter tous les défauts du logiciel",
+        "Une évaluation plus objective et un accès facilité aux mesures (couverture, métriques)"
+      ],
+      "answer": 2,
+      "explanation": "Aucune approche de test ne peut garantir la détection de tous les défauts (le test exhaustif est impossible — principe 2). Les bénéfices réels de l'automatisation sont le gain de temps, la cohérence, la répétabilité et l'objectivité des mesures."
+    },
+    {
+      "id": "Q6-007",
+      "chapter": 6,
+      "level": "K2",
+      "question": "Une organisation a bâti toute son automatisation sur un outil propriétaire dont le fournisseur cesse son activité. Quel risque de l'automatisation s'est matérialisé ?",
+      "options": [
+        "Les attentes irréalistes envers l'outil",
+        "La dépendance vis-à-vis du fournisseur de l'outil",
+        "La sous-estimation de l'effort de formation",
+        "Le manque de compétences techniques de l'équipe"
+      ],
+      "answer": 1,
+      "explanation": "La dépendance au fournisseur (arrêt de commercialisation, rachat, fin du support, faible réactivité) est un risque cité par le syllabus, au même titre que l'abandon d'un outil open source ou l'incompatibilité avec de nouvelles plateformes."
+    },
+    {
+      "id": "Q6-008",
+      "chapter": 6,
+      "level": "K1",
+      "question": "Quelle catégorie d'outils facilite la mise à l'échelle et la standardisation du déploiement des environnements de test, par exemple via des machines virtuelles et des conteneurs ?",
+      "options": [
+        "Les outils de gestion des tests",
+        "Les outils de conception et d'implémentation des tests",
+        "Les outils facilitant la scalabilité et la standardisation du déploiement",
+        "Les outils de collaboration"
+      ],
+      "answer": 2,
+      "explanation": "Le syllabus cite parmi les catégories d'outils ceux qui facilitent la scalabilité et la standardisation du déploiement, tels que les machines virtuelles et les outils de conteneurisation."
     },
 
     {
