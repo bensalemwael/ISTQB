@@ -93,12 +93,14 @@ Cause racine → Erreur (humaine) → Défaut (dans l'artefact) → Défaillance
 | **Planification** | Définir objectifs et approche | 5.1 |
 | **Pilotage & contrôle** | Vérifier progrès / actions correctives | 5.3 |
 | **Analyse** | "Que tester ?" → conditions de test | — |
-| **Conception** | "Comment tester ?" → cas de test | — |
-| **Implémentation** | Créer testware, environnement, ordonnancer | — |
+| **Conception** | "Comment tester ?" → cas de test + **exigences en données de test** + **exigences d'environnement de test** | — |
+| **Implémentation** | Créer/réunir concrètement le testware (procédures, scripts, suites), **mettre en place** l'environnement, ordonnancer | — |
 | **Exécution** | Lancer les tests, comparer, signaler les anomalies | — |
 | **Clôture** | Archiver, leçons apprises, rapport final | — |
 
 Elles sont souvent **itératives et parallèles**, pas séquentielles.
+
+> ⚠️ **Piège d'examen** : « quelle activité travaille avec les conditions de test, les exigences de données de test, les exigences d'environnement de test et les cas de test ? » → **Conception**. La conception *identifie les besoins* (données, environnement) ; l'implémentation *les réalise* (créer les données, monter l'environnement). Ne pas confondre avec l'exécution, qui *utilise* tout cela.
 
 ### 1.4.2 Facteurs contextuels
 

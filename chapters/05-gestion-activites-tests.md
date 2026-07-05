@@ -181,11 +181,13 @@ Mesures d'atténuation par tests :
 ### 5.3.1 Métriques courantes
 - **Avancement projet** : clôture tâches, ressources, effort
 - **Avancement tests** : implémentation, préparation environnement, exécutés/non-exécutés, réussis/échecs, durée
-- **Qualité produit** : disponibilité, temps de réponse, MTBF
-- **Défauts** : nombre, priorité, densité, % détection
+- **Qualité produit** : disponibilité, temps de réponse, **MTTF (délai moyen de défaillance)**, MTBF
+- **Défauts** : nombre, priorité, densité, % détection (DDP)
 - **Risque** : niveau résiduel
 - **Couverture** : exigences, code
 - **Coût** : test, coût organisationnel de la qualité
+
+> ⚠️ **Piège d'examen** : « lequel est une mesure de la **qualité du produit** ? » → MTTF/MTBF, temps de réponse, disponibilité (caractéristiques du produit lui-même). Le *nombre de défauts trouvés*, la *couverture des exigences* et le *DDP* mesurent le **test** (avancement ou efficacité), pas directement la qualité du produit.
 
 ### 5.3.2 Rapports de test
 

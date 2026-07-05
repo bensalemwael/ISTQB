@@ -283,7 +283,6 @@
       "answer": 2,
       "explanation": "Les connaissances du domaine permettent au testeur d'appréhender le produit du point de vue du client et de l'utilisateur, et de communiquer efficacement avec eux. Elles complètent — sans remplacer — les compétences techniques et de test."
     },
-
     {
       "id": "Q2-001",
       "chapter": 2,
@@ -578,7 +577,6 @@
       "answer": 1,
       "explanation": "Le syllabus cite trois facteurs qui déterminent l'étendue des tests de maintenance : le degré de risque de la modification, la taille du système existant et la taille du changement effectué."
     },
-
     {
       "id": "Q3-001",
       "chapter": 3,
@@ -831,7 +829,6 @@
       "answer": 1,
       "explanation": "Lors de la communication et de l'analyse (souvent en réunion de revue), les anomalies sont discutées, leur statut est décidé (une anomalie n'est pas nécessairement un défaut), et le niveau de qualité ainsi que les actions de suivi sont déterminés."
     },
-
     {
       "id": "Q4-001",
       "chapter": 4,
@@ -1364,7 +1361,6 @@
       "answer": 2,
       "explanation": "La collaboration des trois perspectives (métier, développement, test) crée une compréhension partagée et permet de détecter les défauts des exigences avant l'implémentation, au moment où ils coûtent le moins cher à corriger."
     },
-
     {
       "id": "Q5-001",
       "chapter": 5,
@@ -1785,7 +1781,6 @@
       "answer": 1,
       "explanation": "Un rapport de défaut vise d'abord à fournir l'information suffisante pour reproduire, analyser et corriger le problème. Il sert aussi à suivre la qualité du produit et à fournir des idées d'amélioration du processus de développement et de test."
     },
-
     {
       "id": "Q6-001",
       "chapter": 6,
@@ -1898,7 +1893,6 @@
       "answer": 2,
       "explanation": "Le syllabus cite parmi les catégories d'outils ceux qui facilitent la scalabilité et la standardisation du déploiement, tels que les machines virtuelles et les outils de conteneurisation."
     },
-
     {
       "id": "QM-001",
       "chapter": 0,
@@ -1940,6 +1934,216 @@
       ],
       "answer": 2,
       "explanation": "Seuil officiel : 65 % soit 26 bonnes réponses sur 40."
+    },
+    {
+      "id": "Q1-021",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Étant données les affirmations suivantes : 1. Trouver des défauts et provoquer des défaillances ; 2. Corriger les défauts détectés dans le code ; 3. Vérifier que l'objet de test satisfait les exigences spécifiées ; 4. Décider seul de la date de mise en production ; 5. Former les développeurs aux bonnes pratiques de codage. Lesquelles décrivent des objectifs typiques du test ?",
+      "options": [
+        "1 et 2",
+        "1 et 3",
+        "2 et 4",
+        "3 et 5"
+      ],
+      "answer": 1,
+      "explanation": "Trouver des défauts et vérifier la satisfaction des exigences sont des objectifs du test (syllabus 1.1.1). Corriger relève du débogage ; la décision de mise en production appartient aux parties prenantes — le test ne fait qu'éclairer cette décision."
+    },
+    {
+      "id": "Q1-022",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Laquelle des affirmations suivantes concernant l'assurance qualité (QA) et le contrôle de la qualité (QC) est correcte ?",
+      "options": [
+        "L'assurance qualité est effectuée dans le cadre des tests",
+        "Les tests sont effectués dans le cadre du contrôle de la qualité",
+        "« Test » est un autre terme pour désigner le contrôle de la qualité",
+        "Les tests sont effectués dans le cadre de l'assurance qualité"
+      ],
+      "answer": 1,
+      "explanation": "Le contrôle de la qualité (QC) est orienté produit et correctif : le test en est une forme majeure — le test fait donc partie du QC. La QA est orientée processus (amélioration des processus). Le test n'est pas synonyme de QC (le QC comprend d'autres activités, ex. revues formelles de gouvernance)."
+    },
+    {
+      "id": "Q1-023",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Quelle activité de test implique de travailler avec les conditions de test, les exigences relatives aux données de test, les exigences relatives à l'environnement de test et les cas de test ?",
+      "options": [
+        "Analyse de test",
+        "Conception des tests",
+        "Implémentation des tests",
+        "Exécution des tests"
+      ],
+      "answer": 1,
+      "explanation": "La CONCEPTION dérive les cas de test à partir des conditions de test et identifie les exigences en données de test et en environnement de test. L'analyse produit les conditions de test ; l'implémentation crée concrètement le testware (procédures, scripts) et met en place l'environnement ; l'exécution lance les tests."
+    },
+    {
+      "id": "Q2-022",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Laquelle des affirmations suivantes concernant les tests dans le cycle de vie de développement logiciel est CORRECTE ?",
+      "options": [
+        "En développement agile, l'automatisation des tests système remplace les tests de régression",
+        "Si un modèle de développement séquentiel est utilisé, les tests dynamiques sont généralement limités aux phases tardives du cycle de vie",
+        "Si un modèle itératif est utilisé, les tests de composants sont nécessairement effectués manuellement par les développeurs",
+        "Si un modèle incrémental est utilisé, les tests statiques ont lieu dans les premiers incréments et les tests dynamiques dans les derniers"
+      ],
+      "answer": 1,
+      "explanation": "Dans un modèle séquentiel (ex. cycle en V), le logiciel exécutable n'existe que tard : les tests dynamiques sont concentrés en fin de cycle. Dans les modèles itératifs/incrémentaux, tests statiques ET dynamiques ont lieu dans CHAQUE itération ; l'automatisation ne « remplace » pas la régression, elle la facilite."
+    },
+    {
+      "id": "Q2-023",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est LE PLUS susceptible d'être réalisé dans le cadre des TESTS SYSTÈME ?",
+      "options": [
+        "Test de sécurité d'une application de gestion de crédit par une équipe de test indépendante",
+        "Test de l'interface d'une application de change avec un système bancaire externe",
+        "Bêta-test d'une plateforme de formation par des utilisateurs finaux volontaires",
+        "Test des interactions entre deux composants d'une même application"
+      ],
+      "answer": 0,
+      "explanation": "Le test système évalue le système complet, souvent par une équipe indépendante, et peut inclure des types non fonctionnels comme la sécurité. L'interface avec un système externe = test d'intégration système ; le bêta-test = test d'acceptation ; les interactions entre composants = test d'intégration de composants."
+    },
+    {
+      "id": "Q2-024",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Laquelle des affirmations suivantes sur les tests de confirmation et les tests de régression est CORRECTE ?",
+      "options": [
+        "Les tests de régression sont créés dès qu'un défaut est corrigé, les tests de confirmation sont exécutés à chaque amélioration",
+        "Les tests de régression vérifient que l'environnement opérationnel reste inchangé, les tests de confirmation testent les modifications",
+        "Les tests de régression s'intéressent aux effets indésirables dans les parties NON modifiées du code, les tests de confirmation s'intéressent au code modifié",
+        "Le nombre de tests de confirmation augmente au fil du projet tandis que le nombre de tests de régression diminue"
+      ],
+      "answer": 2,
+      "explanation": "Confirmation : vérifier que le défaut est bien corrigé (code modifié). Régression : vérifier que la modification n'a pas d'effets indésirables ailleurs (code inchangé). C'est la suite de régression qui grossit avec le projet, pas l'inverse."
+    },
+    {
+      "id": "Q3-019",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Étant données les tâches suivantes : 1. Les critères de sortie de la revue sont définis ; 2. Le produit d'activités est distribué aux participants ; 3. Chaque réviseur note les anomalies potentielles ; 4. Les anomalies sont discutées et des décisions sont prises. Et les activités de revue : A. Revue individuelle ; B. Lancement de la revue ; C. Planification ; D. Communication et analyse. Quelle association est correcte ?",
+      "options": [
+        "1C, 2B, 3A, 4D",
+        "1B, 2C, 3D, 4A",
+        "1C, 2A, 3B, 4D",
+        "1B, 2D, 3C, 4A"
+      ],
+      "answer": 0,
+      "explanation": "Planification = définir périmètre ET critères d'entrée/sortie (1C). Lancement = s'assurer que chacun a accès au produit d'activités (2B). Revue individuelle = chaque réviseur relève les anomalies (3A). Communication et analyse = discussion des anomalies et décisions (4D)."
+    },
+    {
+      "id": "Q4-039",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Étant données les situations suivantes : 1. Le temps disponible pour la conception et l'exécution des tests est très limité ; 2. La stratégie de test impose des techniques boîte noire formelles ; 3. Les spécifications sont complètes, stables et formelles ; 4. Les testeurs connaissent bien le domaine métier et ont de bonnes capacités d'analyse ; 5. L'équipe veut générer automatiquement les cas de test à partir d'un modèle. Lesquelles justifient LE MIEUX l'utilisation des tests exploratoires ?",
+      "options": [
+        "2 et 3",
+        "1 et 5",
+        "1 et 4",
+        "3 et 4"
+      ],
+      "answer": 2,
+      "explanation": "Le test exploratoire est particulièrement utile quand les spécifications manquent ou que le temps presse (1), et son efficacité dépend fortement de l'expérience du testeur — connaissance métier et capacités d'analyse (4). Des specs formelles et stables ou une stratégie imposant des techniques formelles orientent au contraire vers des techniques systématiques."
+    },
+    {
+      "id": "Q4-040",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un café fidélise ses clients : le système compte les achats de chaque carte (valeur initiale 0, incrémentée à chaque achat). Chaque 5e achat déclenche une boisson offerte ; chaque 25e achat déclenche à la place un menu complet offert. Lequel des ensembles suivants de numéros d'achat permet d'obtenir la couverture la plus élevée des partitions d'équivalence ?",
+      "options": [
+        "4, 10, 25",
+        "5, 10, 15",
+        "1, 2, 25",
+        "20, 25, 50"
+      ],
+      "answer": 0,
+      "explanation": "Trois partitions : aucun avantage (non multiple de 5), boisson offerte (multiple de 5 mais pas de 25), menu offert (multiple de 25). {4, 10, 25} couvre les trois (3/3). {5, 10, 15} ne couvre que « boisson » ; {1, 2, 25} couvre 2/3 ; {20, 25, 50} couvre boisson + menu = 2/3 (50 est multiple de 25 → menu, comme 25)."
+    },
+    {
+      "id": "Q4-041",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Une table de décision de calcul des frais de port comporte 5 règles : R1 : poids ≤ 1 kg ET standard → 5 € ; R2 : poids ≤ 1 kg ET express → 10 € ; R3 : 1 kg < poids ≤ 5 kg ET standard → 8 € ; R4 : 1 kg < poids ≤ 5 kg ET express → 15 € ; R5 : poids > 5 kg (tout mode) → sur devis. Cas de test exécutés : TC1 : 3 kg express ; TC2 : 5 kg express ; TC3 : 1 kg express ; TC4 : 0,5 kg express ; TC5 : 6 kg standard. Quelle couverture de la table de décision est obtenue ?",
+      "options": [
+        "40 %",
+        "60 %",
+        "80 %",
+        "100 %"
+      ],
+      "answer": 1,
+      "explanation": "TC1 → R4 ; TC2 → R4 (5 kg est dans 1-5 kg) ; TC3 → R2 (1 kg est dans ≤ 1 kg) ; TC4 → R2 ; TC5 → R5. Règles couvertes : R2, R4, R5 = 3 sur 5 = 60 %. R1 et R3 (mode standard ≤ 5 kg) ne sont jamais exercées. La couverture = colonnes exercées / colonnes réalisables."
+    },
+    {
+      "id": "Q4-042",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Un critère d'acceptation est rédigé ainsi : « Étant donné que l'utilisateur est connecté et se trouve sur son panier, lorsqu'il clique sur \"Commander\", alors la page de paiement s'affiche ». Sous quelle forme ce critère d'acceptation est-il rédigé ?",
+      "options": [
+        "Orienté vers les règles",
+        "Orienté-scénario",
+        "Orienté vers le produit",
+        "Orienté vers le processus"
+      ],
+      "answer": 1,
+      "explanation": "Le format Étant donné / Lorsque / Alors (Given/When/Then, issu du BDD) est la forme ORIENTÉE-SCÉNARIO des critères d'acceptation. La forme orientée règles est une liste à puces ou une table de correspondance entrées-sorties."
+    },
+    {
+      "id": "Q4-043",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Lequel des éléments suivants correspond LE MIEUX à un élément d'une checklist utilisée pour un test basé sur des checklists de l'interface utilisateur ?",
+      "options": [
+        "« Le développeur a commis une erreur lors de l'implémentation du code »",
+        "« Le taux de couverture réalisé est supérieur à 85 % »",
+        "« Le programme fonctionne correctement par rapport à toutes les exigences »",
+        "« Les messages d'erreur sont-ils rédigés dans un langage compréhensible par l'utilisateur ? »"
+      ],
+      "answer": 3,
+      "explanation": "Un élément de checklist est une CONDITION DE TEST vérifiable, souvent formulée en question, ciblant un aspect précis (ici l'UI). Un constat d'erreur n'est pas une condition à vérifier ; un taux de couverture est un critère de sortie ; « toutes les exigences » est trop général pour être un élément de checklist."
+    },
+    {
+      "id": "Q5-031",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Compte tenu des risques suivants : 1. Un algorithme de recherche inefficace ralentit les temps de réponse ; 2. Une nouvelle réglementation pourrait imposer des changements majeurs ; 3. Incendie dans la salle des serveurs ; 4. Les remises calculées sont erronées aux seuils de montant. Et des activités : A. Acceptation du risque ; B. Tests de performance ; C. Analyse des valeurs limites ; D. Transfert du risque. Quelle association risque/réponse est LA MEILLEURE ?",
+      "options": [
+        "1B, 2A, 3D, 4C",
+        "1B, 2D, 3A, 4C",
+        "1C, 2A, 3D, 4B",
+        "1B, 2A, 3C, 4D"
+      ],
+      "answer": 0,
+      "explanation": "1 : la lenteur se détecte par des tests de performance (B, atténuation). 2 : une réglementation future ne se teste pas — on accepte le risque (A). 3 : l'incendie se couvre par une assurance = transfert (D). 4 : des erreurs aux seuils s'attaquent avec l'analyse des valeurs limites (C, atténuation par le test)."
+    },
+    {
+      "id": "Q5-032",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Lequel des éléments suivants est une mesure de la QUALITÉ DU PRODUIT ?",
+      "options": [
+        "Délai moyen de défaillance (MTTF)",
+        "Nombre de défauts trouvés",
+        "Couverture des exigences",
+        "Pourcentage de détection des défauts (DDP)"
+      ],
+      "answer": 0,
+      "explanation": "Le MTTF mesure la fiabilité du PRODUIT lui-même. Le nombre de défauts trouvés et la couverture des exigences mesurent l'avancement/la profondeur du test ; le DDP mesure l'efficacité du processus de test. Ce sont des métriques de test, pas des mesures directes de la qualité produit."
+    },
+    {
+      "id": "Q5-033",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Étant donnés les risques suivants : 1. Les temps de réponse de l'application sont trop longs en charge nominale ; 2. Le fournisseur de l'outil de gestion des tests cesse son activité ; 3. Le module de facturation calcule une TVA erronée ; 4. Le testeur senior quitte le projet le mois prochain ; 5. L'environnement de test sera livré avec trois semaines de retard. Lesquels sont des risques PRODUIT ?",
+      "options": [
+        "2 et 4",
+        "1 et 5",
+        "3 et 4",
+        "1 et 3"
+      ],
+      "answer": 3,
+      "explanation": "Un risque produit concerne une caractéristique qualité du LOGICIEL (performance → 1, exactitude fonctionnelle → 3). Fournisseur défaillant, départ d'un testeur et retard d'environnement sont des risques PROJET (ils menacent le déroulement du projet, pas directement la qualité du produit livré)."
     }
   ]
 }

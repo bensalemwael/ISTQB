@@ -350,3 +350,27 @@ Test statique (sans exécution du logiciel)
 - **Rétrospectives** : leurs résultats sont consignés dans le **rapport de clôture des tests**
 - **Automatisation (ch6)** : « l'outil garantit le succès » = faux ; risque = attentes irréalistes, dépendance au fournisseur, coûts de maintenance sous-estimés ; bénéfice = temps gagné sur le répétitif, cohérence, feedback plus rapide — mais les tests manuels restent nécessaires (vue utilisateur)
 - **Gestion de configuration** : un élément approuvé pour les tests devient une **base de référence** (baseline), modifiable uniquement via un processus formel de contrôle des modifications
+
+---
+
+## 21. Conception des tests vs implémentation des tests (activités du processus)
+
+**La confusion** : les deux activités manipulent données de test et environnement — mais pas de la même façon.
+
+**La règle exacte** :
+- **Conception** : dériver les **cas de test** depuis les conditions de test + **identifier** les exigences en **données de test** et en **environnement de test** (« quoi faut-il ? »)
+- **Implémentation** : **créer/réunir** le testware concret — procédures, scripts, suites, calendrier d'exécution — et **mettre en place** l'environnement (« le fabriquer »)
+
+**Question piège** : « Quelle activité implique de travailler avec les conditions de test, les exigences relatives aux données de test, les exigences relatives à l'environnement de test et les cas de test ? »
+✅ **Conception des tests** — c'est elle qui *travaille avec les exigences* (les identifie). L'implémentation *réalise* ; l'exécution *utilise*.
+
+## 22. Mesure de la qualité du produit vs métrique de test
+
+**La confusion** : toutes les métriques du chapitre 5.3.1 semblent « mesurer la qualité ».
+
+**La règle exacte** :
+- **Qualité du PRODUIT** : disponibilité, temps de réponse, **MTTF (délai moyen de défaillance)**, MTBF — elles décrivent le comportement du logiciel lui-même
+- **Métriques de TEST** : nombre de défauts trouvés, couverture des exigences/du code, **DDP (% de détection des défauts)**, tests exécutés/réussis — elles décrivent l'avancement ou l'efficacité **du test**
+
+**Question piège** : « Lequel est une mesure de la qualité du produit ? a) Délai moyen de défaillance b) Nombre de défauts trouvés c) Couverture des exigences d) DDP »
+✅ **a) Délai moyen de défaillance (MTTF)** — les trois autres mesurent le test, pas le produit.

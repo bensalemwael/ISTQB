@@ -50,7 +50,7 @@ Activer Pages dans `Settings → Pages → Branch: main, Folder: /quiz` et accé
 
 ## Fonctionnalités du quiz
 
-- ✅ 135+ questions couvrant les 6 chapitres (dont 32 questions K3 avec calculs corrigés)
+- ✅ 150+ questions couvrant les 6 chapitres (dont 35 questions K3 avec calculs corrigés et des questions calquées sur les formats de l'examen blanc officiel : associations, scénarios, couverture)
 - ✅ Filtres par chapitre et par niveau cognitif (K1/K2/K3)
 - ✅ Mode examen blanc (40 questions, 60 minutes, chrono, **distribution officielle par chapitre 8/6/4/11/9/2**)
 - ✅ Mode entraînement (feedback immédiat avec explication)

@@ -204,6 +204,26 @@
     el.classList.toggle('danger', STATE.timeLeft <= 60);
   }
 
+  // ---------- Questions à réponses multiples ----------
+  // Une question multi porte "answers": [i, j] au lieu de "answer": i (format examen : « Sélectionnez DEUX options »)
+  function isMulti(q) { return Array.isArray(q.answers); }
+  function correctSet(q) { return new Set(isMulti(q) ? q.answers : [q.answer]); }
+  function userSet(q) {
+    const a = STATE.answers[q.id];
+    if (a === undefined) return new Set();
+    return new Set(Array.isArray(a) ? a : [a]);
+  }
+  function isAnsweredFully(q) {
+    // Multi : répondu quand le bon nombre d'options est coché ; simple : dès le premier clic
+    return isMulti(q) ? userSet(q).size === correctSet(q).size : STATE.answers[q.id] !== undefined;
+  }
+  function isCorrectAnswer(q) {
+    const optMap = STATE.optionMaps[q.id];
+    const chosen = new Set([...userSet(q)].map(d => optMap[d]));
+    const correct = correctSet(q);
+    return chosen.size === correct.size && [...correct].every(i => chosen.has(i));
+  }
+
   // ---------- Rendu d'une question ----------
   function renderQuestion() {
     const q = STATE.session[STATE.current];
@@ -213,23 +233,26 @@
     $('#progress-bar').style.width = `${(idx / total) * 100}%`;
 
     const optMap = STATE.optionMaps[q.id];
-    const userAnswer = STATE.answers[q.id]; // index dans l'ordre mélangé
-    const isAnswered = userAnswer !== undefined;
-    const showFeedback = STATE.mode === 'training' && isAnswered;
+    const multi = isMulti(q);
+    const selected = userSet(q); // indices d'affichage
+    const showFeedback = STATE.mode === 'training' && isAnsweredFully(q);
 
     const chLabel = q.chapter === 0 ? 'Examen' : `Ch. ${q.chapter}`;
+    const consigne = multi ? `<p class="q-consigne"><em>Sélectionnez ${correctSet(q).size === 2 ? 'DEUX' : correctSet(q).size} options.</em></p>` : '';
 
     const html = `
       <div class="q-tags">
         <span class="tag">${chLabel}</span>
         <span class="tag ${q.level.toLowerCase()}">${q.level}</span>
         <span class="tag">${q.id}</span>
+        ${multi ? '<span class="tag">multi</span>' : ''}
       </div>
       <p class="q-text">${escapeHtml(q.question)}</p>
+      ${consigne}
       <ul class="options">
         ${optMap.map((origIdx, displayIdx) => {
-          const isSelected = userAnswer === displayIdx;
-          const isCorrect = origIdx === q.answer;
+          const isSelected = selected.has(displayIdx);
+          const isCorrect = correctSet(q).has(origIdx);
           let cls = 'option';
           if (showFeedback) {
             cls += ' locked';
@@ -239,13 +262,13 @@
             cls += ' selected';
           }
           return `<li class="${cls}" data-display="${displayIdx}">
-            <input type="radio" name="opt" ${isSelected ? 'checked' : ''} ${showFeedback ? 'disabled' : ''}>
+            <input type="${multi ? 'checkbox' : 'radio'}" name="opt" ${isSelected ? 'checked' : ''} ${showFeedback ? 'disabled' : ''}>
             <span>${escapeHtml(q.options[origIdx])}</span>
           </li>`;
         }).join('')}
       </ul>
       ${showFeedback ? `<div class="explanation">
-        <strong>${optMap[userAnswer] === q.answer ? '✓ Correct' : '✗ Incorrect'}.</strong>
+        <strong>${isCorrectAnswer(q) ? '✓ Correct' : '✗ Incorrect'}.</strong>
         ${escapeHtml(q.explanation)}
       </div>` : ''}
     `;
@@ -267,7 +290,18 @@
 
   function selectOption(displayIdx) {
     const q = STATE.session[STATE.current];
-    STATE.answers[q.id] = displayIdx;
+    if (isMulti(q)) {
+      const cur = new Set(userSet(q));
+      if (cur.has(displayIdx)) cur.delete(displayIdx);
+      else {
+        // Limiter au nombre de réponses attendues (comme sur l'interface réelle)
+        if (cur.size >= correctSet(q).size) return;
+        cur.add(displayIdx);
+      }
+      STATE.answers[q.id] = [...cur];
+    } else {
+      STATE.answers[q.id] = displayIdx;
+    }
     renderQuestion();
   }
 
@@ -299,7 +333,7 @@
     const details = STATE.session.map(q => {
       const optMap = STATE.optionMaps[q.id];
       const userDisplayIdx = STATE.answers[q.id];
-      const isCorrect = userDisplayIdx !== undefined && optMap[userDisplayIdx] === q.answer;
+      const isCorrect = userDisplayIdx !== undefined && isCorrectAnswer(q);
       if (isCorrect) correct++;
       return { q, userDisplayIdx, isCorrect, optMap };
     });
@@ -321,8 +355,10 @@
     const detailHtml = details.map((d, i) => {
       const optMap = d.optMap;
       const userDisplayIdx = d.userDisplayIdx;
-      const userText = userDisplayIdx !== undefined ? d.q.options[optMap[userDisplayIdx]] : '<em>Sans réponse</em>';
-      const correctText = d.q.options[d.q.answer];
+      const userText = userDisplayIdx !== undefined
+        ? (Array.isArray(userDisplayIdx) ? userDisplayIdx : [userDisplayIdx]).map(di => d.q.options[optMap[di]]).join(' · ')
+        : '<em>Sans réponse</em>';
+      const correctText = [...correctSet(d.q)].map(i2 => d.q.options[i2]).join(' · ');
       return `<div class="result-item ${d.isCorrect ? 'correct' : 'wrong'}">
         <strong>Q${i + 1}.</strong> ${escapeHtml(d.q.question)}<br>
         <span class="score-label">Votre réponse : </span>${escapeHtml(userText)}<br>
