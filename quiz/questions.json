@@ -2144,6 +2144,286 @@
       ],
       "answer": 3,
       "explanation": "Un risque produit concerne une caractéristique qualité du LOGICIEL (performance → 1, exactitude fonctionnelle → 3). Fournisseur défaillant, départ d'un testeur et retard d'environnement sont des risques PROJET (ils menacent le déroulement du projet, pas directement la qualité du produit livré)."
+    },
+    {
+      "id": "Q1-024",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Lors d'une réunion de lancement de projet, quatre parties prenantes formulent chacune ce qu'elles attendent du test. Laquelle de ces formulations correspond à un objectif de test VALIDE selon le syllabus ?",
+      "options": [
+        "« Le test doit prouver qu'il ne reste aucun défaut dans le logiciel avant la livraison »",
+        "« Le test doit démontrer que le logiciel fonctionnera correctement dans toutes les situations d'utilisation possibles »",
+        "« Le test doit fournir aux parties prenantes des informations suffisantes pour leur permettre de prendre des décisions éclairées »",
+        "« Le test doit garantir que le produit est totalement exempt d'erreurs »"
+      ],
+      "answer": 2,
+      "explanation": "Fournir des informations aux parties prenantes pour des décisions éclairées est un objectif de test explicite du syllabus (section 1.1.1). Les trois autres formulations sont absolutistes et contredisent les principes du test : le test montre la présence de défauts, pas leur absence (principe 1), et le test exhaustif est impossible (principe 2)."
+    },
+    {
+      "id": "Q1-025",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Étant données les tâches suivantes : 1. Créer le calendrier des tests et définir les critères de sortie ; 2. Dériver les cas de test à partir des conditions de test priorisées ; 3. Rédiger le rapport de clôture des tests ; 4. Mettre en place l'environnement de test et exécuter les procédures de test ; 5. Piloter l'avancement des tests par rapport au plan de test. Lesquelles relèvent typiquement du rôle de TESTEUR plutôt que du rôle de test manager ?",
+      "options": [
+        "1 et 3",
+        "2 et 4",
+        "2 et 5",
+        "3 et 4"
+      ],
+      "answer": 1,
+      "explanation": "Le rôle de testeur porte la responsabilité de l'aspect technique : analyse de test, conception des tests (dériver les cas de test), implémentation (mettre en place l'environnement) et exécution des tests — soit les tâches 2 et 4. Les tâches 1, 3 et 5 (planification, clôture, pilotage et contrôle) relèvent du rôle de test manager (section 1.4.5)."
+    },
+    {
+      "id": "Q1-026",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Étant donnés les facteurs suivants : i. Les besoins, attentes et volonté de coopérer des parties prenantes ; ii. La criticité de l'objet de test et les réglementations légales du domaine d'activité ; iii. Le nombre de lignes de code écrites par jour par chaque développeur ; iv. Les contraintes du projet (portée, temps, budget, ressources) ; v. Les résultats des tests réalisés sur les produits des concurrents. Lesquels sont des facteurs de contexte ayant une influence significative sur le processus de test ?",
+      "options": [
+        "i, ii et iv",
+        "i, iii et v",
+        "ii, iii et iv",
+        "i, ii et v"
+      ],
+      "answer": 0,
+      "explanation": "La section 1.4.2 liste parmi les facteurs contextuels : les parties prenantes (besoins, attentes, coopération), le domaine d'activité (criticité, risques, réglementations) et les contraintes du projet (portée, temps, budget, ressources). La productivité individuelle des développeurs et les résultats de test des concurrents ne font pas partie des facteurs de contexte qui déterminent comment le test est effectué."
+    },
+    {
+      "id": "Q1-027",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Étant données les compétences suivantes : i. Rigueur, curiosité et souci du détail ; ii. Réflexion analytique, esprit critique et créativité ; iii. Capacité à corriger rapidement les défauts dans le code source ; iv. Bonne communication, écoute active et esprit d'équipe ; v. Aptitude à décider seul de la date de mise en production. Lesquelles font partie des compétences particulièrement pertinentes pour un testeur selon le syllabus ?",
+      "options": [
+        "ii, iii et v",
+        "i, iii et iv",
+        "iii, iv et v",
+        "i, ii et iv"
+      ],
+      "answer": 3,
+      "explanation": "La section 1.5.1 cite notamment : la rigueur, la curiosité et le souci du détail (pour identifier les défauts difficiles à trouver), la réflexion analytique, l'esprit critique et la créativité (pour accroître l'efficacité des tests), ainsi que la bonne communication, l'écoute active et l'esprit d'équipe. Corriger les défauts relève du débogage (activité de développement), et la décision de mise en production appartient aux parties prenantes, pas au testeur."
+    },
+    {
+      "id": "Q2-025",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Une équipe hésite entre un modèle en V et une approche agile, et se demande quelles bonnes pratiques de test resteront valables dans les deux cas. Laquelle des affirmations suivantes décrit une bonne pratique de test applicable QUEL QUE SOIT le modèle de cycle de vie du développement logiciel choisi ?",
+      "options": [
+        "L'analyse et la conception des tests ne commencent qu'une fois le code livré aux testeurs",
+        "Les testeurs ne participent aux revues des produits d'activités que dans les modèles agiles",
+        "Pour chaque activité de développement logiciel, il existe une activité de test correspondante, afin que toutes les activités de développement soient soumises à un contrôle qualité",
+        "Chaque niveau de test doit poursuivre les mêmes objectifs de test afin de garantir la redondance des vérifications"
+      ],
+      "answer": 2,
+      "explanation": "La section 2.1.2 énonce des bonnes pratiques indépendantes du modèle SDLC : à chaque activité de développement correspond une activité de test, chaque niveau de test a des objectifs spécifiques et DIFFÉRENTS (pour éviter la redondance), l'analyse et la conception des tests commencent pendant la phase de développement correspondante, et les testeurs participent aux revues dès que des versions préliminaires sont disponibles — dans tous les modèles, pas seulement en agile."
+    },
+    {
+      "id": "Q2-026",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Laquelle des pratiques suivantes N'EST PAS un exemple de shift-left cité par le syllabus ?",
+      "options": [
+        "Examiner la spécification du point de vue des tests afin d'y trouver des ambiguïtés, incomplétudes et incohérences",
+        "Utiliser l'intégration continue pour obtenir un feedback rapide et des tests de composants automatisés accompagnant le code déposé dans le référentiel",
+        "Rédiger les cas de test avant l'écriture du code et faire exécuter le code dans un harnais de test pendant l'implémentation",
+        "Effectuer les tests non fonctionnels uniquement lorsque le système complet est disponible dans un environnement de test représentatif"
+      ],
+      "answer": 3,
+      "explanation": "Le syllabus (section 2.1.5) recommande au contraire d'effectuer les tests non fonctionnels dès le niveau de test de composants dans la mesure du possible : attendre le système complet est justement la pratique tardive que le shift-left cherche à éviter. Les trois autres options sont des exemples exacts de bonnes pratiques shift-left cités par le syllabus (revue des spécifications, tests écrits avant le code, intégration continue)."
+    },
+    {
+      "id": "Q2-027",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Une équipe dérive ses tests à partir des critères d'acceptation dans le cadre du processus de conception du système, et écrit ces tests avant que la partie correspondante de l'application ne soit développée. Quelle approche de développement pilotée par les tests cette équipe applique-t-elle ?",
+      "options": [
+        "Le développement piloté par les tests d'acceptation (ATDD)",
+        "Le développement piloté par les tests (TDD)",
+        "Le développement piloté par le comportement (BDD)",
+        "La conception pilotée par le domaine (DDD)"
+      ],
+      "answer": 0,
+      "explanation": "L'ATDD dérive les tests des critères d'acceptation dans le cadre de la conception du système, les tests étant écrits avant le développement de la partie applicative concernée (section 2.1.3). Le TDD dirige le codage par des cas de test au niveau du code, tandis que le BDD exprime le comportement souhaité dans un langage naturel simple (format Given/When/Then) traduit ensuite en tests exécutables ; le DDD n'est pas une approche pilotée par les tests."
+    },
+    {
+      "id": "Q2-028",
+      "chapter": 2,
+      "level": "K3",
+      "question": "Trois cas de test (TC1, TC2, TC3) sont exécutés sur trois versions successives d'un logiciel. Version 1.0 : TC1 échoue (1), TC2 réussit (2), TC3 réussit (3). Le défaut révélé par TC1 est corrigé, produisant la version 1.1 : TC1 réussit (4), TC2 réussit (5), TC3 échoue (6). Le défaut révélé par TC3 est corrigé, produisant la version 1.2 : TC1 réussit (7), TC2 réussit (8), TC3 réussit (9). Lesquelles de ces exécutions sont des tests de RÉGRESSION ?",
+      "options": [
+        "(4) et (9)",
+        "(5), (6), (7) et (8)",
+        "(4), (5), (6) et (9)",
+        "(7), (8) et (9)"
+      ],
+      "answer": 1,
+      "explanation": "Les exécutions (1), (2) et (3) sont l'exécution initiale (ni confirmation ni régression). Après le premier correctif, (4) est un test de CONFIRMATION (ré-exécution du test qui avait échoué), tandis que (5) et (6) sont des tests de RÉGRESSION sur les parties non modifiées — (6) révèle d'ailleurs une régression introduite par le correctif. Après le second correctif, (9) est le test de confirmation et (7) et (8) sont les tests de régression : les tests de régression sont donc (5), (6), (7) et (8)."
+    },
+    {
+      "id": "Q3-020",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Une revue présente les caractéristiques suivantes : i. La réunion est animée par un modérateur (facilitateur) et non par l'auteur ; ii. Les réviseurs sont techniquement qualifiés ; iii. L'objectif principal est de parvenir à un consensus et de prendre des décisions concernant un problème technique ; iv. Chaque réviseur effectue une revue individuelle préalable, par exemple à l'aide de checklists ; v. La détection d'anomalies et l'évaluation de la qualité font aussi partie des objectifs. De quel type de revue s'agit-il ?",
+      "options": [
+        "Une inspection",
+        "Une revue technique",
+        "Une relecture technique (walkthrough)",
+        "Une revue informelle"
+      ],
+      "answer": 1,
+      "explanation": "La revue technique est réalisée par des réviseurs techniquement qualifiés et dirigée par un modérateur, avec pour objectifs le consensus et la prise de décisions sur un problème technique, en plus de la détection d'anomalies (section 3.2.4). La relecture technique est menée par l'auteur, la revue informelle ne suit pas de processus défini, et l'inspection — le type le plus formel — vise avant tout à trouver le maximum d'anomalies avec collecte de métriques, l'auteur ne pouvant y être ni réviseur ni scribe."
+    },
+    {
+      "id": "Q3-021",
+      "chapter": 3,
+      "level": "K2",
+      "question": "Sur un projet, les représentants métier examinent l'incrément du produit à la fin de chaque itération de deux semaines et transmettent leurs remarques à l'équipe. Quel bénéfice cette pratique de feedback précoce et fréquent apporte-t-elle PRINCIPALEMENT ?",
+      "options": [
+        "Elle permet à l'équipe de se concentrer sur les caractéristiques qui apportent le plus de valeur aux parties prenantes et qui ont l'impact le plus positif sur les risques identifiés",
+        "Elle élimine le besoin d'effectuer des tests de régression sur les itérations suivantes",
+        "Elle garantit que le produit final sera livré sans aucun défaut",
+        "Elle réduit le nombre de réviseurs nécessaires lors des inspections formelles"
+      ],
+      "answer": 0,
+      "explanation": "Selon la section 3.2.1, un feedback précoce et fréquent permet de communiquer rapidement les problèmes de qualité potentiels, d'éviter les malentendus sur les exigences et d'améliorer la compréhension du produit par l'équipe, qui peut alors se concentrer sur les caractéristiques ayant le plus de valeur et le meilleur impact sur les risques. Il ne supprime ni les tests de régression, ni les défauts, et n'a aucun lien avec la taille des équipes d'inspection."
+    },
+    {
+      "id": "Q4-044",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Sur un projet de billetterie en ligne, quatre activités sont menées : A. Définir le budget et le calendrier des tests et sélectionner les critères de sortie de la campagne ; B. Dériver des cas de test à partir des conditions de test en appliquant l'analyse des valeurs limites ; C. Examiner la spécification des exigences et le référentiel des risques afin d'identifier et de prioriser les conditions de test du module de réservation ; D. Exécuter les procédures de test et comparer les résultats réels aux résultats attendus. Laquelle de ces activités relève de l'ANALYSE de test ?",
+      "options": [
+        "L'activité A",
+        "L'activité B",
+        "L'activité C",
+        "L'activité D"
+      ],
+      "answer": 2,
+      "explanation": "L'analyse de test consiste à analyser la base de test (exigences, risques) pour identifier les caractéristiques testables et définir/prioriser les conditions de test : elle répond à la question « quoi tester ? » (activité C). A relève de la planification, B de la conception des tests (« comment tester ? ») et D de l'exécution des tests."
+    },
+    {
+      "id": "Q4-045",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un système de réservation de vols prend deux paramètres : classe ∈ {économique, affaires, première} et option repas ∈ {aucun, standard, gastronomique}. Contrainte métier : le repas gastronomique n'est disponible QU'EN première classe (toute autre combinaison avec « gastronomique » est rejetée à la saisie). En appliquant le partitionnement d'équivalence avec le critère « chaque partition couverte au moins une fois » (Each Choice), combien de cas de test VALIDES faut-il au MINIMUM ?",
+      "options": [
+        "2",
+        "3",
+        "6",
+        "9"
+      ],
+      "answer": 1,
+      "explanation": "Chaque cas de test combine une classe ET une option repas, donc le minimum théorique est max(3, 3) = 3. La contrainte impose seulement d'apparier « gastronomique » avec « première » : p. ex. (première, gastronomique), (économique, aucun), (affaires, standard) couvrent les 6 partitions en 3 cas. La contrainte restreint le choix des combinaisons mais n'augmente pas le nombre minimal ; 9 correspondrait à toutes les combinaisons."
+    },
+    {
+      "id": "Q4-046",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un score de crédit est un entier avec les partitions contiguës suivantes : < 0 invalide ; 0–299 refus ; 300–599 examen manuel ; 600–849 accepté ; 850–1000 taux préférentiel ; > 1000 invalide. Les cas de test suivants ont été exécutés : CT1 = 0, CT2 = 299, CT3 = 300, CT4 = 450, CT5 = 850, CT6 = 1001. Quelle couverture de l'analyse des valeurs limites à 2 valeurs est atteinte ?",
+      "options": [
+        "40 %",
+        "50 %",
+        "60 %",
+        "100 %"
+      ],
+      "answer": 1,
+      "explanation": "En BVA à 2 valeurs, les éléments de couverture sont chaque valeur limite et sa plus proche voisine dans la partition adjacente : -1, 0, 299, 300, 599, 600, 849, 850, 1000, 1001, soit 10 valeurs. Les cas exécutés exercent 0, 299, 300, 850 et 1001 (450 est au milieu d'une partition, ce n'est PAS une valeur limite), soit 5 valeurs sur 10. Couverture = 5/10 = 50 %."
+    },
+    {
+      "id": "Q4-047",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un système de publication d'articles comporte 5 états : Brouillon (initial), Soumis, Publié, En révision et Archivé, et 7 transitions valides : T1 Brouillon→Soumis ; T2 Soumis→Publié ; T3 Soumis→En révision ; T4 Publié→Archivé ; T5 Archivé→Publié ; T6 En révision→Archivé ; T7 Publié→En révision. Chaque cas de test doit commencer à l'état initial Brouillon. Quel est le nombre MINIMAL de cas de test pour couvrir toutes les transitions valides ?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "7"
+      ],
+      "answer": 1,
+      "explanation": "T2 et T3 partent toutes deux de l'état Soumis, or aucune transition ne permet de revenir à Soumis (seule T1, depuis Brouillon, y mène, et rien ne ramène à Brouillon) : chaque cas de test ne peut donc exercer que T2 OU T3, d'où au moins 2 cas. Deux suffisent : CT1 = Brouillon→Soumis→Publié→En révision→Archivé→Publié→Archivé (T1, T2, T7, T6, T5, T4) et CT2 = Brouillon→Soumis→En révision (T1, T3)."
+    },
+    {
+      "id": "Q4-048",
+      "chapter": 4,
+      "level": "K2",
+      "question": "Parmi les affirmations suivantes concernant les tests boîte blanche, laquelle N'EST PAS vraie ?",
+      "options": [
+        "Ils permettent de détecter qu'une exigence spécifiée n'a pas été implémentée dans le code",
+        "La couverture obtenue peut être mesurée de manière objective",
+        "Les cas de test sont dérivés de la structure interne du logiciel (p. ex. le code ou l'architecture)",
+        "L'ensemble de l'implémentation logicielle peut être pris en compte lors des tests"
+      ],
+      "answer": 0,
+      "explanation": "Une faiblesse fondamentale des tests boîte blanche est que si une exigence n'a pas été implémentée, il n'existe aucun code correspondant à couvrir : ils ne peuvent donc pas détecter les exigences omises. Leurs forces sont au contraire la prise en compte de toute l'implémentation et la mesure objective de la couverture."
+    },
+    {
+      "id": "Q4-049",
+      "chapter": 4,
+      "level": "K2",
+      "question": "À l'issue d'une campagne de tests unitaires, l'équipe annonce 100 % de couverture des instructions sur un composant. Quelle conclusion est correcte ?",
+      "options": [
+        "Toutes les branches du composant ont également été exercées",
+        "Le composant ne contient plus de défauts",
+        "Chaque instruction exécutable a été exécutée au moins une fois, mais des défauts peuvent subsister (p. ex. dans des décisions ou des combinaisons de données non exercées)",
+        "Toutes les combinaisons de valeurs d'entrée du composant ont été testées"
+      ],
+      "answer": 2,
+      "explanation": "100 % de couverture des instructions garantit uniquement que chaque instruction exécutable a été exécutée au moins une fois. Cela ne garantit ni la couverture des branches (c'est l'inverse qui est vrai : 100 % des branches implique 100 % des instructions), ni l'absence de défauts, notamment ceux qui dépendent des données ou des chemins non exercés."
+    },
+    {
+      "id": "Q5-034",
+      "chapter": 5,
+      "level": "K2",
+      "question": "L'analyse des risques produit d'une application bancaire identifie un risque élevé : « des pertes de données peuvent survenir lors des échanges entre le module de paiement et le module de comptabilité ». En réponse, la Test Manager planifie des tests d'intégration approfondis et rigoureux de ces interfaces, à exécuter en priorité. De quelle option de réponse au risque s'agit-il ?",
+      "options": [
+        "Le transfert du risque, car la responsabilité est déplacée vers l'équipe de test",
+        "L'acceptation du risque, car aucune action corrective n'est entreprise",
+        "L'atténuation du risque, car les tests planifiés visent à réduire le niveau de risque",
+        "Le plan d'urgence (contingence), car les tests seront déclenchés si le risque se matérialise"
+      ],
+      "answer": 2,
+      "explanation": "Le test est une forme d'atténuation du risque : en testant rigoureusement et en priorité les zones les plus risquées, on réduit la probabilité qu'un défaut subsiste dans le produit livré, donc le niveau de risque. Le transfert confierait le risque à un tiers (p. ex. assurance), l'acceptation consisterait à ne rien faire, et un plan d'urgence définirait des actions à déclencher seulement si le risque se matérialise."
+    },
+    {
+      "id": "Q5-035",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Une testeuse signale une défaillance intermittente du module d'export PDF. Son rapport contient : un identifiant unique, un titre, les étapes détaillées de reproduction, les résultats attendus et réels, ainsi que la sévérité. Le développeur, qui ne parvient pas à reproduire la défaillance sur son poste, rejette le rapport comme « non reproductible ». Quelle information manquante dans le rapport aurait LE PLUS probablement aidé à éviter ce rejet ?",
+      "options": [
+        "La priorité attribuée au défaut par la Test Manager",
+        "Le nom du réviseur ayant approuvé le cas de test concerné",
+        "Le nombre total de défauts déjà détectés dans le module d'export",
+        "L'identification de l'environnement de test et la version de l'élément de test sur lesquels la défaillance a été observée"
+      ],
+      "answer": 3,
+      "explanation": "Un rapport de défaut doit préciser le contexte du test : l'environnement de test (OS, configuration, appareil) et la version de l'élément de test sur lesquels la défaillance s'est produite. Sans ces informations, le développeur teste peut-être une autre version ou une autre configuration, ce qui explique la non-reproduction. La priorité, le réviseur ou les statistiques de défauts n'aident pas à reproduire le problème."
+    },
+    {
+      "id": "Q5-036",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Considérez les critères suivants définis pour un niveau de test : 1. L'environnement de test est configuré et prêt à l'emploi ; 2. Le taux de couverture des exigences planifié a été atteint ; 3. La base de test est documentée, revue et approuvée ; 4. Le nombre de défauts majeurs non corrigés est inférieur au seuil convenu ; 5. Les testeurs sont formés à l'outil d'exécution des tests. Lesquels sont des critères de SORTIE ?",
+      "options": [
+        "1 et 3",
+        "2 et 5",
+        "1 et 4",
+        "2 et 4"
+      ],
+      "answer": 3,
+      "explanation": "Les critères de sortie mesurent l'achèvement des activités de test : atteinte de la couverture visée (2) et respect du seuil de défauts non résolus (4). Les critères 1, 3 et 5 sont des critères d'entrée (Definition of Ready) : ils décrivent les préconditions nécessaires pour DÉMARRER les tests (ressources disponibles, base de test prête, personnel formé)."
+    },
+    {
+      "id": "Q6-009",
+      "chapter": 6,
+      "level": "K1",
+      "question": "Une équipe utilise un outil qui génère automatiquement des données de test en anonymisant des extraits de la base de production. Selon le syllabus, à quelle catégorie d'outils de test cet outil appartient-il ?",
+      "options": [
+        "Les outils de conception et d'implémentation des tests",
+        "Les outils de test statique",
+        "Les outils de collaboration",
+        "Les outils DevOps"
+      ],
+      "answer": 0,
+      "explanation": "Les outils de conception et d'implémentation des tests facilitent la génération des cas de test, des données de test et des procédures de test. Les produits ainsi créés soutiennent l'implémentation puis l'exécution des tests, contrairement aux outils de test statique (revues, analyse statique) ou aux outils DevOps (pipeline de livraison, CI/CD)."
     }
   ]
 }

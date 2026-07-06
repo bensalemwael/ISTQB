@@ -38,7 +38,10 @@ Les outils **soutiennent et facilitent** de nombreuses activités de test. Caté
 
 ---
 
+> ⚠️ **Piège d'examen** : un outil de **préparation des données de test** (génération, anonymisation, chargement de jeux de données) soutient les activités d'**implémentation et d'exécution des tests** — les données concrètes sont fabriquées à l'implémentation puis (ré)injectées à chaque exécution. La *conception* ne définit que les **exigences** en données de test (syllabus 1.4.1).
+
 ## 6.2 Avantages et risques de l'automatisation des tests (K1)
+
 
 > ⚠️ **Acquérir un outil ≠ garantie de succès.** Chaque nouvel outil demande des efforts pour obtenir des avantages réels et durables : **introduction, maintenance, formation**. Les risques doivent être **analysés et atténués**.
 

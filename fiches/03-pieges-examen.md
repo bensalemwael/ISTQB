@@ -305,7 +305,13 @@ Test statique (sans exécution du logiciel)
 
 ---
 
+**Tâches concrètes à savoir classer (question type : « quelles DEUX tâches relèvent du rôle de testeur ? »)** :
+- **Testeur** : mettre en place / **configurer l'environnement de test**, concevoir et automatiser les tests, exécuter et journaliser, **mesurer/rapporter la couverture atteinte**, rédiger les rapports de défaut
+- **Gestion de test** : élaborer le **plan de test**, définir les critères d'entrée/sortie, piloter l'avancement, produire les rapports d'avancement/clôture
+- **Ni l'un ni l'autre** : maintenir le backlog produit (PO), concevoir des solutions (développeur)
+
 ## 18. Test exploratoire vs test basé sur des checklists vs estimation d'erreurs
+
 
 **La confusion** : trois techniques basées sur l'expérience, chacune avec son mécanisme propre.
 

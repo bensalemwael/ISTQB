@@ -47,6 +47,16 @@ Référence : **ISO/IEC/IEEE 29119-3**.
 **Critères d'entrée typiques** : ressources disponibles, matériel de test, niveau initial de qualité (smoke tests OK).
 **Critères de sortie typiques** : mesures d'exhaustivité (couverture, défauts non résolus, densité, échecs), critères de clôture (tests exécutés, statiques effectués, défauts signalés, régression automatisée).
 
+| Exemple concret | Entrée ou sortie ? |
+|---|---|
+| Environnement de test **prêt et disponible** | **Entrée** |
+| Le testeur peut **se connecter à l'objet de test** | **Entrée** |
+| Exigences traduites en **given/when/then** (DoR) | **Entrée** |
+| Smoke tests réussis (qualité initiale) | **Entrée** |
+| Couverture ou **densité de défauts** cible atteinte | **Sortie** |
+| Tests de **régression automatisés** | **Sortie** |
+| Tests planifiés exécutés, défauts signalés | **Sortie** |
+
 L'épuisement temps/budget peut être un critère de sortie valable, sous accord des parties prenantes.
 
 **En Agile** :
@@ -160,6 +170,8 @@ Options de réponse :
 - **Transfert**
 - **Plan d'urgence** (contingency)
 
+> 🔑 **Effectuer des tests** en réponse à un risque produit (ex. tests de **performance** face à un risque de lenteur, tests **alpha/bêta** face à un risque d'inadéquation aux usages) = **ATTÉNUATION** du risque. Le **transfert** = confier le risque à un tiers (assurance, sous-traitant) ; l'**acceptation** = ne rien faire en connaissance de cause ; le **plan d'urgence** = prévoir quoi faire si le risque se réalise.
+
 Mesures d'atténuation par tests :
 - Choisir des testeurs avec les bonnes compétences
 - Niveau d'indépendance approprié
@@ -228,6 +240,8 @@ Bénéfices :
 - **Retour à une baseline antérieure** pour reproduire des résultats
 - Souvent automatisée en pipeline DevOps
 
+> ⚠️ **Piège d'examen** : « enregistrer/versionner un script de test dans un référentiel (ex. Git) » = **gestion de configuration** — pas « tests de maintenance » (le test de maintenance teste un système modifié, cf. ch. 2.3), ni « gestion des défauts ». Tout le testware (plans, cas, scripts, résultats) est traité comme **élément de configuration**.
+
 ---
 
 ## 5.5 Gestion des défauts — K3 ⭐
@@ -246,6 +260,8 @@ Le processus doit être suivi par **toutes les parties prenantes**. À appliquer
 - Titre + résumé bref
 - **Date** d'observation, **organisation émettrice, auteur** + son rôle
 - Identification **objet de test** + **environnement**
+
+  > 🔑 L'identification de l'**élément de test** (avec sa **version**) et de l'**environnement de test** est indispensable pour permettre la **reproduction** de la défaillance par les développeurs — c'est souvent LA bonne réponse quand l'examen demande quelle information manque à un rapport de défaut rejeté « non reproductible ».
 - Contexte (cas de test, activité, phase SDLC, technique, données…)
 - **Description de la défaillance** (étapes, logs, captures) → permet la reproduction
 - **Résultats attendus** vs **résultats réels**

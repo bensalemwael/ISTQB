@@ -30,6 +30,8 @@ Le choix du SDLC influence :
 
 ### 2.1.2 Bonnes pratiques transverses
 - À chaque activité de dev = une activité de test
+
+> ❗ Cette bonne pratique s'applique à **TOUT modèle de SDLC** (séquentiel, itératif, incrémental, Agile) — pas seulement au modèle en V. Piège d'examen : une réponse limitant cette correspondance à un seul type de modèle est fausse.
 - Niveaux de test = objectifs distincts (éviter redondance)
 - Analyse/conception de chaque niveau démarre **avec la phase de dev correspondante** (test précoce)
 - Testeurs impliqués dans les revues dès les premiers brouillons (shift-left)
@@ -130,6 +132,8 @@ Les 4 types peuvent s'appliquer à tous les niveaux.
 | Si manque de temps : reproduire les étapes seulement | Excellent candidat à l'**automatisation** (CI/DevOps) |
 
 > 🔑 Bonne pratique : démarrer l'automatisation de régression **dès le début** du projet.
+
+> 🔑 **Lecture d'un historique d'exécutions** (question type d'examen) : après une correction, les tests de **confirmation** ré-exécutent les cas qui **ÉCHOUAIENT** (vérifier la correction) ; les tests de **régression** ré-exécutent des cas qui **PASSAIENT** auparavant (vérifier l'absence d'effets de bord). Un cas qui réussissait et qu'on relance après une modification = régression, pas confirmation.
 
 ---
 
