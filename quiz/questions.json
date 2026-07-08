@@ -21,15 +21,15 @@
       "id": "Q1-002",
       "chapter": 1,
       "level": "K2",
-      "question": "Quelle est la différence FONDAMENTALE entre le test et le débogage ?",
+      "question": "Lors des tests système d'une application de paiement en ligne, une testeuse exécute un cas de test qui déclenche une défaillance : le montant total affiché est erroné. Elle rédige un rapport de défaut. Un développeur reproduit ensuite la défaillance, en diagnostique la cause racine dans le code de calcul de la TVA, puis l'élimine. Laquelle des affirmations suivantes décrit correctement la répartition de ces activités entre le test et le débogage ?",
       "options": [
-        "Le test est manuel, le débogage est automatisé",
-        "Le test détecte les défaillances/défauts ; le débogage trouve et élimine la cause",
-        "Le test est statique, le débogage est dynamique",
-        "Il n'y a pas de différence, ce sont des synonymes"
+        "La testeuse a réalisé un test dynamique qui a déclenché la défaillance ; la reproduction, le diagnostic et l'élimination de la cause relèvent du débogage, effectué par le développeur",
+        "La testeuse a réalisé le débogage en détectant la défaillance ; le développeur a réalisé le test en corrigeant le code",
+        "Le test et le débogage désignent la même activité, réalisée ici en deux étapes par deux personnes différentes",
+        "Le développeur a réalisé un test statique en éliminant le défaut ; la testeuse a réalisé le débogage en rédigeant le rapport de défaut"
       ],
-      "answer": 1,
-      "explanation": "Le test révèle l'existence d'un problème (défaillance ou défaut). Le débogage reproduit, diagnostique et corrige."
+      "answer": 0,
+      "explanation": "Le test et le débogage sont des activités distinctes (section 1.1.2). Le test dynamique peut déclencher des défaillances causées par des défauts ; le débogage consiste alors à reproduire la défaillance, à diagnostiquer la cause racine et à l'éliminer. Ici, la testeuse teste (détection et rapport), le développeur débogue (reproduction, diagnostic, correction)."
     },
     {
       "id": "Q1-003",
@@ -49,15 +49,15 @@
       "id": "Q1-004",
       "chapter": 1,
       "level": "K2",
-      "question": "Quel principe du test affirme que tester de manière exhaustive est impossible ?",
+      "question": "Sur un projet de calculateur de primes d'assurance, le sponsor exige que l'équipe vérifie « toutes les combinaisons possibles d'entrées » du formulaire de devis, qui comporte plus de vingt champs. La Test Manager explique que cela est irréalisable, sauf dans les cas triviaux, et propose plutôt de concentrer l'effort de test à l'aide des techniques de test, de la priorisation des cas de test et du test basé sur les risques. Sur quel principe du test s'appuie-t-elle ?",
       "options": [
-        "Principe 1 : Le test montre la présence de défauts",
-        "Principe 2 : Le test exhaustif est impossible",
-        "Principe 4 : Regroupement des défauts",
-        "Principe 7 : Illusion de l'absence de défauts"
+        "Le test montre la présence, et non l'absence, de défauts",
+        "L'usure des tests",
+        "Le test exhaustif est impossible",
+        "L'illusion de l'absence de défaut"
       ],
-      "answer": 1,
-      "explanation": "Le 2ᵉ principe (Manna 1978). Il faut donc concentrer l'effort via les techniques de test, la priorisation et le test basé sur les risques."
+      "answer": 2,
+      "explanation": "Principe 2 (section 1.3, Manna 1978) : il n'est pas possible de tout tester, sauf dans les cas triviaux. Plutôt que de tenter un test exhaustif, il faut concentrer l'effort via les techniques de test, la priorisation des cas de test et le test basé sur les risques — exactement la réponse de la Test Manager au sponsor."
     },
     {
       "id": "Q1-005",
@@ -105,15 +105,15 @@
       "id": "Q1-008",
       "chapter": 1,
       "level": "K2",
-      "question": "Quelle activité de test consiste à définir 'comment tester' ?",
+      "question": "Sur un projet de site de réservation en ligne, une testeuse reprend les conditions de test priorisées issues de l'analyse de test. Elle en dérive des cas de test en appliquant le partitionnement d'équivalence, et identifie les exigences relatives aux données de test et à l'environnement de test nécessaires. Elle répond ainsi à la question « comment tester ? ». Quelle activité du processus de test réalise-t-elle ?",
       "options": [
-        "Analyse de test",
-        "Conception des tests",
-        "Implémentation des tests",
-        "Exécution des tests"
+        "L'implémentation des tests",
+        "L'analyse de test",
+        "La conception des tests",
+        "L'exécution des tests"
       ],
-      "answer": 1,
-      "explanation": "L'analyse définit 'quoi tester' (conditions de test). La conception définit 'comment tester' (cas de test)."
+      "answer": 2,
+      "explanation": "La conception des tests (section 1.4.1) élabore les conditions de test en cas de test, notamment via les techniques de test, et identifie les exigences en données de test et en environnement de test : elle répond à « comment tester ? ». L'analyse de test répond à « quoi tester ? » (conditions de test) ; l'implémentation crée le testware concret ; l'exécution lance les tests."
     },
     {
       "id": "Q1-009",
@@ -217,15 +217,15 @@
       "id": "Q1-016",
       "chapter": 1,
       "level": "K2",
-      "question": "Parmi les options suivantes, laquelle représente le niveau d'indépendance du test le PLUS ÉLEVÉ ?",
+      "question": "Un fabricant de dispositifs médicaux développe le logiciel critique de sûreté d'une pompe à perfusion. Pour répondre aux exigences réglementaires, la direction souhaite mettre en place, pour la campagne d'acceptation, le degré d'indépendance du test le PLUS ÉLEVÉ possible. Quelle organisation doit-elle retenir ?",
       "options": [
-        "Le développeur teste son propre code",
-        "Un développeur teste le code d'un collègue de la même équipe",
-        "Une équipe de test indépendante au sein de l'organisation",
-        "Des testeurs externes à l'organisation"
+        "Faire tester chaque composant par le développeur qui l'a écrit",
+        "Faire tester le code par des pairs de l'auteur appartenant à la même équipe",
+        "Confier les tests à des testeurs externes à l'organisation",
+        "Confier les tests à une équipe de test indépendante interne, extérieure à l'équipe de développement"
       ],
-      "answer": 3,
-      "explanation": "Le syllabus décrit des degrés croissants d'indépendance : pas de testeur indépendant (le développeur teste son code), testeurs de la même équipe, équipe de test indépendante interne, et enfin testeurs externes à l'organisation — le niveau le plus élevé."
+      "answer": 2,
+      "explanation": "La section 1.5.3 décrit des degrés croissants d'indépendance : l'auteur teste son propre travail (pas d'indépendance), les pairs de la même équipe (un peu d'indépendance), des testeurs extérieurs à l'équipe mais internes à l'organisation, et enfin des testeurs externes à l'organisation — le degré le plus élevé, souvent exigé pour les systèmes critiques de sûreté."
     },
     {
       "id": "Q1-017",
@@ -315,15 +315,15 @@
       "id": "Q2-003",
       "chapter": 2,
       "level": "K2",
-      "question": "Quel format est typiquement associé au BDD ?",
+      "question": "Une équipe agile qui développe une application de covoiturage adopte le développement piloté par le comportement (BDD). Un représentant métier, un développeur et une testeuse rédigent ensemble le comportement souhaité d'une User Story sous forme de scénarios exprimés dans un langage naturel simple, compréhensible par tous et pouvant ensuite être traduit en tests automatisés. Dans quel format ces scénarios sont-ils typiquement rédigés ?",
       "options": [
-        "Input/Output/Result",
-        "Given/When/Then",
+        "Given/When/Then (Étant donné / Lorsque / Alors)",
         "If/Then/Else",
+        "Input/Output/Result",
         "Setup/Act/Verify"
       ],
-      "answer": 1,
-      "explanation": "Le BDD exprime le comportement en Given/When/Then (Étant donné / Lorsque / Alors)."
+      "answer": 0,
+      "explanation": "Dans le BDD (section 2.1.3), le comportement souhaité est exprimé sous forme de cas de test rédigés dans un langage naturel simple, compréhensible par les parties prenantes, généralement au format Given/When/Then (Étant donné un contexte, Lorsque survient une action, Alors un résultat vérifiable est attendu). Ces scénarios sont ensuite traduits automatiquement en tests exécutables."
     },
     {
       "id": "Q2-004",
@@ -371,15 +371,15 @@
       "id": "Q2-007",
       "chapter": 2,
       "level": "K2",
-      "question": "Combien de niveaux de test décrits par le syllabus v4.0 ?",
+      "question": "Vous êtes Test Manager d'un projet bancaire dans lequel le nouveau système est construit à partir de composants développés en interne, puis interconnecté avec les systèmes de plusieurs partenaires externes avant sa mise en service. Vous structurez votre stratégie de test conformément aux cinq niveaux de test décrits par le syllabus CTFL v4.0. Quelle liste correspond à ces cinq niveaux ?",
       "options": [
-        "3",
-        "4",
-        "5",
-        "6"
+        "Test unitaire, test fonctionnel, test non fonctionnel, test de régression, test d'acceptation",
+        "Test de composants, test d'intégration de composants, test système, test d'intégration système, test d'acceptation",
+        "Test de composants, test d'intégration, test système, test d'acceptation, test de maintenance",
+        "Test statique, test dynamique, test système, test d'intégration système, test bêta"
       ],
-      "answer": 2,
-      "explanation": "5 niveaux : composants, intégration de composants, système, intégration système, acceptation."
+      "answer": 1,
+      "explanation": "La section 2.2.1 décrit cinq niveaux de test : tests de composants (unitaires), tests d'intégration de composants, tests système, tests d'intégration système (interfaces avec d'autres systèmes, p. ex. les partenaires externes) et tests d'acceptation. Fonctionnel, non fonctionnel et régression sont des types de test ; la maintenance et le test statique ne sont pas des niveaux de test."
     },
     {
       "id": "Q2-008",
@@ -483,15 +483,15 @@
       "id": "Q2-015",
       "chapter": 2,
       "level": "K2",
-      "question": "Quelle stratégie d'intégration consiste à intégrer tous les composants simultanément ?",
+      "question": "Une équipe développe une application de gestion de stock composée de douze modules réalisés en parallèle par trois sous-traitants. Le chef de projet décide d'attendre que tous les modules soient livrés, puis de les assembler tous simultanément et de ne commencer les tests d'intégration de composants qu'à ce moment-là. Quelle stratégie d'intégration cette équipe applique-t-elle ?",
       "options": [
-        "Bottom-up",
-        "Top-down",
-        "Big-bang",
-        "Continuous integration"
+        "L'intégration ascendante (bottom-up)",
+        "L'intégration descendante (top-down)",
+        "L'intégration big-bang",
+        "L'intégration continue"
       ],
       "answer": 2,
-      "explanation": "Le big-bang intègre tout d'un coup. Bottom-up commence par les composants bas-niveau, top-down par le haut."
+      "explanation": "Intégrer tous les composants simultanément une fois qu'ils sont tous disponibles correspond à la stratégie big-bang (section 2.2.1 : les tests d'intégration de composants dépendent de la stratégie d'intégration — ascendante, descendante ou big-bang). Cette approche retarde la détection des défauts d'interface et rend leur localisation difficile, contrairement à une intégration progressive."
     },
     {
       "id": "Q2-016",
@@ -1379,15 +1379,15 @@
       "id": "Q5-002",
       "chapter": 5,
       "level": "K2",
-      "question": "Quelle est la différence entre Definition of Ready (DoR) et Definition of Done (DoD) ?",
+      "question": "Dans une équipe Scrum, une User Story de paiement est écartée lors de la planification d'itération : ses critères d'acceptation ne sont pas encore rédigés, elle ne remplit donc pas les conditions convenues pour entrer en développement et en test. En fin d'itération, une autre User Story est déclarée terminée car elle satisfait les métriques objectives définies par l'équipe (tests exécutés, couverture atteinte, défauts sous le seuil). Quelle affirmation décrit correctement les deux notions appliquées par cette équipe ?",
       "options": [
-        "Aucune, ce sont des synonymes",
-        "DoR = critères d'entrée, DoD = critères de sortie",
-        "DoR = test, DoD = production",
-        "DoR = développement, DoD = test"
+        "La Definition of Ready correspond aux critères de sortie et la Definition of Done aux critères d'entrée",
+        "La Definition of Ready et la Definition of Done sont deux noms d'un même ensemble de critères",
+        "La Definition of Ready correspond aux critères d'entrée (conditions pour démarrer l'activité) et la Definition of Done aux critères de sortie (conditions pour la considérer comme terminée)",
+        "La Definition of Ready ne concerne que les développeurs et la Definition of Done ne concerne que les testeurs"
       ],
-      "answer": 1,
-      "explanation": "DoR conditionne le démarrage (entrée) ; DoD conditionne la complétion (sortie)."
+      "answer": 2,
+      "explanation": "Section 5.1.3 : en développement Agile, les critères d'entrée qu'une User Story doit remplir pour démarrer les activités de développement et/ou de test sont appelés Definition of Ready (première User Story du scénario) ; les critères de sortie, définissant les métriques objectives d'un produit livrable, sont appelés Definition of Done (seconde User Story)."
     },
     {
       "id": "Q5-003",
@@ -1421,15 +1421,15 @@
       "id": "Q5-005",
       "chapter": 5,
       "level": "K2",
-      "question": "Quelle technique d'estimation est basée sur des données historiques de projets antérieurs ?",
+      "question": "Une Test Manager doit estimer l'effort de test d'un nouveau projet de portail client. Elle relève que, sur le projet précédent de l'organisation, le rapport entre l'effort de développement et l'effort de test était de 3:2. L'effort de développement du nouveau projet étant estimé à 600 jours-personne, elle en déduit un effort de test de 400 jours-personne. Quelle technique d'estimation applique-t-elle ?",
       "options": [
-        "Delphi large bande",
-        "Estimation en 3 points",
-        "Estimation basée sur des ratios",
-        "Planning Poker"
+        "Le Delphi large bande",
+        "L'estimation en trois points",
+        "L'extrapolation",
+        "L'estimation basée sur des ratios"
       ],
-      "answer": 2,
-      "explanation": "Les ratios standards (ex. dev:test = 3:2) proviennent de projets antérieurs de l'organisation."
+      "answer": 3,
+      "explanation": "Il s'agit de l'estimation basée sur des ratios (section 5.1.4) : technique basée sur des métriques, où des ratios « standards » sont déduits de données historiques de projets antérieurs de l'organisation (ici dev:test = 3:2, soit 600 → 400 jours-personne). Le Delphi large bande et l'estimation en trois points sont basés sur l'expertise ; l'extrapolation projette les mesures des itérations précédentes du même projet."
     },
     {
       "id": "Q5-006",
@@ -1561,15 +1561,15 @@
       "id": "Q5-015",
       "chapter": 5,
       "level": "K2",
-      "question": "Quelle est la différence entre 'sévérité' et 'priorité' d'un défaut ?",
+      "question": "Lors d'une réunion de triage des défauts d'une application de vente en ligne, un développeur junior s'étonne : un défaut provoquant le crash d'un module de statistiques utilisé une fois par trimestre est classé « sévérité élevée, priorité faible », tandis qu'un texte tronqué sur l'écran de connexion, vu immédiatement par tous les utilisateurs, est classé « sévérité faible, priorité élevée ». Quelle explication la Test Manager doit-elle lui donner ?",
       "options": [
-        "Aucune",
-        "Sévérité = impact technique/métier ; priorité = urgence de correction",
-        "Sévérité = priorité",
-        "Sévérité = financière ; priorité = humaine"
+        "C'est une erreur de classification : la sévérité et la priorité d'un défaut doivent toujours avoir la même valeur",
+        "La sévérité mesure l'impact du défaut sur le système ou sur les intérêts des parties prenantes, tandis que la priorité exprime l'urgence de sa correction : les deux s'évaluent indépendamment",
+        "La sévérité est attribuée par les développeurs et la priorité par les testeurs, ce qui explique mécaniquement les écarts",
+        "La priorité mesure l'impact technique du défaut et la sévérité l'urgence métier de sa correction"
       ],
       "answer": 1,
-      "explanation": "Un défaut peut avoir une sévérité élevée mais une priorité faible (et inversement)."
+      "explanation": "Sévérité et priorité sont deux attributs indépendants d'un rapport de défaut (section 5.5) : la sévérité qualifie l'impact du défaut (technique ou sur les intérêts des parties prenantes), la priorité l'urgence de la correction. Un crash d'un module rarement utilisé peut donc être sévère mais peu urgent, et un défaut cosmétique très visible peut être peu sévère mais urgent."
     },
     {
       "id": "Q5-016",
@@ -2424,6 +2424,286 @@
       ],
       "answer": 0,
       "explanation": "Les outils de conception et d'implémentation des tests facilitent la génération des cas de test, des données de test et des procédures de test. Les produits ainsi créés soutiennent l'implémentation puis l'exécution des tests, contrairement aux outils de test statique (revues, analyse statique) ou aux outils DevOps (pipeline de livraison, CI/CD)."
+    },
+    {
+      "id": "Q1-028",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Une testeuse doit tester un champ de saisie acceptant des montants de 0,01 € à 10 000,00 €. Elle constate rapidement qu'il est impossible de tester toutes les valeurs et combinaisons d'entrées possibles dans le temps imparti. Compte tenu du principe « le test exhaustif est impossible », quelle est LA MEILLEURE façon de procéder ?",
+      "options": [
+        "Documenter toutes les variations d'entrée possibles dans la spécification de test et les faire valider par le product owner",
+        "Concevoir des cas de test qui couvrent tous les résultats spécifiés du programme",
+        "Utiliser les partitions d'équivalence et l'analyse des valeurs limites pour tester un sous-ensemble représentatif des entrées",
+        "Exécuter toutes les combinaisons d'entrées possibles à l'aide d'un outil d'automatisation des tests"
+      ],
+      "answer": 2,
+      "explanation": "Le principe 2 (le test exhaustif est impossible) implique qu'au lieu d'essayer de tout tester, il faut utiliser les techniques de test, la priorisation des cas de test et le test basé sur les risques pour CONCENTRER l'effort. EP et BVA sélectionnent un sous-ensemble représentatif des entrées. Couvrir tous les résultats ou documenter toutes les variations ne résout pas l'explosion combinatoire des entrées, et l'automatisation ne rend pas l'exhaustivité possible."
+    },
+    {
+      "id": "Q1-029",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Dans un projet de refonte d'un portail client, Sara vient de recevoir les conditions de test priorisées issues de l'activité précédente. À partir de celles-ci, elle élabore des cas de test de haut niveau, identifie les données de test dont elle aura besoin et précise les exigences relatives à l'environnement de test. Quelle activité de test Sara est-elle en train de réaliser ?",
+      "options": [
+        "L'analyse de test, car elle travaille à partir de la base de test pour définir quoi tester",
+        "L'implémentation des tests, car elle prépare le testware nécessaire à l'exécution",
+        "L'exécution des tests, car elle utilise les données et l'environnement de test",
+        "La conception des tests, car elle dérive les cas de test et identifie les besoins en données et en environnement"
+      ],
+      "answer": 3,
+      "explanation": "La conception des tests transforme les conditions de test en cas de test (« comment tester ») et comprend l'identification des données de test nécessaires ainsi que la définition des exigences relatives à l'environnement de test (section 1.4.1). L'analyse produit les conditions de test en amont ; l'implémentation crée concrètement les procédures, scripts et met en place l'environnement ; l'exécution lance les tests."
+    },
+    {
+      "id": "Q1-030",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Lequel des exemples suivants illustre LE MIEUX l'utilisation de la connaissance du domaine, en tant que compétence générique, LORS des tests ?",
+      "options": [
+        "Une ancienne infirmière, devenue testeuse d'un logiciel de gestion des soins, comprend les critères d'acceptation rédigés par les représentants métier et évalue le produit du point de vue des utilisateurs finaux",
+        "Un ancien développeur, devenu testeur, communique avec les analystes métier pour clarifier les exigences ambiguës",
+        "Un testeur utilise un outil de capture/rejeu pour automatiser la suite de tests de régression du projet",
+        "Une testeuse rédige des rapports de défauts objectifs et factuels afin d'éviter de froisser les développeurs"
+      ],
+      "answer": 0,
+      "explanation": "La connaissance du domaine permet de comprendre les utilisateurs finaux et les représentants métier, et de communiquer avec eux (section 1.5.1) : l'expérience d'infirmière donne à la testeuse la compréhension métier des critères d'acceptation d'un logiciel médical. Le profil ex-développeur illustre les connaissances techniques, l'usage d'outils les connaissances techniques également, et la rédaction de rapports constructifs relève des compétences en communication."
+    },
+    {
+      "id": "Q1-031",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Lequel des exemples suivants illustre CORRECTEMENT la valeur du maintien de la traçabilité entre la base de test et le testware ?",
+      "options": [
+        "La traçabilité entre les cas de test et les défauts garantit que tous les défauts détectés seront corrigés avant la livraison",
+        "Grâce à la traçabilité entre les exigences et les résultats d'exécution des tests, l'équipe peut auditer l'avancement du projet par rapport aux objectifs métier et rendre les rapports de test compréhensibles pour les parties prenantes",
+        "La traçabilité permet de générer automatiquement les cas de test à partir des exigences, ce qui supprime l'effort de conception des tests",
+        "La traçabilité entre les risques et les cas de test rend inutiles les revues de la base de test"
+      ],
+      "answer": 1,
+      "explanation": "Selon la section 1.4.4, une bonne traçabilité rend les rapports d'avancement et de clôture plus compréhensibles en incluant le statut des éléments de la base de test, et fournit des informations permettant d'auditer la qualité du produit, la capacité du processus et l'avancement du projet par rapport aux objectifs métiers. La traçabilité ne garantit pas la correction des défauts, ne génère pas les cas de test et ne remplace jamais les revues."
+    },
+    {
+      "id": "Q1-032",
+      "chapter": 1,
+      "level": "K2",
+      "question": "Un testeur junior conçoit des cas de test pour un module de virement bancaire. Il ne teste que le chemin nominal (virement réussi avec des données valides) et ne prévoit aucun cas pour les saisies invalides, les plafonds dépassés ou les interruptions de session. Quelle compétence générique, particulièrement pertinente pour les testeurs, fait LE PLUS défaut à ce testeur ?",
+      "options": [
+        "Les connaissances techniques nécessaires pour utiliser les outils de test appropriés",
+        "La bonne communication et l'écoute active envers les parties prenantes",
+        "L'esprit d'équipe nécessaire pour collaborer avec les développeurs",
+        "La curiosité, l'esprit critique et le souci du détail nécessaires pour envisager les comportements inattendus et les conditions d'erreur"
+      ],
+      "answer": 3,
+      "explanation": "La section 1.5.1 cite la rigueur, l'attention, la curiosité et le souci du détail pour identifier les défauts difficiles à trouver, ainsi que l'esprit critique : un bon testeur remet en cause les hypothèses et cherche activement ce qui pourrait mal se passer (pessimisme professionnel), au lieu de se contenter de démontrer que le chemin nominal fonctionne. Les outils, la communication et l'esprit d'équipe ne sont pas la cause de cette lacune de conception."
+    },
+    {
+      "id": "Q2-029",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Lors d'une formation interne sur le test dans les cycles de vie de développement logiciel (SDLC), quatre affirmations sont proposées. Laquelle est CORRECTE ?",
+      "options": [
+        "Dans un modèle de développement séquentiel, la participation des testeurs aux tests dynamiques commence typiquement tard dans le cycle de vie, lorsque le logiciel exécutable devient disponible",
+        "Dans un modèle incrémental, les tests statiques sont réalisés dans les premiers incréments et les tests dynamiques sont réservés aux derniers incréments",
+        "Dans un modèle itératif, les tests de composants doivent nécessairement être exécutés manuellement par les développeurs",
+        "En développement agile, l'automatisation des tests rend les tests de régression inutiles"
+      ],
+      "answer": 0,
+      "explanation": "Dans un modèle séquentiel (p. ex. cascade, cycle en V), le logiciel exécutable n'existe qu'en fin de cycle : les tests dynamiques y sont donc typiquement effectués tard, même si les activités statiques (revues, analyse et conception des tests) peuvent commencer tôt. Dans les modèles itératifs et incrémentaux, tests statiques ET dynamiques ont lieu dans chaque itération ; les tests de composants peuvent être automatisés ; et l'automatisation facilite les tests de régression, elle ne les supprime pas."
+    },
+    {
+      "id": "Q2-030",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Une organisation développe certains produits selon un cycle en V et d'autres avec Scrum. Le responsable qualité veut définir une bonne pratique de test applicable QUEL QUE SOIT le cycle de vie de développement logiciel choisi. Laquelle des pratiques suivantes devrait-il retenir ?",
+      "options": [
+        "Attendre la version finale approuvée et signée de la documentation avant que les testeurs ne participent aux revues",
+        "N'impliquer les testeurs dans les revues des produits d'activités que sur les projets séquentiels, car en agile la documentation est réduite",
+        "Impliquer les testeurs dans la revue des produits d'activités dès que des versions préliminaires (drafts) de la documentation sont disponibles",
+        "Faire poursuivre à chaque niveau de test les mêmes objectifs de test afin de multiplier les vérifications"
+      ],
+      "answer": 2,
+      "explanation": "La section 2.1.2 énonce des bonnes pratiques de test valables pour tout SDLC, dont : les testeurs sont impliqués dans la revue des produits d'activités dès que les versions préliminaires de la documentation sont disponibles, afin de soutenir le test précoce et le shift-left. Attendre une version finale approuvée retarde la détection des défauts, et chaque niveau de test doit avoir des objectifs SPÉCIFIQUES et différents afin d'éviter la redondance."
+    },
+    {
+      "id": "Q2-031",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Quatre activités de test sont menées dans un projet de billetterie en ligne : 1. Vérifier l'échange de données entre l'application de billetterie et le service de paiement d'un prestataire externe ; 2. Vérifier de bout en bout, par l'équipe de test et dans un environnement représentatif de la production, les tâches fonctionnelles complètes de l'application (recherche, réservation, annulation) ; 3. Vérifier les interactions entre le module « panier » et le module « calcul du prix » de l'application ; 4. Faire vérifier par les représentants métier, avant la mise en production, que le workflow de réservation s'intègre dans leurs processus quotidiens. Laquelle de ces activités relève des TESTS SYSTÈME ?",
+      "options": [
+        "L'activité 1",
+        "L'activité 2",
+        "L'activité 3",
+        "L'activité 4"
+      ],
+      "answer": 1,
+      "explanation": "Les tests système se concentrent sur le comportement global du système complet de bout en bout (tâches fonctionnelles complètes), souvent réalisés par une équipe de test dans un environnement représentatif. L'activité 1 est un test d'intégration de systèmes (interface avec un système externe), l'activité 3 un test d'intégration de composants (interactions entre modules internes), et l'activité 4 un test d'acceptation utilisateur (validation par les représentants métier avant mise en production)."
+    },
+    {
+      "id": "Q2-032",
+      "chapter": 2,
+      "level": "K1",
+      "question": "Une équipe Scrum adopte l'approche « équipe intégrée » (whole-team approach) : testeurs, développeurs et représentants métier travaillent ensemble et partagent le même espace de travail. Lequel des éléments suivants est un AVANTAGE de cette approche ?",
+      "options": [
+        "Elle garantit que n'importe quel membre de l'équipe peut effectuer n'importe quelle tâche à n'importe quel moment, indépendamment de ses compétences",
+        "Elle augmente le niveau d'indépendance du test au sein de l'équipe",
+        "Elle transfère la responsabilité de la qualité aux seuls testeurs de l'équipe",
+        "Elle crée une synergie en permettant aux différents ensembles de compétences au sein de l'équipe d'être exploités au profit du projet"
+      ],
+      "answer": 3,
+      "explanation": "L'approche équipe intégrée améliore la dynamique d'équipe, la communication et la collaboration, et crée une SYNERGIE en exploitant les différents ensembles de compétences au profit du projet (section 1.5.2). Attention au piège : tout membre ayant LES CONNAISSANCES ET COMPÉTENCES NÉCESSAIRES peut effectuer n'importe quelle tâche — pas n'importe qui, n'importe quand. Chacun est responsable de la qualité, et cette approche RÉDUIT l'indépendance du test plutôt qu'elle ne l'augmente."
+    },
+    {
+      "id": "Q2-033",
+      "chapter": 2,
+      "level": "K2",
+      "question": "Après la correction d'un défaut dans le module de facturation d'une application en production, l'équipe planifie ses tests de confirmation et de régression. Laquelle des affirmations suivantes est CORRECTE ?",
+      "options": [
+        "Des tests de régression sont également recommandés lorsque l'environnement change (p. ex. montée de version du système d'exploitation ou du SGBD), car des effets négatifs peuvent apparaître dans des parties non modifiées du système",
+        "Les tests de régression servent à vérifier que l'environnement opérationnel reste inchangé après la correction",
+        "En cas de forte pression du temps, les tests de confirmation peuvent être totalement omis puisque les tests de régression couvrent aussi le code modifié",
+        "Les tests de confirmation servent à détecter les effets indésirables de la correction sur les parties non modifiées du code"
+      ],
+      "answer": 0,
+      "explanation": "Les tests de régression vérifient qu'un changement — du code OU de l'environnement (p. ex. nouvelle version du système d'exploitation ou du SGBD) — n'a pas d'effets négatifs sur le comportement existant des parties non modifiées (section 2.2.3). La régression ne vérifie pas que l'environnement « reste inchangé » : c'est précisément un changement d'environnement qui la déclenche. En cas de pression du temps, la confirmation peut être limitée aux étapes ayant reproduit la défaillance, mais pas supprimée ; et c'est la régression, non la confirmation, qui cible les parties non modifiées."
+    },
+    {
+      "id": "Q5-037",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Une Test Manager doit estimer le budget de test d'un nouveau projet en utilisant la technique d'estimation basée sur des ratios. Les données historiques de quatre projets terminés de l'organisation sont les suivantes : Projet P1 : coût de développement 500 000 €, coût de test 140 000 € ; Projet P2 : coût de développement 800 000 €, coût de test 130 000 € ; Projet P3 : coût de développement 400 000 €, coût de test 160 000 € ; Projet P4 : coût de développement 700 000 €, coût de test 170 000 €. Le budget de développement du nouveau projet est de 800 000 €. Quelle est l'estimation du coût de test du nouveau projet ?",
+      "options": [
+        "130 000 €",
+        "160 000 €",
+        "200 000 €",
+        "150 000 €"
+      ],
+      "answer": 2,
+      "explanation": "Le ratio standard se calcule sur les MOYENNES des projets historiques : coût moyen de développement = (500 + 800 + 400 + 700)/4 = 600 k€ ; coût moyen de test = (140 + 130 + 160 + 170)/4 = 150 k€, soit un ratio développement:test de 4:1. L'estimation est donc 800 000 € / 4 = 200 000 €. Reprendre les 130 000 € du projet P2 parce qu'il a le même budget de développement est le piège classique : la technique exige d'utiliser le ratio moyen, pas un projet isolé."
+    },
+    {
+      "id": "Q5-038",
+      "chapter": 5,
+      "level": "K3",
+      "question": "Six cas de test doivent être exécutés lors d'une campagne de tests système d'une application de gestion des stocks. Priorités (1 = la plus élevée) : TC1 = priorité 2 ; TC2 = priorité 3 ; TC3 = priorité 1 ; TC4 = priorité 2 ; TC5 = priorité 1 ; TC6 = priorité 3. Dépendances fonctionnelles : TC3 ne peut être exécuté qu'après TC4, et TC4 ne peut être exécuté qu'après TC6. L'ordonnancement doit respecter les dépendances et exécuter les cas de priorité la plus élevée le plus tôt possible. Quel cas de test sera exécuté en TROISIÈME position ?",
+      "options": [
+        "TC1",
+        "TC3",
+        "TC6",
+        "TC4"
+      ],
+      "answer": 3,
+      "explanation": "TC5 (priorité 1, sans dépendance) s'exécute en premier. TC3 est aussi de priorité 1 mais il est bloqué : il faut d'abord exécuter ses prérequis TC6 puis TC4, même s'ils sont de priorité inférieure, afin de débloquer TC3 au plus tôt. L'ordre complet est donc TC5, TC6, TC4, TC3, TC1, TC2 : le troisième cas exécuté est TC4."
+    },
+    {
+      "id": "Q5-039",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Une équipe teste un système de paiement dont l'environnement de test intègre plusieurs bibliothèques externes, des bouchons (stubs) et des pilotes (drivers). Lequel des exemples suivants illustre CORRECTEMENT la façon dont la gestion de configuration soutient les tests ?",
+      "options": [
+        "Chaque anomalie détectée reçoit un identifiant unique, une sévérité et une priorité afin de faciliter sa correction",
+        "Chaque version de l'environnement de test, y compris les versions des bibliothèques, des bouchons et des pilotes qui le composent, est identifiée de manière unique, contrôlée en version et reliée aux autres éléments, ce qui permet de reproduire les résultats d'une campagne antérieure",
+        "Un rapport d'avancement des tests est diffusé chaque semaine aux parties prenantes avec l'état des risques et les métriques de couverture",
+        "Les critères d'entrée et de sortie de chaque niveau de test sont définis dans le plan de test et approuvés par les parties prenantes"
+      ],
+      "answer": 1,
+      "explanation": "La gestion de configuration garantit que tous les éléments de configuration — y compris un élément complexe comme l'environnement de test avec ses bibliothèques, bouchons et pilotes — sont identifiés de manière unique, versionnés, suivis et reliés entre eux pour maintenir la traçabilité, et permet de revenir à une base de référence antérieure pour reproduire des résultats. Les autres options relèvent de la gestion des défauts, du pilotage des tests et de la planification des tests."
+    },
+    {
+      "id": "Q5-040",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Une équipe de test est répartie sur deux continents et son client final se trouve dans un troisième pays, avec un décalage horaire de neuf heures. La Test Manager doit communiquer régulièrement l'avancement des tests au client. Parmi les moyens suivants, lequel est LE MOINS efficace dans ce contexte ?",
+      "options": [
+        "Organiser des réunions quotidiennes en face à face avec le client pour présenter verbalement l'avancement",
+        "Mettre à disposition un tableau de bord en ligne actualisé automatiquement avec les métriques de test",
+        "Envoyer un rapport d'avancement des tests écrit à une fréquence convenue",
+        "Planifier des visioconférences périodiques à un horaire compatible avec les fuseaux horaires"
+      ],
+      "answer": 0,
+      "explanation": "Pour les équipes distribuées, la communication directe en face à face n'est généralement pas possible en raison de la distance géographique et du décalage horaire : des canaux plus formels (rapports écrits, tableaux de bord, visioconférences planifiées) sont plus appropriés. Exiger des réunions quotidiennes en face à face est donc le moyen le moins efficace, car il est irréaliste et non adapté au contexte."
+    },
+    {
+      "id": "Q5-041",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Une exigence précise : « lors de l'import d'un fichier de codes clients, chaque ligne doit être enregistrée et toute ligne en double doit être rejetée avec un message d'erreur ». Le journal d'exécution montre : Fichier F1 (lignes A1, B2, B2, C3, D4) → 4 enregistrements créés, aucune erreur ; Fichier F2 (lignes E5, E5, E5) → 1 enregistrement créé, aucune erreur ; Fichier F3 (lignes F6, G7, H8) → 3 enregistrements créés, aucune erreur. Quelle est la MEILLEURE description de la défaillance pour le rapport de défaut ?",
+      "options": [
+        "L'import de fichiers ne fonctionne pas correctement et doit être corrigé avant la livraison",
+        "Le fichier F2 produit un seul enregistrement au lieu de trois, ce qui montre que le système perd des données",
+        "Les lignes en double sont ignorées silencieusement : seule la première occurrence est enregistrée et aucun message d'erreur n'est produit, alors que l'exigence impose de rejeter les doublons avec une erreur",
+        "Le système rejette les fichiers contenant plus de quatre lignes, comme le montre le fichier F1"
+      ],
+      "answer": 2,
+      "explanation": "Une bonne description de défaillance identifie le comportement général observé et l'écart par rapport au résultat attendu : ici, F1 (5 lignes dont 1 doublon → 4 enregistrements) et F2 (3 lignes identiques → 1 enregistrement) révèlent le même schéma, les doublons sont ignorés sans erreur au lieu d'être rejetés avec un message. L'option A est trop vague, l'option B interprète mal l'attendu (les doublons ne doivent pas être enregistrés, mais une erreur doit être signalée), et l'option D tire une conclusion erronée du journal."
+    },
+    {
+      "id": "Q5-042",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Lors de l'analyse des risques d'un site de vente en ligne, quatre risques sont identifiés : 1. Les remises calculées sont erronées aux seuils des tranches de montant ; 2. Le centre de données pourrait être détruit par une inondation ; 3. Les pages du catalogue se chargent trop lentement pendant les périodes de forte affluence ; 4. Une future évolution de la réglementation comptable pourrait imposer une refonte du module de facturation. Réponses possibles : A. Tests de performance ; B. Analyse des valeurs limites ; C. Souscription d'une assurance ; D. Acceptation du risque. Quelle association risque/réponse est LA MEILLEURE ?",
+      "options": [
+        "1B, 2D, 3A, 4C",
+        "1A, 2C, 3B, 4D",
+        "1B, 2C, 3D, 4A",
+        "1B, 2C, 3A, 4D"
+      ],
+      "answer": 3,
+      "explanation": "Les erreurs aux seuils s'atténuent par des tests utilisant l'analyse des valeurs limites (1B) ; l'inondation du centre de données ne peut pas être traitée par le test, on transfère le risque à un tiers via une assurance (2C) ; la lenteur en charge s'atténue par des tests de performance (3A) ; une évolution réglementaire future et incertaine ne se teste pas, on accepte le risque (4D). L'atténuation par le test, le transfert et l'acceptation sont trois options distinctes de réponse au risque."
+    },
+    {
+      "id": "Q5-043",
+      "chapter": 5,
+      "level": "K2",
+      "question": "Une équipe DevOps met en place un pipeline d'intégration continue comportant les étapes suivantes : soumission du code au référentiel → analyse statique → tests de composants automatisés → déploiement en environnement de test. Lequel des critères suivants est le critère d'ENTRÉE le PLUS approprié pour l'étape des tests de composants automatisés ?",
+      "options": [
+        "Tous les tests de composants planifiés ont été exécutés avec succès",
+        "L'analyse statique du code soumis s'est terminée sans signaler d'avertissement critique",
+        "La couverture des branches visée de 80 % a été atteinte par la suite de tests",
+        "Le nombre de défauts majeurs non résolus est inférieur au seuil convenu pour la livraison"
+      ],
+      "answer": 1,
+      "explanation": "Un critère d'entrée décrit les préconditions qui doivent être remplies AVANT de démarrer une activité : ici, l'étape précédente du pipeline (l'analyse statique) doit s'être achevée sans avertissement critique pour que les tests de composants puissent commencer. Les trois autres options mesurent l'achèvement d'activités de test (exécution complète, couverture atteinte, seuil de défauts respecté) : ce sont des critères de sortie."
+    },
+    {
+      "id": "Q4-050",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Le module de connexion d'une application est modélisé par une machine à états avec une variable N (nombre d'échecs consécutifs, valeur initiale 0). États : Déconnecté (initial), Connecté, Bloqué. Transitions valides : T1 : Déconnecté –login_ok→ Connecté ; T2 : Déconnecté –login_ko [N<2]→ Déconnecté (N est incrémenté) ; T3 : Déconnecté –login_ko [N=2]→ Bloqué ; T4 : Connecté –logout→ Déconnecté (N remis à 0). Tout autre événement est invalide et interrompt la séquence. En partant de l'état initial, quelle séquence d'événements atteint la PLUS HAUTE couverture des transitions valides ?",
+      "options": [
+        "login_ko, login_ko, login_ko, login_ok",
+        "login_ok, login_ko, logout, login_ko",
+        "login_ok, logout, login_ko, login_ko, login_ko",
+        "login_ko, login_ko, login_ok, logout"
+      ],
+      "answer": 2,
+      "explanation": "La séquence C exerce T1 (login_ok), T4 (logout, N=0), T2 (login_ko, N=0<2), T2 (login_ko, N=1<2) puis T3 (login_ko avec N=2 → Bloqué) : 4 transitions valides sur 4, soit 100 %. La séquence A se termine par login_ok depuis Bloqué (événement invalide) et ne couvre que T2 et T3 ; la séquence B est interrompue dès le deuxième événement (login_ko est invalide depuis Connecté) ; la séquence D couvre T2, T1 et T4 mais jamais T3 (3/4)."
+    },
+    {
+      "id": "Q4-051",
+      "chapter": 4,
+      "level": "K3",
+      "question": "Un champ « commentaire » accepte une longueur de 0 à 200 caractères inclus (0 = commentaire vide autorisé) ; toute longueur supérieure à 200 est rejetée. Une longueur de chaîne ne peut par nature jamais être négative. La suite de tests existante couvre déjà à 100 % l'analyse des valeurs limites à 2 valeurs, avec les longueurs {0, 200, 201}. Quelles longueurs SUPPLÉMENTAIRES faut-il ajouter pour atteindre 100 % de couverture de l'analyse des valeurs limites à 3 valeurs ?",
+      "options": [
+        "1 et 199",
+        "1, 199 et 202",
+        "-1, 1, 199 et 202",
+        "199, 201 et 202"
+      ],
+      "answer": 1,
+      "explanation": "La BVA à 3 valeurs exige, pour CHAQUE valeur limite, la limite et ses deux voisines existantes : limite 0 → {0, 1} (la voisine -1 n'existe pas, une longueur n'est jamais négative) ; limite 200 → {199, 200, 201} ; limite 201 (minimum de la partition invalide) → {200, 201, 202}. Les valeurs supplémentaires sont donc {1, 199, 202}. Piège : oublier la voisine SUPÉRIEURE de la limite invalide (le 202 joue le même rôle que le 14 pour la limite 13 dans l'exemple officiel du mot de passe 6-12)."
+    },
+    {
+      "id": "Q6-010",
+      "chapter": 6,
+      "level": "K2",
+      "question": "Une équipe qui exécutait manuellement ses tests de régression introduit un outil d'exécution automatisée des tests couplé à un outil de mesure de la couverture du code. Lequel des éléments suivants est l'avantage LE PLUS probable de cette automatisation ?",
+      "options": [
+        "La responsabilité de la qualité du produit est désormais partagée avec le fournisseur de l'outil",
+        "Les testeurs n'ont plus besoin d'exercer leur réflexion critique lors de la conception des tests",
+        "L'outil garantit que le testware n'aura plus besoin d'être maintenu lors des évolutions du produit",
+        "Une évaluation plus objective et l'accès à des mesures, comme la couverture du code, trop complexes pour être calculées manuellement"
+      ],
+      "answer": 3,
+      "explanation": "Parmi les avantages de l'automatisation cités par le syllabus figurent une évaluation plus objective (mesures statiques, couverture) et un accès plus facile aux informations sur les tests : la couverture du code est précisément une mesure impossible à calculer manuellement de façon fiable. La responsabilité de la qualité n'est jamais transférée au fournisseur de l'outil, la réflexion critique des testeurs reste indispensable, et la maintenance du testware demeure un effort réel, souvent sous-estimé."
     }
   ]
 }

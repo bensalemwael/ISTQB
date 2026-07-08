@@ -380,3 +380,29 @@ Test statique (sans exécution du logiciel)
 
 **Question piège** : « Lequel est une mesure de la qualité du produit ? a) Délai moyen de défaillance b) Nombre de défauts trouvés c) Couverture des exigences d) DDP »
 ✅ **a) Délai moyen de défaillance (MTTF)** — les trois autres mesurent le test, pas le produit.
+
+---
+
+## 23. Les pièges du SET B officiel (leçons d'un 60 %)
+
+**Estimation par ratios (K3)** : le ratio se calcule sur les **MOYENNES** de l'historique (moyenne test ÷ moyenne dev), jamais en recopiant le projet qui a le même budget. Ex. : moyennes 90k/900k = 10 % → dev 800k ⟹ test = **80k** (pas 40k parce que « P1 avait aussi 800k »).
+
+**Priorisation avec dépendances (K3)** : un prérequis de priorité BASSE passe **devant** un cas de priorité haute si cela débloque un cas de priorité 1 au plus tôt. Et si le cas final dépend d'une **fonctionnalité**, TOUS les cas de cette fonctionnalité doivent passer avant lui.
+
+**BVA 3-valeurs** : chaque limite exige ses **deux** voisines existantes — y compris la voisine **supérieure de la limite invalide** (mot de passe 6-12 → le 14, voisin de 13). Une borne physiquement impossible (longueur -1) n'est simplement pas exigée.
+
+**Machine à états avec gardes** : une séquence contenant un événement **invalide** (ex. Add depuis FULL) est bloquée — elle ne peut pas couvrir les transitions suivantes. Toujours tracer N pas à pas.
+
+**Communication en équipe distribuée** : sur deux continents, le **face à face** physique est le moyen LE MOINS efficace ; tableaux de bord CI/CD, courriel et visio fonctionnent à distance (syllabus 5.3.3).
+
+**Équipe intégrée (whole-team)** : l'avantage = la **synergie d'équipe** au profit du projet. « N'importe quel rôle à n'importe quel moment » = exagération piège (c'est « des tâches selon les compétences »).
+
+**Bonne pratique tous SDLC** : revoir les produits d'activités **dès les premières versions (drafts)** — pas « avant l'analyse des tests », pas « à la phase suivante ».
+
+**Tests système vs intégration de systèmes** ⭐ récurrent : interface avec un système bancaire **EXTERNE** = intégration de **systèmes** ; le test **système** = le système complet (ex. sécurité par équipe indépendante).
+
+**Feedback précoce** : le bénéfice syllabus = **communication précoce des problèmes de qualité potentiels** — pas « les utilisateurs comprennent les retards ».
+
+**Compétence générique en action** : connaissance du **domaine** (ex-pilote → critères d'acceptation d'un système d'hélicoptère) = pour comprendre les **représentants métier** ; connaissances **techniques** = pour communiquer avec les **développeurs**. Ne pas croiser. Un junior qui ne teste que le chemin nominal manque de **curiosité** (pessimisme professionnel).
+
+**Description de défaillance** : la MEILLEURE description identifie le **pattern précis** dans les sorties (ex. « les doublons sont ignorés lors du tri », en citant les TC concernés) — ni vague (« le tri échoue »), ni accusatrice des cas de test.
