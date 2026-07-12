@@ -5,9 +5,11 @@
 [![Licence MIT](https://img.shields.io/badge/licence-MIT-green.svg)](LICENSE)
 [![Syllabus](https://img.shields.io/badge/syllabus-CTFL%20v4.0-blue.svg)](https://www.cftl.fr)
 [![Questions](https://img.shields.io/badge/quiz-193%20questions-orange.svg)](quiz/)
-[![PRs bienvenues](https://img.shields.io/badge/PRs-bienvenues-brightgreen.svg)](CONTRIBUTING.md)
+[![Certifié](https://img.shields.io/badge/testé%20en%20conditions%20réelles-certification%20obtenue-success.svg)](#)
 
 > ⚠️ **Support d'étude non officiel.** Le syllabus officiel reste la seule référence pour l'examen. Voir [istqb.org](https://www.istqb.org) et [cftl.fr](https://www.cftl.fr).
+
+> 📖 **Repo en lecture seule.** Il est mis à disposition librement pour vos révisions, mais il n'accepte pas de contributions externes : les mises à jour sont faites par son auteur. Vous êtes libre de le **forker** pour l'adapter à vos besoins.
 
 ---
 
@@ -111,15 +113,15 @@ Ou plus simple encore : **double-cliquer sur [quiz/index.html](quiz/index.html)*
 
 ---
 
-## 🤝 Contribuer
+## 📌 Utilisation et réutilisation
 
-Les contributions sont les bienvenues ! Corrections, nouvelles questions, exemples, traductions… Voir **[CONTRIBUTING.md](CONTRIBUTING.md)** pour le format des questions et le processus.
+Ce repo est un **support de révision en lecture seule**. Il n'accepte pas de contributions externes (pull requests), mais la licence MIT vous autorise à :
 
-Idées de contributions utiles :
-- ➕ De nouvelles questions (surtout **K3** et chapitres 1/2/3)
-- 🐛 Corriger une réponse ou une explication inexacte (**merci de citer la section du syllabus**)
-- 🌍 Traduire le contenu (anglais, autres langues)
-- ♿ Améliorer l'accessibilité du quiz
+- ✅ **Cloner ou forker** le repo pour réviser
+- ✅ **Adapter le contenu** à vos besoins dans votre propre fork (ajouter vos questions, vos notes)
+- ✅ **Le partager** avec d'autres candidats
+
+Si vous repérez une erreur de contenu, n'hésitez pas à la signaler — merci d'indiquer l'**ID de la question** et la **section du syllabus** concernée.
 
 ---
 
