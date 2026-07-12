@@ -1,0 +1,21 @@
+name: Valider le quiz
+
+on:
+  push:
+    paths:
+      - 'quiz/**'
+  pull_request:
+    paths:
+      - 'quiz/**'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Valider questions.json
+        run: python scripts/validate_questions.py
+
+      - name: Vérifier la syntaxe de app.js
+        run: node --check quiz/app.js

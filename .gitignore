@@ -1,9 +1,25 @@
+# Notes personnelles de révision (chacun tient les siennes)
+mes-erreurs.md
+notes-perso.md
+
+# Documents sous copyright ISTQB/CFTL — ne jamais committer
+*.pdf
+_syllabus_text.txt
+
+# Python
+__pycache__/
+*.py[cod]
+
+# OS
 .DS_Store
 Thumbs.db
-*.log
-node_modules/
+
+# Éditeurs
 .vscode/
 .idea/
 *.swp
-_syllabus_text.txt
+
+# Divers
+node_modules/
+*.log
 *.tmp

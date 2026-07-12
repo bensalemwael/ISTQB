@@ -383,7 +383,9 @@ Test statique (sans exécution du logiciel)
 
 ---
 
-## 23. Les pièges du SET B officiel (leçons d'un 60 %)
+## 23. Les pièges des examens blancs officiels (SET A / SET B)
+
+> Ces pièges sont tirés des examens blancs officiels du CFTL/ISTQB. Ce sont les questions qui font le plus souvent basculer un score sous le seuil des 65 %.
 
 **Estimation par ratios (K3)** : le ratio se calcule sur les **MOYENNES** de l'historique (moyenne test ÷ moyenne dev), jamais en recopiant le projet qui a le même budget. Ex. : moyennes 90k/900k = 10 % → dev 800k ⟹ test = **80k** (pas 40k parce que « P1 avait aussi 800k »).
 

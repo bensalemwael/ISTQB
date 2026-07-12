@@ -5,7 +5,7 @@
 
 ## La logique du plan
 
-L'examen n'est pas uniforme — investis ton temps là où sont les points :
+L'examen n'est pas uniforme — investir son temps là où sont les points :
 
 | Ch. | Thème | Questions à l'examen | Poids | Priorité |
 |---|---|---|---|---|
@@ -16,7 +16,7 @@ L'examen n'est pas uniforme — investis ton temps là où sont les points :
 | 3 | Test statique | **4** | 10 % | 🟡 Moyenne |
 | 6 | Outils | **2** | 5 % | 🟢 Basse |
 
-**Ch4 + Ch5 = 50 % de l'examen.** Et les ~8 questions K3 (calculs) sont presque toutes dans ces deux chapitres. C'est là que se joue ta réussite.
+**Ch4 + Ch5 = 50 % de l'examen.** Et les ~8 questions K3 (calculs) sont presque toutes dans ces deux chapitres. C'est là que se joue la réussite.
 
 Niveaux cognitifs : **K1** = 8 q. (mémorisation pure), **K2** = 24 q. (comprendre/distinguer), **K3** = 8 q. (appliquer/calculer).
 
@@ -58,9 +58,9 @@ Niveaux cognitifs : **K1** = 8 q. (mémorisation pure), **K2** = 24 q. (comprend
 | Bloc | Durée | Activité |
 |---|---|---|
 | Matin | 1h15 | **Examen blanc n°1** dans le quiz (mode examen, 40 q., 60 min chrono, conditions réelles : pas de pause, pas de notes). Corriger : relire l'explication de CHAQUE erreur. |
-| Après-midi | 1h30 | Faire l'examen blanc officiel PDF (`Foundation-Exam_Blanc_Numéro3`). Corriger de la même façon. |
-| Fin d'après-midi | 1h | Relire [fiches/03-pieges-examen.md](fiches/03-pieges-examen.md) en entier. Croiser avec tes erreurs des deux blancs : quel piège t'a eu ? |
-| Soir | 1h | Revenir sur ton chapitre le plus faible (quiz ciblé + relecture). |
+| Après-midi | 1h30 | Faire un **examen blanc officiel** (SET A ou SET B, téléchargeables sur [cftl.fr](https://www.cftl.fr)). Corriger de la même façon. |
+| Fin d'après-midi | 1h | Relire [fiches/03-pieges-examen.md](fiches/03-pieges-examen.md) en entier. Croiser avec ses erreurs des deux blancs : quel piège a fait mouche ? |
+| Soir | 1h | Revenir sur le chapitre le plus faible (quiz ciblé + relecture). |
 
 **✔️ Critère de sortie : ≥ 28/40 aux deux examens blancs. Sinon → Jour 5 matin cible ce qui a échoué.**
 
@@ -81,13 +81,13 @@ Niveaux cognitifs : **K1** = 8 q. (mémorisation pure), **K2** = 24 q. (comprend
   2. **Deuxième passage** : traiter les marquées, faire les calculs K3 posément au brouillon (~15 min).
   3. **Jamais laisser de case vide** — pas de points négatifs.
   4. Attention aux **négations** (« n'est PAS », « JAMAIS ») : les surligner mentalement, reformuler la question.
-  5. Douter entre deux réponses → choisir celle qui colle au **vocabulaire exact du syllabus**, pas à ton expérience terrain.
+  5. Douter entre deux réponses → choisir celle qui colle au **vocabulaire exact du syllabus**, pas à son expérience terrain.
 
 ---
 
 ## Règles transverses (tous les jours)
 
-- 📓 Tenir `mes-erreurs.md` : chaque question ratée → 1 ligne (notion + règle exacte). C'est TA fiche la plus précieuse au Jour 5.
+- 📓 Tenir un fichier `mes-erreurs.md` (ignoré par git) : chaque question ratée → 1 ligne (notion + règle exacte). C'est la fiche la plus précieuse au Jour 5.
 - 🔁 Chaque matin : 10 min de relecture de `mes-erreurs.md` de la veille avant d'attaquer.
 - ⏱️ Toujours faire les quiz en se chronométrant (~1 min 30/question max).
 - 🛑 Pas plus de 5h/jour. Au-delà, la rétention s'effondre.

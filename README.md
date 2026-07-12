@@ -1,81 +1,149 @@
-# ISTQB CTFL v4.0 — Révision (FR)
+# ISTQB CTFL v4.0 — Révision en français 🇫🇷
 
-Repo de révision pour la certification **ISTQB Testeur Certifié Niveau Fondation v4.0** (avril 2023), en français, basé sur le syllabus officiel CFTL/ISTQB.
+> Tout le nécessaire pour préparer et **réussir** la certification **ISTQB Testeur Certifié Niveau Fondation v4.0** (avril 2023) : cours condensés, exercices K3 corrigés, pièges d'examen, glossaire et un **quiz de 190+ questions** avec mode examen blanc.
 
-> ⚠️ Ce projet est un **support d'étude non officiel**. Le syllabus officiel reste la référence. Voir [istqb.org](https://www.istqb.org) et [cftl.fr](https://www.cftl.fr).
+[![Licence MIT](https://img.shields.io/badge/licence-MIT-green.svg)](LICENSE)
+[![Syllabus](https://img.shields.io/badge/syllabus-CTFL%20v4.0-blue.svg)](https://www.cftl.fr)
+[![Questions](https://img.shields.io/badge/quiz-193%20questions-orange.svg)](quiz/)
+[![PRs bienvenues](https://img.shields.io/badge/PRs-bienvenues-brightgreen.svg)](CONTRIBUTING.md)
 
-## Contenu
+> ⚠️ **Support d'étude non officiel.** Le syllabus officiel reste la seule référence pour l'examen. Voir [istqb.org](https://www.istqb.org) et [cftl.fr](https://www.cftl.fr).
 
-- **[plan-5-jours.md](plan-5-jours.md)** — 🎯 Plan de révision intensif sur 5 jours (bloc par bloc, avec critères de sortie)
-- **[chapters/](chapters/)** — Fiches de révision détaillées par chapitre (1 à 6)
-- **[fiches/](fiches/)** — Fiches synthèses : mémo express, exercices K3 corrigés, pièges d'examen, glossaire essentiel
-- **[quiz/](quiz/)** — Quiz interactif en ligne (HTML/JS, ouvrable directement dans un navigateur)
+---
 
-## L'examen en chiffres
+## 🚀 Démarrage rapide
+
+**1. Lancer le quiz** (aucune installation, 100 % hors-ligne) :
+
+```bash
+git clone https://github.com/bensalemwael/ISTQB.git
+cd ISTQB/quiz
+python -m http.server 8000   # puis ouvrir http://localhost:8000
+```
+
+Ou plus simple encore : **double-cliquer sur [quiz/index.html](quiz/index.html)**.
+
+**2. Choisir son plan de révision** selon le temps disponible (voir [Plans de révision](#-plans-de-révision)).
+
+**3. Réviser les chapitres**, faire les quiz, noter ses erreurs, recommencer.
+
+---
+
+## 📚 Ce que contient ce repo
+
+| Dossier / fichier | Contenu |
+|---|---|
+| **[chapters/](chapters/)** | Les **6 chapitres** du syllabus, condensés et structurés (tableaux, encarts « À l'examen », quiz éclair) |
+| **[fiches/01-fiche-synthese.md](fiches/01-fiche-synthese.md)** | 🧠 **Mémo express** — tout le syllabus en 2 pages, à relire 30 min avant l'examen |
+| **[fiches/02-exercices-k3-corriges.md](fiches/02-exercices-k3-corriges.md)** | ✍️ **16 exercices K3 corrigés pas à pas** — EP, BVA, tables de décision, transitions d'état, couverture, estimation 3 points |
+| **[fiches/03-pieges-examen.md](fiches/03-pieges-examen.md)** | ⚠️ **23 pièges classiques** — les confusions qui font échouer, avec les questions types |
+| **[fiches/04-glossaire-essentiel.md](fiches/04-glossaire-essentiel.md)** | 📖 **~110 termes FR/EN** groupés par chapitre |
+| **[quiz/](quiz/)** | 🎯 **Quiz interactif** — 193 questions, mode examen blanc chronométré |
+| **[plan-5-jours.md](plan-5-jours.md)** | 📅 Plan de révision intensif, heure par heure |
+
+---
+
+## 🎯 Le quiz
+
+**193 questions** rédigées au format de l'examen officiel (mises en situation, associations « 1C, 2A, 3B, 4D », scénarios chiffrés) :
+
+- ✅ **43 questions K3** (calculs) avec correction détaillée : couverture BVA en %, Each Choice avec contraintes, transitions minimales, estimation par ratios, priorisation avec dépendances…
+- ✅ **Mode examen blanc** : 40 questions, 60 min chrono, **distribution officielle par chapitre (8/6/4/11/9/2)** conforme aux *Exam Structure Tables v1.3*
+- ✅ **Mode entraînement** : feedback immédiat avec explication après chaque réponse
+- ✅ Filtres par chapitre et par niveau cognitif (K1/K2/K3)
+- ✅ Score, historique local (localStorage), mélange aléatoire, reprise des erreurs
+
+### Le publier en ligne (GitHub Pages)
+
+`Settings → Pages → Branch: main, Folder: /quiz` → accessible sur `https://<votre-user>.github.io/<repo>/`
+
+---
+
+## 📊 L'examen en chiffres
 
 | Élément | Valeur |
 |---|---|
-| Durée | 60 min (75 min si non-natif anglais) |
-| Questions | 40 QCM |
-| Seuil de réussite | 65 % (26/40) |
-| Niveaux cognitifs | K1 (se souvenir), K2 (comprendre), K3 (appliquer) |
+| Questions | **40 QCM** (une seule bonne réponse) |
+| Durée | **60 min** (75 min si l'examen n'est pas dans votre langue maternelle) |
+| Seuil de réussite | **65 % — soit 26/40** |
+| Niveaux cognitifs | K1 (se souvenir) · K2 (comprendre) · K3 (appliquer) |
+| Points négatifs | ❌ Aucun — **ne jamais laisser une question vide** |
 
-## Plan du syllabus v4.0
+### Où sont les points ? (distribution officielle)
 
-| Ch. | Titre | Durée min. | **Questions à l'examen** | Points clés |
+| Ch. | Titre | **Questions** | Poids | Priorité de révision |
 |---|---|---|---|---|
-| 1 | Fondamentaux des tests | 180 min | **8** | Objectifs, 7 principes, processus, rôles |
-| 2 | Tests dans le cycle de vie | 130 min | **6** | TDD/ATDD/BDD, DevOps, shift-left, niveaux, types |
-| 3 | Test statique | 80 min | **4** | Revues (informelle, walkthrough, technique, inspection) |
-| 4 | Analyse & conception | 390 min | **11** | Partitions, valeurs limites, tables décision, transitions d'état, boîte blanche, ATDD |
-| 5 | Gestion des activités | 335 min | **9** | Plan, estimation, risques, métriques, défauts, pyramide, quadrants |
-| 6 | Outils de test | 20 min | **2** | Catégories, bénéfices, risques |
+| 1 | Fondamentaux des tests | **8** | 20 % | 🟠 Haute |
+| 2 | Tests dans le cycle de vie | **6** | 15 % | 🟠 Haute |
+| 3 | Test statique | **4** | 10 % | 🟡 Moyenne |
+| 4 | Analyse & conception des tests | **11** | 27,5 % | 🔴 **Maximale** |
+| 5 | Gestion des activités de test | **9** | 22,5 % | 🔴 **Maximale** |
+| 6 | Outils de test | **2** | 5 % | 🟢 Basse |
 
-> Distribution officielle des 40 questions (Exam Structure Tables v1.3). **Ch4 + Ch5 = 50 % de l'examen.** Le mode examen du quiz respecte cette distribution.
+> 💡 **Ch4 + Ch5 = 50 % de l'examen** — et c'est là que se trouvent la quasi-totalité des ~8 questions K3 (calculs). C'est le meilleur retour sur temps investi.
 
-## Démarrer le quiz
+---
 
-### Option 1 — Ouvrir le fichier directement
-Double-cliquer sur [quiz/index.html](quiz/index.html) — le quiz fonctionne 100 % hors-ligne.
+## 📅 Plans de révision
 
-### Option 2 — Serveur local (recommandé)
-```bash
-cd quiz
-python -m http.server 8000
-# puis ouvrir http://localhost:8000
-```
+### ⚡ Examen dans moins d'une semaine
+👉 Suivre le **[plan intensif 5 jours](plan-5-jours.md)** : découpage bloc par bloc, critères de sortie quotidiens, stratégie du jour J.
 
-### Option 3 — GitHub Pages
-Activer Pages dans `Settings → Pages → Branch: main, Folder: /quiz` et accéder à `https://<user>.github.io/<repo>/`.
+### 📆 4 semaines devant soi
+1. **Semaine 1** — Chapitres 1 et 2 + quiz par chapitre (K1/K2)
+2. **Semaine 2** — Chapitres 3 et 4 + [exercices K3](fiches/02-exercices-k3-corriges.md) refaits **sur papier**
+3. **Semaine 3** — Chapitres 5 et 6 + quiz complets
+4. **Semaine 4** — Examens blancs à répétition + [pièges d'examen](fiches/03-pieges-examen.md), en ciblant les chapitres faibles
 
-## Fonctionnalités du quiz
+### 🌙 La veille et le jour J
+- **Veille** : uniquement la [fiche synthèse](fiches/01-fiche-synthese.md) et vos erreurs notées. **Pas de nouveauté.** Dormir tôt.
+- **30 min avant** : la fiche synthèse, rien d'autre.
+- **Pendant** : 1 min 30 par question. Premier passage sur les questions sûres, second sur les douteuses. Attention aux négations (« n'est **PAS** », « **JAMAIS** »). En cas de doute, choisir la réponse qui colle au **vocabulaire exact du syllabus**, pas à son expérience terrain.
 
-- ✅ 150+ questions couvrant les 6 chapitres (dont 35 questions K3 avec calculs corrigés et des questions calquées sur les formats de l'examen blanc officiel : associations, scénarios, couverture)
-- ✅ Filtres par chapitre et par niveau cognitif (K1/K2/K3)
-- ✅ Mode examen blanc (40 questions, 60 minutes, chrono, **distribution officielle par chapitre 8/6/4/11/9/2**)
-- ✅ Mode entraînement (feedback immédiat avec explication)
-- ✅ Score, historique local (localStorage)
-- ✅ Mélange aléatoire des questions et réponses
+---
 
-## Méthodes de révision
+## 💡 Conseils qui font la différence
 
-- **⚡ Examen dans moins d'une semaine** → suivre le [plan intensif 5 jours](plan-5-jours.md) (bloc par bloc, critères de sortie quotidiens)
-- **📆 4 semaines devant soi** :
-  1. **S1** — Lire chapitre 1 + 2, faire les quiz par chapitre (K1/K2)
-  2. **S2** — Lire chapitre 3 + 4, faire les quiz, pratiquer les techniques K3 ([fiches/02-exercices-k3-corriges.md](fiches/02-exercices-k3-corriges.md))
-  3. **S3** — Lire chapitre 5 + 6, faire les quiz complets
-  4. **S4** — Examens blancs à répétition, revoir les chapitres faibles + [fiches/03-pieges-examen.md](fiches/03-pieges-examen.md)
+1. **Tenir un fichier `mes-erreurs.md`** (ignoré par git) : une ligne par question ratée = notion + règle exacte. C'est la fiche la plus précieuse la veille de l'examen.
+2. **Refaire les exercices K3 à la main**, sans regarder la solution. À l'examen, il n'y a qu'un brouillon.
+3. **Le vocabulaire prime sur l'expérience.** Beaucoup de professionnels expérimentés échouent en répondant « comme sur le terrain » plutôt que selon le syllabus.
+4. **Faire au moins deux examens blancs complets en conditions réelles** (chrono, sans notes) avant le jour J.
 
-## Ressources complémentaires
+---
 
-- Syllabus officiel CFTL v4.0 : [cftl.fr](https://www.cftl.fr/syllabus)
-- Glossaire des tests v3.2 (CFTL/ISTQB)
-- Examens blancs officiels
+## 🤝 Contribuer
 
-## Licence
+Les contributions sont les bienvenues ! Corrections, nouvelles questions, exemples, traductions… Voir **[CONTRIBUTING.md](CONTRIBUTING.md)** pour le format des questions et le processus.
 
-Le contenu de ce repo (notes, quiz) est publié sous **MIT**. Les textes cités du syllabus restent la propriété de l'**ISTQB®** / **CFTL** et sont reproduits à des fins pédagogiques (fair use éducatif).
+Idées de contributions utiles :
+- ➕ De nouvelles questions (surtout **K3** et chapitres 1/2/3)
+- 🐛 Corriger une réponse ou une explication inexacte (**merci de citer la section du syllabus**)
+- 🌍 Traduire le contenu (anglais, autres langues)
+- ♿ Améliorer l'accessibilité du quiz
 
-## Contribuer
+---
 
-Issues et PRs bienvenues — corrections, nouvelles questions, traductions, exemples.
+## 📖 Ressources officielles
+
+- **Syllabus CTFL v4.0 (FR)** — [cftl.fr/syllabus](https://www.cftl.fr/syllabus)
+- **Glossaire des tests ISTQB** — [glossary.istqb.org](https://glossary.istqb.org)
+- **Examens blancs officiels** — disponibles sur le site du CFTL / ISTQB
+- **Exam Structure Tables** — répartition officielle des questions par objectif d'apprentissage
+
+---
+
+## ⚖️ Licence
+
+Le contenu original de ce repo (notes, quiz, exercices) est publié sous licence **[MIT](LICENSE)** — libre de le réutiliser, l'adapter et le partager.
+
+Les concepts, la terminologie et les objectifs d'apprentissage proviennent du syllabus **ISTQB® / CFTL**, qui en restent propriétaires ; ils sont ici reformulés et cités à des fins pédagogiques. **ISTQB®** est une marque déposée de l'International Software Testing Qualifications Board.
+
+---
+
+<div align="center">
+
+**Ce repo vous a aidé à décrocher votre certification ? Laissez une ⭐ — ça aide les prochains à le trouver.**
+
+Bonne révision, et bonne chance ! 💪
+
+</div>
